@@ -1,0 +1,89 @@
+import { motion, useAnimation } from 'framer-motion';
+import offer_1 from 'public/assets/services/offer_1.svg';
+import offer_2 from 'public/assets/services/offer_2.svg';
+import { useEffect } from 'react';
+import { useInView } from 'react-intersection-observer';
+
+import {
+  defaultWrapperAnimation,
+  SlideUpAnimation,
+  SubtitleAnimation,
+  TitleAnimation,
+} from '@/common/animations/sharedAnimations';
+import Responsiveplayer from '@/common/components/Responsiveplayer';
+import Subtitle from '@/Layout/Subtitle';
+import Title from '@/Layout/Title';
+import Wrapper from '@/Layout/Wrapper';
+
+import SpreadMessageCard from './SpreadMessageCard';
+
+interface ISpreadMessage {
+  title: string;
+  subtitle: string;
+}
+const SpreadMessage = ({ title, subtitle }: ISpreadMessage) => {
+  const controls = useAnimation();
+  const [ref, inView] = useInView({ threshold: 0.2, triggerOnce: true });
+  useEffect(() => {
+    if (inView) {
+      controls.start('visible');
+    }
+  }, [controls, inView]);
+
+  return (
+    <motion.div
+      className="py-20"
+      ref={ref}
+      initial="hidden"
+      variants={defaultWrapperAnimation}
+      animate={controls}
+    >
+      <Wrapper>
+        <div className="overflow-hidden">
+          <motion.div variants={SubtitleAnimation}>
+            <Subtitle>{subtitle}</Subtitle>
+          </motion.div>
+        </div>
+        <div className="overflow-hidden">
+          <motion.div variants={TitleAnimation}>
+            <Title size="xl3">
+              <span className="font-bold">{title}</span>
+            </Title>
+          </motion.div>
+        </div>
+
+        <div className="mt-12 grid w-full grid-cols-12">
+          <div className="col-span-12 grid grid-cols-1 gap-8 md:grid-cols-2 lg:col-span-6 lg:grid-cols-1 lg:space-y-6 ">
+            <motion.div
+              className="col-span-1 flex items-center justify-center"
+              variants={SlideUpAnimation()}
+            >
+              <SpreadMessageCard
+                image={offer_1}
+                title="Let us package your offer"
+                content="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum accusantium praesentium aliquam, ullam modi"
+              />
+            </motion.div>
+            <motion.div
+              className="col-span-1 flex items-center justify-center"
+              variants={SlideUpAnimation()}
+            >
+              <SpreadMessageCard
+                image={offer_2}
+                title="Let us package your offer"
+                content="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum accusantium praesentium aliquam, ullam modi fuga natus. Consectetur dolorum corrupti fugit."
+              />
+            </motion.div>
+          </div>
+          <motion.div
+            variants={SlideUpAnimation(1)}
+            className="col-span-12 mt-12 grid h-full lg:col-span-6 lg:mt-0"
+          >
+            <Responsiveplayer url="https://www.youtube.com/watch?v=JxS5E-kZc2s" />
+          </motion.div>
+        </div>
+      </Wrapper>
+    </motion.div>
+  );
+};
+export default SpreadMessage;
