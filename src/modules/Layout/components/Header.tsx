@@ -6,7 +6,7 @@ import Link from 'next/link';
 import { useRouter } from 'next/router';
 import logoDark from 'public/assets/logo_dark.svg';
 import logoWhite from 'public/assets/logo_white.svg';
-import logoMark from 'public/assets/logoMark.svg';
+import logoMark from 'public/assets/logomark.svg';
 import { useEffect, useState } from 'react';
 
 import OutlineButton from '@/common/components/buttons/outline';

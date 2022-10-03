@@ -34,6 +34,143 @@ const services: IService[] = [
     options: [
       {
         label: 'Facebook',
+        popup: {
+          serviceId: 8,
+          title: 'FACEBOOK',
+          subtitle: 'Marketing',
+          contents: [
+            {
+              title: 'PREPARATION PHASE',
+              text: [
+                {
+                  value: 'Development of Research and Campaign Strategy',
+                  decorator: (
+                    <PlusIcon className="h-4 w-4 text-theme-primary" />
+                  ),
+                },
+                {
+                  value: 'Development of Value Propositions and Visual Assets',
+                  decorator: (
+                    <PlusIcon className="h-4 w-4 text-theme-primary" />
+                  ),
+                },
+                {
+                  value:
+                    'Facebook/Google Ad Account Opening and Ads Installation',
+                  decorator: (
+                    <PlusIcon className="h-4 w-4 text-theme-primary" />
+                  ),
+                },
+              ],
+              icon: flag,
+            },
+            {
+              title: 'WEBSITE EVENT ANNOUNCEMENT ARTICLE',
+              text: [
+                {
+                  value: 'Up to 300 words',
+                },
+                {
+                  value: 'Tailored to your target audience',
+                },
+                {
+                  value: 'Unlimited copy revisions',
+                },
+              ],
+              icon: web,
+            },
+            {
+              title: '2 SOCIAL MEDIA EVENT VISUALS',
+              text: [
+                {
+                  value: 'Based on event‘s visual identity',
+                },
+                {
+                  value: 'Photos, banners, GIFs, short videos (max. 30 sec)',
+                },
+                {
+                  value: '2 rounds of revision',
+                },
+              ],
+              icon: visuals,
+            },
+            {
+              title: 'PRESS RELEASE',
+              text: [
+                {
+                  value: 'Up to 450 words',
+                },
+                {
+                  value: 'Based on your call-to-action',
+                },
+                {
+                  value: 'Unlimited copy revisions',
+                },
+              ],
+              icon: press_release,
+            },
+            {
+              title: 'EVENT INVITATION',
+              text: [
+                {
+                  value: 'Matching corporate identity',
+                },
+                {
+                  value: 'Fitting up to 5 sizes',
+                },
+                {
+                  value: 'Revisions included',
+                },
+              ],
+              icon: invite,
+            },
+            {
+              title: '3 SOCIAL MEDIA EVENT POSTS',
+              text: [
+                {
+                  value: 'Up to 300 words',
+                },
+                {
+                  value: 'Tailored to your target audience',
+                },
+                {
+                  value: 'Unlimited copy revisions',
+                },
+              ],
+              icon: post,
+            },
+            {
+              title: 'POST-EVENT MAILING TO ATTENDEES',
+              text: [
+                {
+                  value: 'Based on event‘s visual identity',
+                },
+                {
+                  value: 'Photos, banners, GIFs, short videos (max. 30 sec)',
+                },
+                {
+                  value: '2 rounds of revisions',
+                },
+              ],
+              icon: attendee,
+            },
+            {
+              title: 'POST-EVENT MAILING TO SPEAKERS',
+              text: [
+                {
+                  value: 'Up to 300 words',
+                },
+                {
+                  value: 'Tailored to your target audience',
+                },
+                {
+                  value: 'Unlimited copy revisions',
+                },
+              ],
+              icon: speaker,
+            },
+          ],
+        },
       },
       {
         label: 'Google',
