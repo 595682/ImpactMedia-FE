@@ -28,7 +28,7 @@ interface IApproachModule {
   approach: any[];
 }
 
-const tickMarks = ['Professional', 'Hands-free management', 'Fast delivery'];
+const tickMarks = ['Professional', 'Creative', 'One-of-a-kind '];
 
 const ApproachModule = ({ approach = [] }: IApproachModule) => {
   const controls = useAnimation();

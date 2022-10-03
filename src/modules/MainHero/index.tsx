@@ -108,6 +108,16 @@ const MainHeroModule = () => {
               variants={mainHeroTitleVariants}
               transition={{ ease: 'easeInOut', duration: 1 }}
             >
+              {/* <Title>
+                <span className="block leading-none tracking-wide">
+                  Tell your
+                </span>
+              </Title>
+              <Title size="xl4">
+                <span className="whitespace-pre font-extrabold leading-none tracking-tight lg:text-[8rem]">
+                  <span>STORY </span>
+                </span>
+              </Title> */}
               <Title>
                 <span className="block leading-none tracking-wide">We are</span>
               </Title>
@@ -123,9 +133,14 @@ const MainHeroModule = () => {
               <motion.div className="mt-6" variants={mainHeroButtonVariants}>
                 <Button
                   color="secondary"
-                  title="GET A QUOTATION"
+                  title="TELL YOUR STORY"
                   onClick={() => actions.openQuote(99)}
                 />
+                {/* <Button
+                  color="secondary"
+                  title="GET A QUOTATION"
+                  onClick={() => actions.openQuote(99)}
+                /> */}
               </motion.div>
             </motion.div>
           </motion.div>

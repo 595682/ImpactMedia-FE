@@ -9,21 +9,23 @@ import goal_map_4 from 'public/assets/home/goal_map_4.svg';
 const approach = [
   {
     id: 0,
-    title: 'INTRODUCTION MEETING',
-    description: 'Where we get to know your and find solutions',
+    title: 'HANDS-FREE MANAGEMENT',
+    description:
+      'Save time and effort in managing your content team. Our expert-led professionals are independent, proactive, and highly dedicated to your success.',
     image: approach_1,
   },
   {
     id: 1,
-    title: 'CONSULTATION MEETING',
+    title: 'HIGH QUALITY OUTPUTS',
     description:
-      'We meet with you again to discuss your feedback on the first drafts',
+      'Place your goals in the hands of a network of experts with over X years of experience across audio, visual, and communications.',
     image: approach_2,
   },
   {
     id: 2,
-    title: 'REGULAR REPORTING VIA E-MAIL AND/OR PHONE',
-    description: 'We are always there for you',
+    title: 'TAILORED TO YOUR GOALS',
+    description:
+      'We dive deep into your needs, desires, and goals, to ensure that your message is conveyed in the most effective and compelling way.',
     image: approach_3,
   },
 ];
@@ -33,9 +35,9 @@ const goals = [
     id: 0,
     description: (
       <span>
-        According to studies, the average viewer remembers{' '}
-        <strong>95% of a message when it is watched,</strong> whereas only{' '}
-        <strong>10% when read.</strong>
+        Studies show that the average viewer remembers{' '}
+        <strong>95% of a message when they watch it,</strong> versus only 10%
+        when they read it.
       </span>
     ),
     imageDescription: 'Playlist vector graphic',
@@ -45,8 +47,8 @@ const goals = [
     id: 1,
     description: (
       <span>
-        Users spend <strong>88% more time</strong> on a website that has{' '}
-        <strong>video.</strong>
+        Users spend <strong>88% more time</strong> on websites that have{' '}
+        <strong>videos </strong> on them.
       </span>
     ),
     imageDescription: 'Website with a video vector graphic',
@@ -56,8 +58,8 @@ const goals = [
     id: 1,
     description: (
       <span>
-        Video generates <strong>1200% more shares</strong> than both{' '}
-        <strong>images and text.</strong>
+        Video generates <strong>1200% more shares</strong> than both images and
+        text combined.
       </span>
     ),
     imageDescription: 'Video player vector graphic',
@@ -67,8 +69,8 @@ const goals = [
     id: 1,
     description: (
       <span>
-        Videos up to <strong>2 minutes long</strong> receive the{' '}
-        <strong>most engagement.</strong>
+        Videos up to <strong>2 minutes long</strong> receive the most
+        engagement.
       </span>
     ),
     imageDescription: 'User watching online video vector graphic',
@@ -78,10 +80,11 @@ const goals = [
 
 const ctaContent = (
   <>
-    <span className="block">We are here to make</span>
     <span className="block">
-      your event a{' '}
-      <span className="font-bold text-theme-secondary">SUCCESS!</span>
+      Have a <span className="text-theme-secondary">story</span> in mind?
+    </span>
+    <span className="block">
+      We’ll help you <span className="text-theme-secondary">tell it.</span>
     </span>
   </>
 );
@@ -89,21 +92,21 @@ const ctaContent = (
 const heroOptions = [
   {
     id: 0,
-    title: 'Video Production',
+    title: 'Videos',
     url: '/services/video-production',
-    video: '/hero_video.mp4',
+    video: '/dev_video.webm',
     poster: '/poster.jpg',
   },
   {
     id: 1,
     title: 'Animated Videos',
     url: '/services/animated-video-production',
-    video: '/hero_anim.mp4',
+    video: '/dev_anim.mp4',
     poster: '/poster.jpg',
   },
   {
     id: 2,
-    title: 'Event Communication',
+    title: 'Events',
     url: '/services/event-communication',
     video: '/hero_event.mp4',
     poster: '/poster.jpg',

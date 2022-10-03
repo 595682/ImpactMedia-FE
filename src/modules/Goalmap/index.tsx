@@ -56,9 +56,9 @@ const GoalmapModule = ({ goals }: IGoalmapModulev2) => {
         <div className="mb-20 flex flex-col items-center text-white">
           <div className="overflow-hidden">
             <motion.div variants={SubtitleAnimation}>
-              <Title size="xl3">
-                <p className="text-center text-3xl font-bold sm:text-2xl md:text-3xl xl:text-5xl">
-                  VIDEO MARKETING FOR BUSINESSES ACROSS EUROPE
+              <Title>
+                <p className="text-center text-3xl font-bold sm:text-2xl md:text-3xl xl:text-4xl">
+                  GET YOUR MESSAGE ACROSS IN THE MOST EFFECTIVE WAY
                 </p>
               </Title>
             </motion.div>
@@ -67,9 +67,9 @@ const GoalmapModule = ({ goals }: IGoalmapModulev2) => {
           <div className="overflow-hidden">
             <motion.div variants={TitleAnimation}>
               <Subtitle>
-                <p className="text-center text-lg lg:text-2xl">
-                  With years of experience and hundreds of hours of content
-                  produced.
+                <p className="text-center text-lg lg:text-xl">
+                  Tap on the expertise of a team with X years of experience and
+                  X video content produced.
                 </p>
               </Subtitle>
             </motion.div>

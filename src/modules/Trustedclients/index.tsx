@@ -45,7 +45,7 @@ const TrustedclientsModule = ({
       transition={{ when: 'beforeChildren' }}
     >
       <Wrapper>
-        <div className="overflow-hidden">
+        {/* <div className="overflow-hidden">
           <motion.div variants={SubtitleAnimation}>
             <Subtitle>Some of our</Subtitle>
           </motion.div>
@@ -55,6 +55,23 @@ const TrustedclientsModule = ({
             <Title>
               <span className="font-bold">TRUSTED</span> CLIENTS
             </Title>
+          </motion.div>
+        </div> */}
+        {/* COPYWR */}
+
+        <div className="overflow-hidden">
+          <motion.div variants={SubtitleAnimation}>
+            <Title>
+              <span className="font-bold">Trusted </span> by
+            </Title>
+          </motion.div>
+        </div>
+        <div className="overflow-hidden">
+          <motion.div variants={SubtitleAnimation}>
+            <Subtitle>
+              NGOs, political institutions, industry leaders, and communications
+              managers
+            </Subtitle>
           </motion.div>
         </div>
         <Space amount="md" />

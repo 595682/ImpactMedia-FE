@@ -5,7 +5,6 @@ import { useInView } from 'react-intersection-observer';
 import {
   caseStudyBgAnimation,
   caseStudyButtonAnimation,
-  caseStudySubtitleAnimation,
   caseStudySwiperAnimation,
   caseStudyTitleAnimation,
   caseStudyWrapperAnimation,
@@ -18,7 +17,6 @@ import TextButton from '@/common/components/buttons/textButton';
 import CustomLink from '@/common/components/CustomLink';
 import SwiperComponent from '@/common/components/Swiper';
 import Space from '@/Layout/Space';
-import Subtitle from '@/Layout/Subtitle';
 import Title from '@/Layout/Title';
 import Wrapper from '@/Layout/Wrapper';
 import type { PortfolioElementEntity } from '@/types';
@@ -69,15 +67,15 @@ const InlinePortfolioComponent = ({
         }`}
       ></motion.div>
       <Wrapper>
-        <div className="overflow-hidden">
+        {/* <div className="overflow-hidden">
           <motion.div variants={caseStudySubtitleAnimation}>
             <Subtitle>Show & Tell.</Subtitle>
           </motion.div>
-        </div>
+        </div> */}
         <div className="overflow-hidden">
           <motion.div variants={caseStudyTitleAnimation}>
             <Title>
-              <span className="font-bold">CASE</span> STUDIES
+              Our latest <span className="font-bold">projects</span>
             </Title>
           </motion.div>
         </div>
