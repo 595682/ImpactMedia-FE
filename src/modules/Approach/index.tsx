@@ -3,7 +3,7 @@ import 'swiper/css/effect-cards';
 
 import { motion, useAnimation } from 'framer-motion';
 import Image from 'next/image';
-import logomark from 'public/assets/logomark.svg';
+import logomark from 'public/assets/logoMark.svg';
 import { useEffect } from 'react';
 import { useInView } from 'react-intersection-observer';
 import { EffectCards } from 'swiper';
