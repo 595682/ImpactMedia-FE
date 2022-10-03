@@ -1,4 +1,5 @@
 import { motion, useAnimation } from 'framer-motion';
+import Image from 'next/image';
 import { useEffect } from 'react';
 import { useInView } from 'react-intersection-observer';
 
@@ -13,7 +14,12 @@ import {
 import Title from '../Layout/components/Title';
 import Wrapper from '../Layout/components/Wrapper';
 
-const highlights = ['1', '2', '3', '4'];
+const highlights = [
+  { id: 0, image: 'docs.jpg', alt: 'Branded documents' },
+  { id: 1, image: 'newsletter.jpg', alt: 'Mail templates' },
+  { id: 2, image: 'chimp.jpg', alt: 'Conference invitations' },
+  { id: 3, image: 'logo.jpg', alt: 'Logo design' },
+];
 
 const EventHighlightModule = () => {
   const controls = useAnimation();
@@ -49,14 +55,21 @@ const EventHighlightModule = () => {
       <Wrapper width="narrower">
         <motion.div
           variants={StaggerWrapperAnimation}
-          className="mt-20 grid  gap-12 sm:grid-cols-2 lg:gap-14"
+          className="mt-20 grid  gap-12 overflow-hidden sm:grid-cols-2 lg:gap-14"
         >
           {highlights.map((highlight) => (
             <motion.div
               variants={StaggerItemAnimation}
-              key={highlight}
-              className="aspect-1 w-full rounded-lg bg-slate-300"
-            ></motion.div>
+              key={highlight.id}
+              className="flex aspect-1 w-full overflow-hidden rounded-lg bg-slate-300"
+            >
+              <Image
+                src={`/assets/images/highlights/${highlight.image}`}
+                width={1000}
+                height={1000}
+                alt={highlight.alt}
+              />
+            </motion.div>
           ))}
         </motion.div>
       </Wrapper>
