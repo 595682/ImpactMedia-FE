@@ -1,10 +1,8 @@
 # Boilerplate and Starter for Next JS 12+, Tailwind CSS 3 and TypeScript
 
-
 🚀 Boilerplate and Starter for Next.js, Tailwind CSS and TypeScript ⚡️ Made with developer experience first: Next.js, TypeScript, ESLint, Prettier, Husky, Lint-Staged, Jest, Testing Library, VSCode, Netlify, PostCSS, Tailwind CSS.
 
 ## Features
-
 
 Developer experience first:
 
@@ -25,14 +23,11 @@ Developer experience first:
 - 🌈 Include a FREE minimalist theme
 - 💯 Maximize lighthouse score
 
-
 Built-in feature from Next.js:
 
 - ☕ Minify HTML & CSS
 - 💨 Live reload
 - ✅ Cache busting
-
-
 
 ## Requirements
 
@@ -91,7 +86,3 @@ npm run build-prod
 ```
 
 Now, your blog is ready to be deployed. All generated files are located at `out` folder, which you can deploy with any hosting service.
-
-
-
-

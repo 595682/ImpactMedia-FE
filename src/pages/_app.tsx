@@ -6,10 +6,10 @@ import type { AppProps } from 'next/app';
 import Head from 'next/head';
 import { useState } from 'react';
 
+import ClientOnly from '@/common/components/ClientOnly';
 import { AppWrapper } from '@/lib/context/state';
 import client from '@/lib/gql/client';
 import QuotationWindowModule from '@/modules/QuotationWindow';
-import ClientOnly from '@/common/components/ClientOnly';
 
 const containerVariants = {
   fadeOut: {
@@ -86,7 +86,7 @@ const MyApp = ({ Component, pageProps, router }: AppProps) => {
           >
             <AnimatePresence initial={true}>
               <ClientOnly>
-              <QuotationWindowModule />
+                <QuotationWindowModule />
               </ClientOnly>
               <Component {...pageProps} />
             </AnimatePresence>

@@ -15,7 +15,7 @@
     "prepare": "husky install",
     "gen": "plop",
     "generate": "graphql-codegen",
-    "predev": "npm run generate --config codegen.yml",
+    "codegen": "npm run generate --config codegen.yml",
     "format": "prettier --write ."
   },
   "dependencies": {
