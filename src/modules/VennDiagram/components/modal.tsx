@@ -84,17 +84,26 @@ const ServicePopup = ({ isOpen, closePopup, content }: IServicePopup) => {
             >
               <div className="mx-auto h-full max-w-7xl px-4 lg:h-auto">
                 <div className=" flex h-auto flex-1 items-center justify-center">
-                  <div className="grid h-max gap-8 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+                  <div
+                    className={`grid h-max gap-8 sm:grid-cols-2 md:grid-cols-3 ${
+                      content.contents.length > 3
+                        ? 'lg:grid-cols-4'
+                        : 'lg:grid-cols-3'
+                    }`}
+                  >
                     {content.contents.map(
                       (cnt: IInnerContent, index: number) => (
-                        <div key={index} className="">
+                        <div
+                          key={index}
+                          className="flex h-full flex-col justify-center"
+                        >
                           {cnt.icon && (
                             <div className="flex w-max items-center justify-center rounded-lg bg-theme-secondary p-3">
                               <Image
                                 src={cnt.icon}
                                 width={28}
                                 height={28}
-                                alt={cnt.title}
+                                alt={`${content.title}. ${cnt.title}`}
                               />
                             </div>
                           )}

@@ -1,8 +1,14 @@
 export type Maybe<T> = T | null;
 export type InputMaybe<T> = Maybe<T>;
-export type Exact<T extends { [key: string]: unknown }> = { [K in keyof T]: T[K] };
-export type MakeOptional<T, K extends keyof T> = Omit<T, K> & { [SubKey in K]?: Maybe<T[SubKey]> };
-export type MakeMaybe<T, K extends keyof T> = Omit<T, K> & { [SubKey in K]: Maybe<T[SubKey]> };
+export type Exact<T extends { [key: string]: unknown }> = {
+  [K in keyof T]: T[K];
+};
+export type MakeOptional<T, K extends keyof T> = Omit<T, K> & {
+  [SubKey in K]?: Maybe<T[SubKey]>;
+};
+export type MakeMaybe<T, K extends keyof T> = Omit<T, K> & {
+  [SubKey in K]: Maybe<T[SubKey]>;
+};
 /** All built-in and custom scalars, mapped to their actual values */
 export type Scalars = {
   ID: string;
@@ -32,7 +38,16 @@ export type BlogArticle = {
   updatedAt?: Maybe<Scalars['DateTime']>;
 };
 
-export type BlogArticleContentDynamicZone = ComponentBlogComplexCallToAction | ComponentBlogGallery | ComponentBlogImage | ComponentBlogSectionSubtitle | ComponentBlogSectionTitle | ComponentBlogSimpleCallToAction | ComponentBlogTextModule | ComponentBlogVideo | Error;
+export type BlogArticleContentDynamicZone =
+  | ComponentBlogComplexCallToAction
+  | ComponentBlogGallery
+  | ComponentBlogImage
+  | ComponentBlogSectionSubtitle
+  | ComponentBlogSectionTitle
+  | ComponentBlogSimpleCallToAction
+  | ComponentBlogTextModule
+  | ComponentBlogVideo
+  | Error;
 
 export type BlogArticleEntity = {
   __typename?: 'BlogArticleEntity';
@@ -213,7 +228,6 @@ export type ComponentBlogGallery = {
   id: Scalars['ID'];
   images?: Maybe<UploadFileRelationResponseCollection>;
 };
-
 
 export type ComponentBlogGalleryImagesArgs = {
   filters?: InputMaybe<UploadFileFiltersInput>;
@@ -411,7 +425,7 @@ export enum Enum_Portfolioelement_Elementtype {
   AnimatedVideo = 'animated_video',
   HybridEvent = 'hybrid_event',
   Video = 'video',
-  VirtualEvent = 'virtual_event'
+  VirtualEvent = 'virtual_event',
 }
 
 export type Error = {
@@ -449,7 +463,29 @@ export type FloatFilterInput = {
   startsWith?: InputMaybe<Scalars['Float']>;
 };
 
-export type GenericMorph = BlogArticle | ClientFeedback | Company | ComponentBlogComplexCallToAction | ComponentBlogGallery | ComponentBlogImage | ComponentBlogSectionSubtitle | ComponentBlogSectionTitle | ComponentBlogSimpleCallToAction | ComponentBlogTextModule | ComponentBlogVideo | ComponentFeedbackFeedback | ComponentPortfolioBrief | ComponentPortfolioOutcomes | Connection | I18NLocale | PortfolioElement | TeamMember | UploadFile | UsersPermissionsPermission | UsersPermissionsRole | UsersPermissionsUser;
+export type GenericMorph =
+  | BlogArticle
+  | ClientFeedback
+  | Company
+  | ComponentBlogComplexCallToAction
+  | ComponentBlogGallery
+  | ComponentBlogImage
+  | ComponentBlogSectionSubtitle
+  | ComponentBlogSectionTitle
+  | ComponentBlogSimpleCallToAction
+  | ComponentBlogTextModule
+  | ComponentBlogVideo
+  | ComponentFeedbackFeedback
+  | ComponentPortfolioBrief
+  | ComponentPortfolioOutcomes
+  | Connection
+  | I18NLocale
+  | PortfolioElement
+  | TeamMember
+  | UploadFile
+  | UsersPermissionsPermission
+  | UsersPermissionsRole
+  | UsersPermissionsUser;
 
 export type I18NLocale = {
   __typename?: 'I18NLocale';
@@ -606,111 +642,89 @@ export type Mutation = {
   upload: UploadFileEntityResponse;
 };
 
-
 export type MutationCreateBlogArticleArgs = {
   data: BlogArticleInput;
 };
-
 
 export type MutationCreateClientFeedbackArgs = {
   data: ClientFeedbackInput;
 };
 
-
 export type MutationCreateCompanyArgs = {
   data: CompanyInput;
 };
-
 
 export type MutationCreateConnectionArgs = {
   data: ConnectionInput;
 };
 
-
 export type MutationCreatePortfolioElementArgs = {
   data: PortfolioElementInput;
 };
-
 
 export type MutationCreateTeamMemberArgs = {
   data: TeamMemberInput;
 };
 
-
 export type MutationCreateUploadFileArgs = {
   data: UploadFileInput;
 };
-
 
 export type MutationCreateUsersPermissionsRoleArgs = {
   data: UsersPermissionsRoleInput;
 };
 
-
 export type MutationCreateUsersPermissionsUserArgs = {
   data: UsersPermissionsUserInput;
 };
-
 
 export type MutationDeleteBlogArticleArgs = {
   id: Scalars['ID'];
 };
 
-
 export type MutationDeleteClientFeedbackArgs = {
   id: Scalars['ID'];
 };
-
 
 export type MutationDeleteCompanyArgs = {
   id: Scalars['ID'];
 };
 
-
 export type MutationDeleteConnectionArgs = {
   id: Scalars['ID'];
 };
-
 
 export type MutationDeletePortfolioElementArgs = {
   id: Scalars['ID'];
 };
 
-
 export type MutationDeleteTeamMemberArgs = {
   id: Scalars['ID'];
 };
-
 
 export type MutationDeleteUploadFileArgs = {
   id: Scalars['ID'];
 };
 
-
 export type MutationDeleteUsersPermissionsRoleArgs = {
   id: Scalars['ID'];
 };
-
 
 export type MutationDeleteUsersPermissionsUserArgs = {
   id: Scalars['ID'];
 };
 
-
 export type MutationEmailConfirmationArgs = {
   confirmation: Scalars['String'];
 };
-
 
 export type MutationForgotPasswordArgs = {
   email: Scalars['String'];
 };
 
-
 export type MutationLoginArgs = {
   input: UsersPermissionsLoginInput;
 };
-
 
 export type MutationMultipleUploadArgs = {
   field?: InputMaybe<Scalars['String']>;
@@ -719,16 +733,13 @@ export type MutationMultipleUploadArgs = {
   refId?: InputMaybe<Scalars['ID']>;
 };
 
-
 export type MutationRegisterArgs = {
   input: UsersPermissionsRegisterInput;
 };
 
-
 export type MutationRemoveFileArgs = {
   id: Scalars['ID'];
 };
-
 
 export type MutationResetPasswordArgs = {
   code: Scalars['String'];
@@ -736,66 +747,55 @@ export type MutationResetPasswordArgs = {
   passwordConfirmation: Scalars['String'];
 };
 
-
 export type MutationUpdateBlogArticleArgs = {
   data: BlogArticleInput;
   id: Scalars['ID'];
 };
-
 
 export type MutationUpdateClientFeedbackArgs = {
   data: ClientFeedbackInput;
   id: Scalars['ID'];
 };
 
-
 export type MutationUpdateCompanyArgs = {
   data: CompanyInput;
   id: Scalars['ID'];
 };
-
 
 export type MutationUpdateConnectionArgs = {
   data: ConnectionInput;
   id: Scalars['ID'];
 };
 
-
 export type MutationUpdateFileInfoArgs = {
   id: Scalars['ID'];
   info?: InputMaybe<FileInfoInput>;
 };
-
 
 export type MutationUpdatePortfolioElementArgs = {
   data: PortfolioElementInput;
   id: Scalars['ID'];
 };
 
-
 export type MutationUpdateTeamMemberArgs = {
   data: TeamMemberInput;
   id: Scalars['ID'];
 };
-
 
 export type MutationUpdateUploadFileArgs = {
   data: UploadFileInput;
   id: Scalars['ID'];
 };
 
-
 export type MutationUpdateUsersPermissionsRoleArgs = {
   data: UsersPermissionsRoleInput;
   id: Scalars['ID'];
 };
 
-
 export type MutationUpdateUsersPermissionsUserArgs = {
   data: UsersPermissionsUserInput;
   id: Scalars['ID'];
 };
-
 
 export type MutationUploadArgs = {
   field?: InputMaybe<Scalars['String']>;
@@ -843,13 +843,11 @@ export type PortfolioElement = {
   whatWeDid?: Maybe<ComponentPortfolioBrief>;
 };
 
-
 export type PortfolioElementGalleryArgs = {
   filters?: InputMaybe<UploadFileFiltersInput>;
   pagination?: InputMaybe<PaginationArg>;
   sort?: InputMaybe<Array<InputMaybe<Scalars['String']>>>;
 };
-
 
 export type PortfolioElementOutcomesArgs = {
   filters?: InputMaybe<ComponentPortfolioOutcomesFiltersInput>;
@@ -918,7 +916,7 @@ export type PortfolioElementInput = {
 
 export enum PublicationState {
   Live = 'LIVE',
-  Preview = 'PREVIEW'
+  Preview = 'PREVIEW',
 }
 
 export type Query = {
@@ -946,11 +944,9 @@ export type Query = {
   usersPermissionsUsers?: Maybe<UsersPermissionsUserEntityResponseCollection>;
 };
 
-
 export type QueryBlogArticleArgs = {
   id?: InputMaybe<Scalars['ID']>;
 };
-
 
 export type QueryBlogArticlesArgs = {
   filters?: InputMaybe<BlogArticleFiltersInput>;
@@ -959,11 +955,9 @@ export type QueryBlogArticlesArgs = {
   sort?: InputMaybe<Array<InputMaybe<Scalars['String']>>>;
 };
 
-
 export type QueryClientFeedbackArgs = {
   id?: InputMaybe<Scalars['ID']>;
 };
-
 
 export type QueryClientFeedbacksArgs = {
   filters?: InputMaybe<ClientFeedbackFiltersInput>;
@@ -972,7 +966,6 @@ export type QueryClientFeedbacksArgs = {
   sort?: InputMaybe<Array<InputMaybe<Scalars['String']>>>;
 };
 
-
 export type QueryCompaniesArgs = {
   filters?: InputMaybe<CompanyFiltersInput>;
   pagination?: InputMaybe<PaginationArg>;
@@ -980,16 +973,13 @@ export type QueryCompaniesArgs = {
   sort?: InputMaybe<Array<InputMaybe<Scalars['String']>>>;
 };
 
-
 export type QueryCompanyArgs = {
   id?: InputMaybe<Scalars['ID']>;
 };
 
-
 export type QueryConnectionArgs = {
   id?: InputMaybe<Scalars['ID']>;
 };
-
 
 export type QueryConnectionsArgs = {
   filters?: InputMaybe<ConnectionFiltersInput>;
@@ -997,11 +987,9 @@ export type QueryConnectionsArgs = {
   sort?: InputMaybe<Array<InputMaybe<Scalars['String']>>>;
 };
 
-
 export type QueryI18NLocaleArgs = {
   id?: InputMaybe<Scalars['ID']>;
 };
-
 
 export type QueryI18NLocalesArgs = {
   filters?: InputMaybe<I18NLocaleFiltersInput>;
@@ -1009,11 +997,9 @@ export type QueryI18NLocalesArgs = {
   sort?: InputMaybe<Array<InputMaybe<Scalars['String']>>>;
 };
 
-
 export type QueryPortfolioElementArgs = {
   id?: InputMaybe<Scalars['ID']>;
 };
-
 
 export type QueryPortfolioElementsArgs = {
   filters?: InputMaybe<PortfolioElementFiltersInput>;
@@ -1022,11 +1008,9 @@ export type QueryPortfolioElementsArgs = {
   sort?: InputMaybe<Array<InputMaybe<Scalars['String']>>>;
 };
 
-
 export type QueryTeamMemberArgs = {
   id?: InputMaybe<Scalars['ID']>;
 };
-
 
 export type QueryTeamMembersArgs = {
   filters?: InputMaybe<TeamMemberFiltersInput>;
@@ -1035,11 +1019,9 @@ export type QueryTeamMembersArgs = {
   sort?: InputMaybe<Array<InputMaybe<Scalars['String']>>>;
 };
 
-
 export type QueryUploadFileArgs = {
   id?: InputMaybe<Scalars['ID']>;
 };
-
 
 export type QueryUploadFilesArgs = {
   filters?: InputMaybe<UploadFileFiltersInput>;
@@ -1047,11 +1029,9 @@ export type QueryUploadFilesArgs = {
   sort?: InputMaybe<Array<InputMaybe<Scalars['String']>>>;
 };
 
-
 export type QueryUsersPermissionsRoleArgs = {
   id?: InputMaybe<Scalars['ID']>;
 };
-
 
 export type QueryUsersPermissionsRolesArgs = {
   filters?: InputMaybe<UsersPermissionsRoleFiltersInput>;
@@ -1059,11 +1039,9 @@ export type QueryUsersPermissionsRolesArgs = {
   sort?: InputMaybe<Array<InputMaybe<Scalars['String']>>>;
 };
 
-
 export type QueryUsersPermissionsUserArgs = {
   id?: InputMaybe<Scalars['ID']>;
 };
-
 
 export type QueryUsersPermissionsUsersArgs = {
   filters?: InputMaybe<UsersPermissionsUserFiltersInput>;
@@ -1323,13 +1301,11 @@ export type UsersPermissionsRole = {
   users?: Maybe<UsersPermissionsUserRelationResponseCollection>;
 };
 
-
 export type UsersPermissionsRolePermissionsArgs = {
   filters?: InputMaybe<UsersPermissionsPermissionFiltersInput>;
   pagination?: InputMaybe<PaginationArg>;
   sort?: InputMaybe<Array<InputMaybe<Scalars['String']>>>;
 };
-
 
 export type UsersPermissionsRoleUsersArgs = {
   filters?: InputMaybe<UsersPermissionsUserFiltersInput>;

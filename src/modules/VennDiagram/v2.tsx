@@ -141,10 +141,12 @@ const VennV2 = ({ makeItPop }: IVennProps) => {
               <Button
                 color="secondary"
                 title={services[2]?.options[0]?.label!}
+                onClick={() => makeItPop(services[2]?.options[0]?.popup!)}
               />
               <Button
                 color="secondary"
                 title={services[2]?.options[1]?.label!}
+                onClick={() => makeItPop(services[2]?.options[1]?.popup!)}
               />
             </div>
           </motion.div>

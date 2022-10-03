@@ -1,4 +1,5 @@
 import type { GetStaticProps } from 'next';
+import type { ReactNode } from 'react';
 import React, { useState } from 'react';
 
 import client from '@/lib/gql/client';
@@ -25,12 +26,12 @@ interface IEventCommunicationPage {
 }
 
 interface IText {
-  value: string;
+  value: string | ReactNode;
   decorator?: any;
 }
 
 export interface IInnerContent {
-  title: string;
+  title: string | ReactNode;
   text: IText[];
   icon: any;
 }
