@@ -55,21 +55,19 @@ const Videocomparetable = ({ compareTableRows }: IVideocomparetable) => {
       <Wrapper>
         <div className="overflow-hidden">
           <motion.div variants={TitleAnimation}>
-            <Subtitle>Why do our videos work?</Subtitle>
+            <Subtitle>What sets us apart?</Subtitle>
           </motion.div>
         </div>
         <div className="overflow-hidden">
           <motion.div variants={TitleAnimation}>
-            <div className="max-w-[40ch] sm:max-w-[60ch] lg:max-w-none">
+            <div className="max-w-[40ch] sm:max-w-[70ch] lg:max-w-none">
               <Title size="xl3">
-                <span className="font-bold">
-                  WELL PRODUCED VIDEOS WITH A PURPOSE
-                </span>
+                <span className="font-bold">THE IMPACT MEDIA X FACTOR</span>
               </Title>
             </div>
           </motion.div>
         </div>
-        <motion.div className="mt-20 lg:px-12">
+        <motion.div className="mt-20">
           <motion.div
             className=" w-full divide-y-[1px] rounded-xl bg-white py-4 px-10 text-theme-primary"
             variants={tableWrapperVariants}

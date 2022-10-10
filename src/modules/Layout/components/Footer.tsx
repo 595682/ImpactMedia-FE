@@ -21,18 +21,18 @@ const Footer = ({
           <div className="absolute bottom-0 -z-10 h-1/2 w-full bg-theme-primary "></div>
           <Wrapper>
             <Parallax offset={90}>
-              <div className="sm:px-16 lg:px-6">
+              <div className="sm:px-6 lg:px-6">
                 <div className="grid min-h-[500px] w-full grid-cols-2 overflow-hidden rounded-lg bg-[#E8E8EB] shadow-lg">
                   <div className="col-span-2 p-10 sm:p-8 sm:py-16 lg:col-span-1 lg:p-10 lg:py-10">
                     <ContactForm
                       title={
                         <>
-                          <span className="font-bold">Contact</span> us!
+                          GET IN<span className="font-bold"> TOUCH</span>
                         </>
                       }
                     />
                   </div>
-                  <div className="col-span-2 hidden min-h-[300px] lg:col-span-1 lg:block">
+                  <div className="col-span-2  hidden min-h-[300px] lg:col-span-1 lg:block">
                     <iframe
                       src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d641997.2746628037!2d4.069472957196646!3d51.05674639968752!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c3c461e2ed6b85%3A0x321cc0dc126af91c!2sImpact%20Media!5e0!3m2!1sen!2sbe!4v1658474471499!5m2!1sen!2sbe"
                       width="100%"
@@ -49,11 +49,11 @@ const Footer = ({
           </Wrapper>
         </>
       )}
-      <footer className="mt-10 bg-theme-primary pb-6 text-white lg:mt-6">
+      <footer className="mt-10 bg-theme-primary pb-6 text-white ">
         <Wrapper>
           <div className="grid grid-cols-3">
             <div className="flex items-center">
-              <div className="min-w-[100px] grow">
+              <div className="min-w-[100px] ">
                 <Image
                   src={logo_white}
                   alt="Impact media logo"
@@ -61,20 +61,22 @@ const Footer = ({
                   height={100}
                 />
               </div>
-              <p className="ml-6 hidden shrink text-sm lg:block">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Suscipit necessitatibus nostrum.
+              <p className="ml-6 hidden grow text-sm lg:block">
+                <span className="block">Impact Media Europe SRL</span>
+                <span className="block">Rue du Monastère 10-12</span>
+                <span className="block">1000 Brussels, Belgium</span>
+                {/*  <span className="block">VAT: BE0737.709.843.</span> */}
               </p>
             </div>
             <div className="hidden items-center  justify-center sm:flex">
               <div className="flex w-max flex-col items-start justify-start">
                 <div className="inline-flex  items-center justify-start">
                   <PhoneIcon className="mr-2 h-8 w-8 text-theme-secondary" />
-                  <p className="text-sm text-white">+12 34 5678</p>
+                  <p className="text-sm text-white">(+32) 492 40 86 71</p>
                 </div>
                 <div className="inline-flex  items-center justify-start">
                   <AtSymbolIcon className="mr-2 h-8 w-8 text-theme-secondary" />
-                  <p className="text-sm text-white">contact@impactmedia.com</p>
+                  <p className="text-sm text-white">office@impact-media.be</p>
                 </div>
               </div>
             </div>
@@ -140,6 +142,9 @@ const Footer = ({
             </div>
           </div>
         </Wrapper>
+        <div className="mt-8 w-full text-center text-sm">
+          © 2022 - Impact Media Europe. All Rights Reserved.
+        </div>
       </footer>
     </div>
   );

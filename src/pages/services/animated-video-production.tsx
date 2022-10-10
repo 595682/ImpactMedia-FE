@@ -18,24 +18,27 @@ import Summary from '@/modules/MainServices/components/Summary';
 import Videocomparetable from '@/modules/MainServices/components/Videocomparetable';
 import ServicesModule from '@/modules/Services';
 import type { ClientFeedbackEntityResponseCollection } from '@/types';
+import yearsCounter from '@/utils/yearsCounter';
 
 const facts = [
   {
     id: 0,
     title: 'FACT 1',
-    description: 'Where we get to know your and find solutions',
+    description:
+      'We get to know your goals, needs, and message inside and out before starting production.',
     image: fact_1,
   },
   {
     id: 1,
     title: 'FACT 2',
-    description: 'Where we get to know your and find solutions',
+    description:
+      'We make sure that our animated video concept is aligned to your vision, mission, and values.',
     image: fact_2,
   },
   {
     id: 2,
     title: 'FACT 3',
-    description: 'Where we get to know your and find solutions',
+    description: 'We speak right to the heart of your target audience.',
     image: fact_3,
   },
 ];
@@ -45,15 +48,15 @@ const compareTableRows = [
     id: 0,
     title: 'Story',
     good: {
-      title: 'Good Example',
+      title: 'Tailored to your goals',
       content:
-        'Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore, veniam.',
+        'We dive deep into your needs, desires, and goals, to ensure that your message is conveyed in the most effective and compelling way.',
       isOk: true,
     },
     bad: {
-      title: 'Bad Example',
+      title: 'One-size-fits-all approach',
       content:
-        'Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore, veniam.',
+        'Most audio-visual agencies offer a one-size-fits-all solution that packages your story into a predetermined, unoriginal structure.',
       isOk: false,
     },
   },
@@ -61,15 +64,15 @@ const compareTableRows = [
     id: 1,
     title: 'Style',
     good: {
-      title: 'Good Example',
+      title: 'Storytelling-driven',
       content:
-        'Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore, veniam.',
+        'Our style is creative, unique, and one-of-a-kind - the kind that gets audiences engaged,excited, inspired, and ready to take action.',
       isOk: true,
     },
     bad: {
-      title: 'Bad Example',
+      title: 'Information-driven',
       content:
-        'Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore, veniam.',
+        'When tasked to convey an important message, most agencies adopt a boring, common, and one-dimensional style.',
       isOk: false,
     },
   },
@@ -77,15 +80,14 @@ const compareTableRows = [
     id: 2,
     title: 'Strategy',
     good: {
-      title: 'Good Example',
-      content:
-        'Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore, veniam.',
+      title: 'Proven',
+      content: `With our team’s ${yearsCounter} years of extensive video production experience, we can create the most effective strategy to tell your story.`,
       isOk: true,
     },
     bad: {
-      title: 'Bad Example',
+      title: 'Experimental',
       content:
-        'Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore, veniam.',
+        'Most agencies fumble their way through a strategy, as their lack of expertise makes it difficult for them to know what works and what doesn’t.',
       isOk: false,
     },
   },
@@ -131,6 +133,8 @@ interface IAnimVideoProductionProps {
   clientFeedbacks: ClientFeedbackEntityResponseCollection;
 }
 
+/* TODO: VIDEOURL */
+
 const AnimVideoProduction = ({
   clientFeedbacks,
 }: IAnimVideoProductionProps) => {
@@ -139,7 +143,8 @@ const AnimVideoProduction = ({
       <StatelessHero
         serviceId={3}
         light
-        video="/hero_anim.mp4"
+        video="https://backend.impact-media.eu/uploads/hero_anim_5ad1ef5684.mp4"
+        /* video="/hero_anim.mp4" */
         poster="/poster.jpg"
         title={
           <>
@@ -152,21 +157,22 @@ const AnimVideoProduction = ({
               </Title>
             </Title>
             <p className="mt-3 max-w-xs text-left sm:mt-5 lg:max-w-lg  lg:text-xl xl:font-black">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore
-              illo blanditiis unde quis beatae maxime architecto dicta veniam
-              magni aut!
+              Step into a world of visual storytelling through animation. With a
+              wide variety of 2D and 3D motion graphics, characters, designs,
+              and typography, we’ll convey your most important messages in an
+              engaging and creative way.
             </p>
           </>
         }
       />
       <SpreadMessage
         subtitle="Just one video away"
-        title="TO SECURE MORE CUSTOMERS"
+        title="From telling your story"
       />
       <Facts
         facts={facts}
-        title="How our animated videos will help you get more clients."
-        subtitle="You know why clients ..."
+        title="HOW WE DELIVER IMPACTFUL ANIMATED VIDEOS EVERY SINGLE TIME"
+        subtitle="And why our clients keep coming back to us for more."
       />
       <Videocomparetable compareTableRows={compareTableRows} />
       <ClientFeedback people={clientFeedbacks?.data || []} />

@@ -8,9 +8,11 @@ import {
   ExpandBgAnimation,
   StaggerItemAnimation,
   StaggerWrapperAnimation,
+  SubtitleAnimation,
   TitleAnimation,
 } from '@/common/animations/sharedAnimations';
 
+import Subtitle from '../Layout/components/Subtitle';
 import Title from '../Layout/components/Title';
 import Wrapper from '../Layout/components/Wrapper';
 
@@ -44,6 +46,15 @@ const EventHighlightModule = () => {
         className="absolute inset-0 -z-10 bg-theme-primary"
       ></motion.div>
       <Wrapper>
+        <div className="overflow-hidden">
+          <motion.div variants={SubtitleAnimation}>
+            <Subtitle>
+              <span className="text-white">
+                Our latest branding and identity materials
+              </span>
+            </Subtitle>
+          </motion.div>
+        </div>
         <div className="overflow-hidden">
           <motion.div variants={TitleAnimation}>
             <Title>

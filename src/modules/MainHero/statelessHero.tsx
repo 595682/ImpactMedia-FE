@@ -91,7 +91,7 @@ const StatelessHero = ({
               <motion.div className="mt-6" variants={mainHeroButtonVariants}>
                 <Button
                   color="secondary"
-                  title="GET A QUOTATION"
+                  title="GET IN TOUCH"
                   onClick={() => actions.openQuote(serviceId)}
                 />
               </motion.div>

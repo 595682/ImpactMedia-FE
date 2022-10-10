@@ -14,14 +14,15 @@ const ErrorPage = () => {
       <Wrapper>
         <div className="grid pt-12 md:grid-cols-2 md:pt-40">
           <div className="flex flex-col items-center justify-center">
-            <span className="text-6xl font-bold">Whoops!</span>
+            <span className="text-6xl font-bold">OOPS!</span>
+            <span className="text-3xl font-bold">PAGE NOT FOUND</span>
 
             <span className="max-w-[20ch] text-center text-2xl">
-              It looks like the page you are trying to access does not exist!
+              Looks like it could use a story to bring it to life!
             </span>
             <Space amount="sm" />
             <CustomLink href="/">
-              <Button color="secondary" title="Back to home" />
+              <Button color="secondary" title="GO BACK" />
             </CustomLink>
           </div>
           <div className="flex aspect-1 flex-col">

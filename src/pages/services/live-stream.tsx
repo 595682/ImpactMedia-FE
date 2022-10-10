@@ -26,6 +26,8 @@ interface ILiveStramPage {
   portfolioElements: PortfolioElementEntityResponseCollection;
 }
 
+/* TODO: VIDEOURL */
+
 const LiveStramPage = ({
   companies,
   clientFeedbacks,
@@ -36,22 +38,24 @@ const LiveStramPage = ({
       <StatelessHero
         serviceId={10}
         light
-        video="/hero.mp4"
+        video="https://backend.impact-media.eu/uploads/hero_e7b02f78ea.mp4"
+        /* video="/hero.mp4" */
         poster="/poster.jpg"
         title={
           <>
             <Title>
               <Title size="xl4">
                 <span className="whitespace-pre-wrap font-extrabold leading-none tracking-tight lg:text-[8rem]">
-                  <span className="block">LIVESTREAMS</span>
-                  <span className="block font-bold">WEBINARS</span>
+                  <span className="block">LIVE STREAMS </span>
+                  <span className="block font-bold">& WEBINARS</span>
                 </span>
               </Title>
             </Title>
             <p className="mt-3 max-w-xs text-left sm:mt-5 lg:max-w-lg  lg:text-xl xl:font-black">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore
-              illo blanditiis unde quis beatae maxime architecto dicta veniam
-              magni aut!
+              Connect with audiences across the world, in real time and in high
+              definition. Tap on our live streaming expertise that covers all
+              bases, from high-end camera and streaming gear to back-up Internet
+              connection and well-trained on-site staff.
             </p>
           </>
         }
@@ -62,9 +66,9 @@ const LiveStramPage = ({
         topColor="bg-white"
         content={
           <h2 className="text-4xl leading-tight">
-            <span className="block">We are here to make</span>
+            <span className="block">Have an upcoming event?</span>
             <span className="block">
-              your event a{' '}
+              We’ll make it a{' '}
               <span className="font-bold text-theme-secondary">SUCCESS!</span>
             </span>
           </h2>

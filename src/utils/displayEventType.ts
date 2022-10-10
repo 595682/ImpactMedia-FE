@@ -2,8 +2,8 @@ const displayEventType = (
   typeString?:
     | 'video'
     | 'animated_video'
-    | 'hybrid_event'
-    | 'virtual_event'
+    | 'event'
+    | 'live_stream'
     | string
     | null
 ) => {
@@ -12,10 +12,10 @@ const displayEventType = (
       return 'Video';
     case 'animated_video':
       return 'Animated video';
-    case 'hybrid_event':
-      return 'Hybrid event';
-    case 'virtual_event':
-      return 'Virtual event';
+    case 'live_stream':
+      return 'Live Stream';
+    case 'event':
+      return 'Event';
     default:
       return null;
   }

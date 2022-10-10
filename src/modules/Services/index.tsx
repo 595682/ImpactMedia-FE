@@ -12,6 +12,8 @@ import {
 import Wrapper from '../Layout/components/Wrapper';
 import ServiceCard from './components/Service';
 
+/* TODO: ADD VIDEO COVERS */
+
 interface IServicesModule {
   animated?: boolean;
   video?: boolean;
@@ -26,13 +28,6 @@ const ServicesModule = ({
 }: IServicesModule) => {
   let services = [
     {
-      title1: 'ANIMATED',
-      title2: 'VIDEO',
-      visible: animated,
-      dark: false,
-      url: '/services/animated-video-production',
-    },
-    {
       title1: 'VIDEO',
       title2: 'PRODUCTION',
       visible: video,
@@ -40,15 +35,22 @@ const ServicesModule = ({
       url: '/services/video-production',
     },
     {
+      title1: 'ANIMATED',
+      title2: 'VIDEO PRODUCTION',
+      visible: animated,
+      dark: false,
+      url: '/services/animated-video-production',
+    },
+    {
       title1: 'LIVE STREAMS',
-      title2: 'WEBINARS',
+      title2: '& WEBINARS',
       visible: streams,
       dark: false,
       url: '/services/live-stream',
     },
     {
-      title1: 'EVENT COMMUNICATION',
-      title2: 'PUBLIC RELATION 2.0',
+      title1: 'EVENTS &',
+      title2: 'PUBLIC RELATIONS',
       visible: event,
       dark: false,
       url: '/services/event-communication',

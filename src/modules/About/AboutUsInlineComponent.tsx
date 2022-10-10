@@ -41,10 +41,11 @@ const AboutUsInlineCoponent = () => {
               <span className="font-bold text-white">ABOUT US</span>
             </Title>
             <p className="text-center text-white">
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quis
-              dolorem hic necessitatibus. Cum sint nostrum amet at impedit
-              cumque, voluptatum minima eligendi beatae, nulla laborum ipsum
-              enim repudiandae.
+              Impact Media was borne out of a desire to tell stories in a way
+              that inspires people, puts a smile on their faces, and moves them
+              to take action. As long as you have a desire to connect with a
+              large audience in real time, with the most high-definition live
+              streaming quality, we can help you.
             </p>
             <CustomLink href="/about">
               <Button color="secondary" title="LEARN MORE" />

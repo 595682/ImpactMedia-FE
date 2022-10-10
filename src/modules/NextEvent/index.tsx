@@ -5,6 +5,7 @@ import { useInView } from 'react-intersection-observer';
 
 import {
   defaultWrapperAnimation,
+  StaggerItemAnimation,
   StaggerWrapperAnimation,
   SubtitleAnimation,
   TitleAnimation,
@@ -42,7 +43,10 @@ const NextEventModule = () => {
         <div className="overflow-hidden" key="col0">
           <motion.div variants={TitleAnimation}>
             <Title size="xl4">
-              <span className="font-bold">FEEL FREE TO </span>PICK & CHOOSE
+              <span className="uppercase">
+                Catered to your
+                <span className="font-bold"> every need</span>
+              </span>
             </Title>
           </motion.div>
         </div>
@@ -51,11 +55,17 @@ const NextEventModule = () => {
           className="mt-10 grid gap-10 sm:grid-cols-2 lg:grid-cols-4"
         >
           {elements.map((element, index) => (
-            <NextEventCard
-              title={element.title}
+            <motion.div
+              variants={StaggerItemAnimation}
               key={index}
-              image={element.image}
-            />
+              className="flex cursor-pointer flex-col items-center justify-center rounded-lg bg-white p-6 shadow-lg transition-all duration-300 hover:shadow-2xl"
+            >
+              <NextEventCard
+                title={element.title}
+                key={index}
+                image={element.image}
+              />
+            </motion.div>
           ))}
         </motion.div>
       </Wrapper>

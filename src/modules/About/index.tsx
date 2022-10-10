@@ -46,9 +46,9 @@ const AboutModule = () => {
           </div>
           <motion.div variants={quoteRootAnimation}>
             <Quote
-              content="What Separates good content from great content is a willingness to take
-        risks and push the envelope."
-              author="Brian Halligan"
+              content="We are, as a species, addicted to story. Even when the body goes to sleep, the mind 
+              stays up all night, telling itself stories."
+              author="Jonathan Gottschall"
             />
           </motion.div>
         </div>
@@ -66,26 +66,16 @@ const AboutModule = () => {
             >
               <motion.div variants={StaggerItemAnimation}>
                 <AboutCard
-                  title="Our Company"
-                  content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer vitae
-        ante urna. Praesent ut auctor dolor, nec placerat justo. Interdum et
-        malesuada fames ac ante ipsum primis in faucibus. Interdum et malesuada
-        fames ac ante ipsum primis in faucibus. Morbi quis felis luctus, ornare
-        purus non, gravida dolor. Vivamus in sapien non nibh blandit tempor at
-        at erat. Suspendisse euismod aliquam tortor, et suscipit urna lobortis
-        quis."
+                  title="WHO WE ARE"
+                  content="Impact Media was borne out of a desire to tell stories in a way that inspires people, puts a smile 
+                  on their faces, and moves them to take action."
                 />
               </motion.div>
               <motion.div variants={StaggerItemAnimation}>
                 <AboutCard
-                  title="What we do?"
-                  content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer vitae
-        ante urna. Praesent ut auctor dolor, nec placerat justo. Interdum et
-        malesuada fames ac ante ipsum primis in faucibus. Interdum et malesuada
-        fames ac ante ipsum primis in faucibus. Morbi quis felis luctus, ornare
-        purus non, gravida dolor. Vivamus in sapien non nibh blandit tempor at
-        at erat. Suspendisse euismod aliquam tortor, et suscipit urna lobortis
-        quis."
+                  title="WHAT WE DO"
+                  content="Whether you’re looking for a one-off project like a conference, or a longer-term project like an 
+                  awareness campaign, we’ve got you covered."
                 />
               </motion.div>
             </motion.div>

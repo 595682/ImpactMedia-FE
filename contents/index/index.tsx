@@ -6,6 +6,8 @@ import goal_map_2 from 'public/assets/home/goal_map_2.svg';
 import goal_map_3 from 'public/assets/home/goal_map_3.svg';
 import goal_map_4 from 'public/assets/home/goal_map_4.svg';
 
+import yearsCounter from '@/utils/yearsCounter';
+
 const approach = [
   {
     id: 0,
@@ -17,8 +19,7 @@ const approach = [
   {
     id: 1,
     title: 'HIGH QUALITY OUTPUTS',
-    description:
-      'Place your goals in the hands of a network of experts with over X years of experience across audio, visual, and communications.',
+    description: `Place your goals in the hands of a network of experts with over ${yearsCounter} years of experience across audio, visual, and communications.`,
     image: approach_2,
   },
   {
@@ -89,33 +90,39 @@ const ctaContent = (
   </>
 );
 
+/* TODO: VIDEOURL */
+
 const heroOptions = [
   {
     id: 0,
     title: 'Videos',
     url: '/services/video-production',
-    video: '/dev_video.webm',
+    /* video: '/dev_video.webm', */
+    video: 'https://backend.impact-media.eu/uploads/hero_video_1f8341efa5.mp4',
     poster: '/poster.jpg',
   },
   {
     id: 1,
     title: 'Animated Videos',
     url: '/services/animated-video-production',
-    video: '/dev_anim.mp4',
+    /* video: '/dev_anim.mp4', */
+    video: 'https://backend.impact-media.eu/uploads/hero_anim_5ad1ef5684.mp4',
     poster: '/poster.jpg',
   },
   {
     id: 2,
     title: 'Events',
     url: '/services/event-communication',
-    video: '/hero_event.mp4',
+    video: 'https://backend.impact-media.eu/uploads/hero_event_efc44fec3b.mp4',
+    /* video: '/hero_event.mp4', */
     poster: '/poster.jpg',
   },
   {
     id: 3,
     title: 'Live Streams',
     url: '/services/live-stream',
-    video: '/hero.mp4',
+    /* video: '/hero.mp4', */
+    video: 'https://backend.impact-media.eu/uploads/hero_e7b02f78ea.mp4',
     poster: '/poster.jpg',
   },
 ];

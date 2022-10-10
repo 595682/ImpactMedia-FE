@@ -44,7 +44,7 @@ const OurteamModule = ({ people = [], color = 'light' }: IOurteamModule) => {
 
   return (
     <motion.div
-      className={`relative py-40 text-white ${colors[color].text}`}
+      className={`relative py-20 text-white ${colors[color].text}`}
       ref={ref}
       initial="hidden"
       variants={defaultWrapperAnimation}
@@ -58,7 +58,7 @@ const OurteamModule = ({ people = [], color = 'light' }: IOurteamModule) => {
           <motion.div variants={SubtitleAnimation}>
             <Subtitle>
               <span className={`${colors[color].text}`}>
-                The people who make the magic happen.
+                The people behind the magic
               </span>
             </Subtitle>
           </motion.div>

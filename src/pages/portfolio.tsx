@@ -12,8 +12,8 @@ import type { PortfolioElementEntityResponseCollection } from '@/types';
 export type TCategory =
   | 'video'
   | 'animated_video'
-  | 'hybrid_event'
-  | 'virtual_event'
+  | 'live_stream'
+  | 'event'
   | '';
 
 interface IPortfolioPageProps {

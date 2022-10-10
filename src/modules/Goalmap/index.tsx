@@ -14,6 +14,7 @@ import {
   SubtitleAnimation,
   TitleAnimation,
 } from '@/common/animations/sharedAnimations';
+import yearsCounter from '@/utils/yearsCounter';
 
 import Space from '../Layout/components/Space';
 import Subtitle from '../Layout/components/Subtitle';
@@ -68,8 +69,8 @@ const GoalmapModule = ({ goals }: IGoalmapModulev2) => {
             <motion.div variants={TitleAnimation}>
               <Subtitle>
                 <p className="text-center text-lg lg:text-xl">
-                  Tap on the expertise of a team with X years of experience and
-                  X video content produced.
+                  {`Tap on the expertise of a team with ${yearsCounter} years of experience and
+                  X video content produced.`}
                 </p>
               </Subtitle>
             </motion.div>

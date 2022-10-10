@@ -8,7 +8,6 @@ import {
   StaggerItemAnimation,
   StaggerWrapperAnimation,
   SubtitleAnimation,
-  TitleAnimation,
 } from '@/common/animations/sharedAnimations';
 import Swiper from '@/common/components/Swiper';
 import Wrapper from '@/Layout/Wrapper';
@@ -53,14 +52,17 @@ const ClientFeedback = ({ people = [], style = 'light' }: IClientFeedback) => {
       <Wrapper>
         <div className="overflow-hidden">
           <motion.div variants={SubtitleAnimation}>
-            <Subtitle>What clients</Subtitle>
+            <Title>
+              <span className="font-bold">Trusted </span> by
+            </Title>
           </motion.div>
         </div>
         <div className="overflow-hidden">
-          <motion.div variants={TitleAnimation}>
-            <Title size="xl3">
-              <span className="font-bold">SAY ABOUT OUR VIDEOS</span>
-            </Title>
+          <motion.div variants={SubtitleAnimation}>
+            <Subtitle>
+              NGOs, political institutions, industry leaders, and communications
+              managers
+            </Subtitle>
           </motion.div>
         </div>
         <Space amount="sm" />

@@ -138,7 +138,7 @@ const ServicePopup = ({ isOpen, closePopup, content }: IServicePopup) => {
                   <div>
                     <Button
                       color="secondary"
-                      title="GET A QUOTATION"
+                      title="GET A FREE QUOTE"
                       onClick={handleRequestQuotation}
                     />
                   </div>

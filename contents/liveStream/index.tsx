@@ -9,7 +9,7 @@ import event_venue from 'public/assets/services/event_venue.svg';
 
 const elements = [
   {
-    title: 'FULL SERVICE CONFERENCE',
+    title: 'FULL-SERVICE CONFERENCE',
     image: full_service,
   },
   {
@@ -17,11 +17,11 @@ const elements = [
     image: event_hybrid,
   },
   {
-    title: 'LIVE STREAMING',
+    title: 'LIVE STREAMING AND REPLAY',
     image: event_stream,
   },
   {
-    title: 'EVENT PR',
+    title: 'EVENT PUBLIC RELATIONS',
     image: event_pr,
   },
   {
@@ -29,11 +29,11 @@ const elements = [
     image: event_content,
   },
   {
-    title: 'MODERATORS',
+    title: 'MODERATION AND HOSTING',
     image: event_mod,
   },
   {
-    title: 'VENUE ORGANIZATION',
+    title: 'VENUE ORGANISATION',
     image: event_venue,
   },
   {

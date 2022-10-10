@@ -48,7 +48,7 @@ const StaggerWrapperAnimation = {
   hidden: {},
   visible: {
     transition: {
-      delayChildren: 0.8,
+      delayChildren: 0.6,
       staggerChildren: 0.1,
       when: 'beforeChildren',
     },

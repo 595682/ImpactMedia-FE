@@ -89,7 +89,7 @@ const services: IService[] = [
                   ),
                 },
                 {
-                  value: 'Regular Reporting to Client',
+                  value: 'Regular Reporting',
                   decorator: (
                     <PlusIcon className="h-4 w-4 text-theme-primary" />
                   ),
@@ -98,7 +98,7 @@ const services: IService[] = [
               icon: launch,
             },
             {
-              title: 'AFTERMATH',
+              title: 'REVIEW PHASE',
               text: [
                 {
                   value: 'Evaluation and Analysis Report',
@@ -107,7 +107,7 @@ const services: IService[] = [
                   ),
                 },
                 {
-                  value: 'Debriefing with Client',
+                  value: 'Debriefing',
                   decorator: (
                     <PlusIcon className="h-4 w-4 text-theme-primary" />
                   ),
@@ -166,7 +166,7 @@ const services: IService[] = [
                   ),
                 },
                 {
-                  value: 'Regular Reporting to Client',
+                  value: 'Regular Reporting',
                   decorator: (
                     <PlusIcon className="h-4 w-4 text-theme-primary" />
                   ),
@@ -175,7 +175,7 @@ const services: IService[] = [
               icon: launch,
             },
             {
-              title: 'AFTERMATH',
+              title: 'REVIEW PHASE',
               text: [
                 {
                   value: 'Evaluation and Analysis Report',
@@ -184,7 +184,7 @@ const services: IService[] = [
                   ),
                 },
                 {
-                  value: 'Debriefing with Client',
+                  value: 'Debriefing',
                   decorator: (
                     <PlusIcon className="h-4 w-4 text-theme-primary" />
                   ),
@@ -212,13 +212,13 @@ const services: IService[] = [
               title: 'EVENT BANNER',
               text: [
                 {
-                  value: 'Matching corporate identity',
+                  value: 'Matches your organisation’s visual identity ',
                 },
                 {
-                  value: 'Fitting up to 5 sizes',
+                  value: '1 style suggestion, fits up to 5 sizes',
                 },
                 {
-                  value: 'Revisions included',
+                  value: 'X Revisions',
                 },
               ],
               icon: flag,
@@ -242,13 +242,13 @@ const services: IService[] = [
               title: '2 SOCIAL MEDIA EVENT VISUALS',
               text: [
                 {
-                  value: 'Based on event‘s visual identity',
+                  value: 'Matches your event’s visual identity',
                 },
                 {
                   value: 'Photos, banners, GIFs, short videos (max. 30 sec)',
                 },
                 {
-                  value: '2 rounds of revision',
+                  value: '2 revisions',
                 },
               ],
               icon: visuals,
@@ -260,7 +260,7 @@ const services: IService[] = [
                   value: 'Up to 450 words',
                 },
                 {
-                  value: 'Based on your call-to-action',
+                  value: 'Highly focused on your call-to-action',
                 },
                 {
                   value: 'Unlimited copy revisions',
@@ -272,13 +272,13 @@ const services: IService[] = [
               title: 'EVENT INVITATION',
               text: [
                 {
-                  value: 'Matching corporate identity',
+                  value: 'Matches your organisation’s visual identity',
                 },
                 {
-                  value: 'Fitting up to 5 sizes',
+                  value: 'Fits up to 5 sizes',
                 },
                 {
-                  value: 'Revisions included',
+                  value: 'X revisions',
                 },
               ],
               icon: invite,
@@ -299,22 +299,22 @@ const services: IService[] = [
               icon: post,
             },
             {
-              title: 'POST-EVENT MAILING TO ATTENDEES',
+              title: 'POST-EVENT FOLLOW-UP MAIL TO ATTENDEES',
               text: [
                 {
-                  value: 'Based on event‘s visual identity',
+                  value: 'Up to X words',
                 },
                 {
-                  value: 'Photos, banners, GIFs, short videos (max. 30 sec)',
+                  value: 'Tailored to your target audience',
                 },
                 {
-                  value: '2 rounds of revisions',
+                  value: '2 revisions',
                 },
               ],
               icon: attendee,
             },
             {
-              title: 'POST-EVENT MAILING TO SPEAKERS',
+              title: 'POST-EVENT FOLLOW-UP MAIL TO SPEAKERS',
               text: [
                 {
                   value: 'Up to 300 words',
@@ -323,7 +323,7 @@ const services: IService[] = [
                   value: 'Tailored to your target audience',
                 },
                 {
-                  value: 'Unlimited copy revisions',
+                  value: '2 revisions',
                 },
               ],
               icon: speaker,
@@ -339,155 +339,124 @@ const services: IService[] = [
           subtitle: 'Event Communications',
           contents: [
             {
-              title: 'EVENT INVITATION',
-              text: [
-                {
-                  value: 'Visual style by your choice',
-                },
-                {
-                  value: 'Unlimited copy revisions',
-                },
-                {
-                  value: 'Integration in your e-mail server, including design',
-                  decorator: (
-                    <PlusIcon className="h-4 w-4 text-theme-primary" />
-                  ),
-                },
-              ],
-              icon: invite,
-            },
-            {
-              title: '6 SOCIAL MEDIA POSTS',
-              text: [
-                {
-                  value: 'Integrated call-to-action',
-                },
-                {
-                  value: 'Unlimited copy revisions',
-                },
-                {
-                  value: 'Adapted to all your social media channels',
-                  decorator: (
-                    <PlusIcon className="h-4 w-4 text-theme-primary" />
-                  ),
-                },
-              ],
-              icon: posts_6,
-            },
-            {
-              title: '6 VISUALS',
-              text: [
-                {
-                  value: 'Photos, banners, GIFs, short videos (max. 30 sec)',
-                },
-                {
-                  value: 'Unlimited copy revisions',
-                  decorator: (
-                    <PlusIcon className="h-4 w-4 text-theme-primary" />
-                  ),
-                },
-              ],
-              icon: visuals,
-            },
-            {
-              title: '2 THANK YOU E-MAILS',
-              text: [
-                {
-                  value: 'Tailored to your target audience',
-                },
-                {
-                  value: 'Unlimited revisions',
-                  decorator: (
-                    <PlusIcon className="h-4 w-4 text-theme-primary" />
-                  ),
-                },
-                {
-                  value: 'Style by your choice',
-                  decorator: (
-                    <PlusIcon className="h-4 w-4 text-theme-primary" />
-                  ),
-                },
-                {
-                  value: 'Short thank you video (30sec)',
-                  decorator: (
-                    <PlusIcon className="h-4 w-4 text-theme-primary" />
-                  ),
-                },
-              ],
-              icon: thankyou,
-            },
-            {
               title: 'EVENT BANNER',
               text: [
                 {
-                  value: 'Based on event’s visual identity',
+                  value: 'Matches your organisation’s visual identity ',
                 },
                 {
                   value: 'Unlimited revisions included',
                 },
                 {
-                  value: '2 style suggestions',
-                  decorator: (
-                    <PlusIcon className="h-4 w-4 text-theme-primary" />
-                  ),
-                },
-                {
-                  value: 'Adapted up to 10 sizes',
-                  decorator: (
-                    <PlusIcon className="h-4 w-4 text-theme-primary" />
-                  ),
+                  value: '2 style suggestions, fits up to 10 sizes',
                 },
               ],
               icon: flag,
             },
             {
-              title: 'WEBSITE EVENT ANNOUNCEMENT ARTICLE',
+              title: '3 WEBSITE EVENT ANNOUNCEMENT ARTICLES',
               text: [
+                {
+                  value: 'Up to X words',
+                },
                 {
                   value: 'Tailored to your target audience',
                 },
                 {
-                  value: 'Unlimited revisions included',
-                },
-                {
-                  value: '3 event news articles',
-                  decorator: (
-                    <PlusIcon className="h-4 w-4 text-theme-primary" />
-                  ),
-                },
-                {
-                  value: '1 post-event summary article',
-                  decorator: (
-                    <PlusIcon className="h-4 w-4 text-theme-primary" />
-                  ),
+                  value: 'Unlimited copy revisions',
                 },
               ],
               icon: web,
             },
             {
-              title: 'PRESS RELEASE',
+              title: '6 SOCIAL MEDIA EVENT VISUALS',
               text: [
                 {
-                  value: 'Centered around your call-to-action ',
-                },
-                {
-                  value: 'Unlimited copy revisions',
+                  value: 'Matches your event’s visual identity',
                 },
                 {
                   value:
-                    'Media press list and pitch to publish your press release',
-                  decorator: (
-                    <PlusIcon className="h-4 w-4 text-theme-primary" />
-                  ),
+                    'Photos, banners, GIFs, short videos (max. 30 seconds)',
+                },
+                {
+                  value: 'Unlimited revisions',
+                },
+              ],
+              icon: posts_6,
+            },
+            {
+              title: 'PRESS RELEASE (WITH MEDIA PRESS LIST AND PITCH)',
+              text: [
+                {
+                  value: 'Up to X words',
+                },
+                {
+                  value: 'Highly focused on your call-to-action',
+                },
+                {
+                  value: 'Unlimited copy revisions',
                 },
               ],
               icon: press_release,
             },
             {
+              title: 'EVENT INVITATION (WITH BUILD-OUT ON YOUR EMAIL SOFTWARE)',
+              text: [
+                {
+                  value: 'Matches your organisation’s visual identity',
+                },
+                {
+                  value: 'Fits up to X sizes',
+                },
+                {
+                  value: 'Unlimited revisions',
+                },
+              ],
+              icon: invite,
+            },
+
+            {
+              title: '6 SOCIAL MEDIA EVENT POSTS (ACROSS ALL CHANNELS)',
+              text: [
+                {
+                  value: 'Up to X words',
+                },
+                {
+                  value: 'Tailored to your target audience',
+                },
+                {
+                  value: '○	Unlimited copy revisions',
+                },
+              ],
+              icon: visuals,
+            },
+            {
+              title: 'POST-EVENT FOLLOW-UP MAIL TO ATTENDEES AND SPEAKERS',
+              text: [
+                {
+                  value: 'Up to X words',
+                },
+                {
+                  value: 'Tailored to your target audience',
+                },
+                {
+                  value: 'Choose your own style',
+                },
+                {
+                  value: 'Thank you’ video (max. 30 seconds)',
+                },
+                {
+                  value: 'Unlimited revisions',
+                },
+              ],
+              icon: thankyou,
+            },
+
+            {
               title: 'CUSTOM',
               text: [
                 {
-                  value: 'All of this can be adapted to your needs',
+                  value: 'Adapted to your needs',
                 },
               ],
               icon: custom,
@@ -512,13 +481,13 @@ const services: IService[] = [
               title: 'LOGO',
               text: [
                 {
-                  value: 'Choice between 3 logo styles',
+                  value: 'Choose between 3 logo styles',
                 },
                 {
                   value: 'Unlimited revisions',
-                  decorator: (
+                  /* decorator: (
                     <PlusIcon className="h-4 w-4 text-theme-primary" />
-                  ),
+                  ), */
                 },
               ],
               icon: logo,
@@ -527,23 +496,29 @@ const services: IService[] = [
               title: 'IMAGERY GUIDE',
               text: [
                 {
+                  value: 'Visual reference guide with 10 images',
+                },
+                {
+                  value: 'Tailored to your organisation',
+                },
+                {
                   value:
-                    'Visual reference guide with 10 images tailored to your profile, with listed criteria to navigate you when selecting images for public communication purposes',
+                    'Key criteria in selecting images for public communication',
                 },
               ],
               icon: smpost,
             },
             {
-              title: 'BRAND GUIDELINES',
+              title: 'BRAND GUIDE',
               text: [
                 {
                   value: (
                     <div>
-                      <strong>Color Palette</strong>
+                      <strong>Colour Palette</strong>
                       <br />
                       <span>
-                        Visual color guide with primary and secondary
-                        (supportive) colors
+                        Visual colour guide with primary and secondary
+                        complementary colours
                       </span>
                     </div>
                   ),
@@ -557,9 +532,9 @@ const services: IService[] = [
                       <strong>Font & Typography </strong>
                       <br />
                       <span>
-                        Written guidelines with main and supportive fonts,
-                        including typography guidelines with style of
-                        typography, line weight, curvatures and spacing
+                        Written guidelines with primary and secondary fonts,
+                        including typography style, line weight, curvature, and
+                        spacing
                       </span>
                     </div>
                   ),
@@ -578,54 +553,28 @@ const services: IService[] = [
           subtitle: 'Branding & Identity',
           contents: [
             {
-              title: (
-                <>
-                  PERSONALITY PROFILE <br /> (VOICE, TONE, STORY)
-                </>
-              ),
+              title: 'PERSONALITY PROFILE',
               text: [
                 {
                   value:
-                    'Includes a list of personality traits associated with your organization, together with stance, attitude, and disposition of your organization in a given situation and a cohesive narrative that encompasses facts and feelings created by your organization and tailored to your audience.',
+                    'Written guidelines on personality traits, stance, attitude, demeanour, and disposition of your organisation',
+                },
+                {
+                  value: 'Tailored to your target audience',
+                },
+                {
+                  value:
+                    'Consistent messaging across all public-facing communication materials',
                 },
               ],
               icon: personality,
             },
             {
-              title: 'GRAMMAR GUIDELINES',
+              title: 'LANGUAGE GUIDE',
               text: [
                 {
-                  value: 'Your Grammar Guide will include the following:',
-                },
-                {
-                  value: 'Abbreviations & Acronyms',
-                  decorator: (
-                    <PlusIcon className="h-4 w-4 text-theme-primary" />
-                  ),
-                },
-                {
-                  value: 'Capitalization',
-                  decorator: (
-                    <PlusIcon className="h-4 w-4 text-theme-primary" />
-                  ),
-                },
-                {
-                  value: 'Contractions',
-                  decorator: (
-                    <PlusIcon className="h-4 w-4 text-theme-primary" />
-                  ),
-                },
-                {
-                  value: 'Symbols/Icons',
-                  decorator: (
-                    <PlusIcon className="h-4 w-4 text-theme-primary" />
-                  ),
-                },
-                {
-                  value: 'Numbers',
-                  decorator: (
-                    <PlusIcon className="h-4 w-4 text-theme-primary" />
-                  ),
+                  value:
+                    'Written guidelines on abbreviations, acronyms, capitalisation, contractions, symbols, icons, numbers, and more',
                 },
               ],
               icon: grammar,
@@ -635,7 +584,7 @@ const services: IService[] = [
               text: [
                 {
                   value:
-                    'A list with clear-cut rules about how your organisation speaks in regards to specific topics.',
+                    'Written guidelines on what to do and what not to do when portraying your organisation across all public-facing communication materials',
                 },
               ],
               icon: dos,

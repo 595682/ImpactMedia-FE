@@ -60,8 +60,8 @@ const SpreadMessage = ({ title, subtitle }: ISpreadMessage) => {
             >
               <SpreadMessageCard
                 image={offer_1}
-                title="Let us package your offer"
-                content="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum accusantium praesentium aliquam, ullam modi"
+                title="CAPTURE THEIR ATTENTION"
+                content="We dive deep into your goals, ideas, and target audience, learn all about your message, and create a comprehensive strategy to help you tell it."
               />
             </motion.div>
             <motion.div
@@ -70,8 +70,8 @@ const SpreadMessage = ({ title, subtitle }: ISpreadMessage) => {
             >
               <SpreadMessageCard
                 image={offer_2}
-                title="Let us package your offer"
-                content="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum accusantium praesentium aliquam, ullam modi fuga natus. Consectetur dolorum corrupti fugit."
+                title="WIN THEIR HEARTS"
+                content="We piece together the different parts of the puzzle, including scripting, storyboarding, filming, and editing, to bring your message to life and speak to the hearts of many."
               />
             </motion.div>
           </div>

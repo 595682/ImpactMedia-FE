@@ -65,6 +65,8 @@ const EventCommunicationPage = ({
     setPopupOpen(false);
   };
 
+  /* TODO: VIDEOURL */
+
   return (
     <>
       <ServicePopup
@@ -77,22 +79,25 @@ const EventCommunicationPage = ({
         <StatelessHero
           serviceId={11}
           light
-          video="/hero_event.mp4"
+          video="https://backend.impact-media.eu/uploads/hero_event_efc44fec3b.mp4"
+          /* video="/hero_event.mp4" */
           poster="/poster.jpg"
           title={
             <>
               <Title>
                 <Title size="xl4">
                   <span className="whitespace-pre-wrap font-extrabold leading-none tracking-tight lg:text-[8rem]">
-                    <span className="block">PUBLIC RELATION 2.0</span>
-                    <span className="block font-bold">EVENTS & MORE</span>
+                    <span className="block">EVENTS & </span>
+                    <span className="block font-bold">PUBLIC RELATIONS</span>
                   </span>
                 </Title>
               </Title>
               <p className="mt-3 max-w-xs text-left sm:mt-5 lg:max-w-lg  lg:text-xl xl:font-black">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore
-                illo blanditiis unde quis beatae maxime architecto dicta veniam
-                magni aut!
+                Elevate the communication that serves as a bridge between your
+                organisation and the world. We create an effective
+                communications strategy across newsletters, press releases,
+                journalistic articles, and more, then execute, manage and
+                evaluate it for your greatest success.
               </p>
             </>
           }
@@ -106,9 +111,9 @@ const EventCommunicationPage = ({
           variant="light"
           content={
             <h2 className="text-4xl leading-tight">
-              <span className="block">We are here to make</span>
+              <span className="block">Have an upcoming event?</span>
               <span className="block">
-                your event a{' '}
+                We’ll make it a{' '}
                 <span className="font-bold text-theme-secondary">SUCCESS!</span>
               </span>
             </h2>

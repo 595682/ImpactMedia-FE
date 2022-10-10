@@ -93,7 +93,7 @@ const ContactForm = ({ title, replace }: IContactForm) => {
   };
 
   return (
-    <div className="flex h-full w-full max-w-md flex-col items-center justify-center">
+    <div className="flex h-full w-full flex-col items-center justify-center lg:max-w-md">
       {success && (
         <div className="flex w-full flex-col items-center justify-center py-4 text-theme-primary">
           <CheckIcon className="h-20 w-20 " />
@@ -116,7 +116,7 @@ const ContactForm = ({ title, replace }: IContactForm) => {
               </a>
             </div>
           )}
-          <form className="mt-6 grid grid-cols-1 gap-y-6 sm:grid-cols-2 sm:gap-x-8">
+          <form className="mt-6 grid w-full grid-cols-1 gap-y-6 sm:grid-cols-2 sm:gap-x-8">
             <div>
               <label
                 htmlFor="first-name"

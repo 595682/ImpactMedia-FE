@@ -423,9 +423,9 @@ export type DateTimeFilterInput = {
 
 export enum Enum_Portfolioelement_Elementtype {
   AnimatedVideo = 'animated_video',
-  HybridEvent = 'hybrid_event',
+  Event = 'event',
+  LiveStream = 'live_stream',
   Video = 'video',
-  VirtualEvent = 'virtual_event',
 }
 
 export type Error = {

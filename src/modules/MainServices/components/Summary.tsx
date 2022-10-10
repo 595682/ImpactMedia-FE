@@ -44,7 +44,11 @@ const Summary = ({ tiers }: ISummary) => {
               <motion.div variants={TitleAnimation}>
                 <Title size="xl3">
                   <span className="text-white">
-                    TO <span className="font-bold">SUMMARIZE</span>
+                    READY TO
+                    <span className="font-bold">
+                      {' '}
+                      BRING YOUR STORY TO LIFE?
+                    </span>
                   </span>
                 </Title>
               </motion.div>
@@ -52,7 +56,7 @@ const Summary = ({ tiers }: ISummary) => {
           </div>
           <motion.div
             variants={StaggerWrapperAnimation}
-            className="col-span-12 space-y-6 text-white sm:col-span-6 md:col-span-5 lg:col-span-4"
+            className="col-span-12 ml-10 space-y-6 text-white sm:col-span-6 md:col-span-5 lg:col-span-4"
           >
             <motion.p key={1} variants={StaggerItemAnimation}>
               Are you looking for a proven company to boost your marketing with
@@ -62,7 +66,7 @@ const Summary = ({ tiers }: ISummary) => {
               Are you looking for expert input for your marketing offensive?
             </motion.p>
             <motion.p key={3} variants={StaggerItemAnimation}>
-              Then you are at the right place.
+              You’re in the right place
             </motion.p>
           </motion.div>
         </div>

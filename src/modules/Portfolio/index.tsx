@@ -23,11 +23,11 @@ const tabs: TTab = [
 
     category: 'animated_video',
   },
-  { name: 'Hybrid Events', href: '#', category: 'hybrid_event' },
+  { name: 'Live Streams', href: '#', category: 'live_stream' },
   {
-    name: 'Virtual events',
+    name: 'Events',
     href: '#',
-    category: 'virtual_event',
+    category: 'event',
   },
 ];
 
