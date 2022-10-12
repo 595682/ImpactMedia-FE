@@ -72,6 +72,26 @@ const ContactForm = ({ title, replace }: IContactForm) => {
         service: reqService?.label || '',
       },
     });
+
+    try {
+      fetch(`${process.env.NEXT_PUBLIC_API_ENDPOINT}/api/connections`, {
+        method: 'POST',
+        headers: {
+          Accept: 'application/json',
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          isQuot,
+          firstName,
+          lastName,
+          email,
+          description: message,
+          service: reqService?.label || '',
+        }),
+      });
+    } catch (errorMsg) {
+      console.error(errorMsg);
+    }
   };
 
   useEffect(() => {
