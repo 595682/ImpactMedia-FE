@@ -44,6 +44,11 @@ const BlogPostModule = ({ data, morePosts }: IBlogPostModule) => {
                 data.attributes?.themeImage?.data?.attributes
                   ?.alternativeText || ''
               }
+              blur
+              blurUrl={
+                data.attributes?.themeImage?.data?.attributes?.formats?.small
+                  ?.url || data.attributes?.themeImage?.data?.attributes?.url
+              }
             />
           </div>
         </Wrapper>
@@ -55,27 +60,32 @@ const BlogPostModule = ({ data, morePosts }: IBlogPostModule) => {
           ))}
         </Wrapper>
       </div>
-      <div className="bg-theme-primary py-20">
-        <Wrapper>
-          <Title size="xl3">
-            <span className="text-white">More articles</span>
-          </Title>
-          <div className="mx-auto mt-12 grid max-w-lg gap-10 lg:max-w-none lg:grid-cols-3">
-            {morePosts.map((post) => (
-              <BlogCard post={post} key={post.id} />
-            ))}
-          </div>
-
-          <div className="mt-10 flex w-full justify-end">
-            <Link href="/blog" passHref scroll={false}>
-              <a>
-                <TextButton title="MORE POSTS" color="secondary" />
-              </a>
-            </Link>
-          </div>
-        </Wrapper>
-      </div>
       <Space amount="xl" />
+      {morePosts.length > 0 && (
+        <>
+          <div className="bg-theme-primary py-20">
+            <Wrapper>
+              <Title size="xl3">
+                <span className="text-white">More articles</span>
+              </Title>
+              <div className="mx-auto mt-12 grid max-w-lg gap-10 lg:max-w-none lg:grid-cols-3">
+                {morePosts.map((post) => (
+                  <BlogCard post={post} key={post.id} />
+                ))}
+              </div>
+
+              <div className="mt-10 flex w-full justify-end">
+                <Link href="/blog" passHref scroll={false}>
+                  <a>
+                    <TextButton title="MORE POSTS" color="secondary" />
+                  </a>
+                </Link>
+              </div>
+            </Wrapper>
+          </div>
+          <Space amount="xl" />
+        </>
+      )}
     </>
   );
 };

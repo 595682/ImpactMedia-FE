@@ -213,7 +213,6 @@ const ContactForm = ({ title, replace }: IContactForm) => {
                   rows={4}
                   className="block w-full rounded-md border border-gray-300 py-3 px-4 text-gray-900 shadow-sm focus:border-theme-primary focus:ring-theme-primary"
                   aria-describedby="message-max"
-                  defaultValue={''}
                   disabled={loading}
                 />
               </div>

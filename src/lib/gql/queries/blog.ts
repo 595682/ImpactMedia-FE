@@ -16,7 +16,7 @@ const GET_ALL_BLOG_POSTS = gql`
 const GET_LIMITED_BLOG_POSTS = gql`
   query ($page: Int) {
     blogArticles(
-      pagination: { page: $page, pageSize: 2 }
+      pagination: { page: $page, pageSize: 15 }
       sort: ["createdAt:desc"]
     ) {
       data {

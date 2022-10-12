@@ -3,7 +3,7 @@ import React from 'react';
 import validUrl from 'valid-url';
 
 export const getStrapiURL = () => {
-  return process.env.NEXT_PUBLIC_API_ENDPOINT;
+  return process.env.NEXT_PUBLIC_FS_ENDPOINT;
 };
 
 export const getImageUrl = (imageUrl?: string) => {
