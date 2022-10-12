@@ -1,4 +1,5 @@
 import { goals } from 'contents/index';
+import { anim } from 'contents/videoUrls';
 import type { GetStaticProps } from 'next';
 import fact_1 from 'public/assets/video_prod/fact_1.svg';
 import fact_2 from 'public/assets/video_prod/fact_2.svg';
@@ -143,7 +144,7 @@ const AnimVideoProduction = ({
       <StatelessHero
         serviceId={3}
         light
-        video="https://backend.impact-media.eu/uploads/hero_anim_5ad1ef5684.mp4"
+        video={anim}
         /* video="/hero_anim.mp4" */
         poster="/poster.jpg"
         title={

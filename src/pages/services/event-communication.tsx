@@ -1,3 +1,4 @@
+import { event } from 'contents/videoUrls';
 import type { GetStaticProps } from 'next';
 import type { ReactNode } from 'react';
 import React, { useState } from 'react';
@@ -79,7 +80,7 @@ const EventCommunicationPage = ({
         <StatelessHero
           serviceId={11}
           light
-          video="https://backend.impact-media.eu/uploads/hero_event_efc44fec3b.mp4"
+          video={event}
           /* video="/hero_event.mp4" */
           poster="/poster.jpg"
           title={

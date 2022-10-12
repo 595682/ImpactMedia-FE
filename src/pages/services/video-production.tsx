@@ -1,4 +1,5 @@
 import { goals } from 'contents/index';
+import { video } from 'contents/videoUrls';
 import type { GetStaticProps } from 'next';
 import fact_1 from 'public/assets/video_prod/fact_1.svg';
 import fact_2 from 'public/assets/video_prod/fact_2.svg';
@@ -141,7 +142,7 @@ const VideoProduction = ({ clientFeedbacks }: IVideoProductionProps) => {
       <StatelessHero
         serviceId={2}
         light
-        video="https://backend.impact-media.eu/uploads/hero_video_1f8341efa5.mp4"
+        video={video}
         /* video="/hero_video.mp4" */
         poster="/poster.jpg"
         title={

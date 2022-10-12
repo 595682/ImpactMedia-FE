@@ -1,3 +1,5 @@
+import { anim, event, stream, video } from 'contents/videoUrls';
+
 import ServiceSection from './components/ServiceSection';
 
 /* TODO: VIDEOURL */
@@ -7,7 +9,7 @@ const MainServicesModule = () => {
     <div className="border-t-[1px] border-theme-primary-light">
       <ServiceSection
         link="/services/video-production"
-        videoUrl="https://backend.impact-media.eu/uploads/hero_video_1f8341efa5.mp4"
+        videoUrl={video}
         /* videoUrl="/hero_video.mp4" */
         poster="/poster.jpg"
         color="dark"
@@ -24,7 +26,7 @@ const MainServicesModule = () => {
         reverse
         link="/services/animated-video-production"
         color="dark"
-        videoUrl="https://backend.impact-media.eu/uploads/hero_anim_5ad1ef5684.mp4"
+        videoUrl={anim}
         /* videoUrl="/hero_anim.mp4" */
         poster="/poster.jpg"
         title={
@@ -39,7 +41,7 @@ const MainServicesModule = () => {
       <ServiceSection
         color="dark"
         link="/services/live-stream"
-        videoUrl="https://backend.impact-media.eu/uploads/hero_e7b02f78ea.mp4"
+        videoUrl={stream}
         /* videoUrl="/hero.mp4" */
         poster="/poster.jpg"
         title={
@@ -54,7 +56,7 @@ const MainServicesModule = () => {
       <ServiceSection
         reverse
         link="/services/event-communication"
-        videoUrl="https://backend.impact-media.eu/uploads/hero_event_efc44fec3b.mp4"
+        videoUrl={event}
         /* videoUrl="/hero_event.mp4" */
         poster="/poster.jpg"
         color="dark"

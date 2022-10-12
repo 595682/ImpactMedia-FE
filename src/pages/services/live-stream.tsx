@@ -1,3 +1,4 @@
+import { stream } from 'contents/videoUrls';
 import type { GetStaticProps } from 'next';
 import React from 'react';
 
@@ -38,7 +39,7 @@ const LiveStramPage = ({
       <StatelessHero
         serviceId={10}
         light
-        video="https://backend.impact-media.eu/uploads/hero_e7b02f78ea.mp4"
+        video={stream}
         /* video="/hero.mp4" */
         poster="/poster.jpg"
         title={
