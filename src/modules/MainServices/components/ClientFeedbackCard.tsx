@@ -56,8 +56,10 @@ const ClientFeedbackCard = ({
             <div
               className={`mx-auto mb-8 text-center font-semibold ${colors[color].hl}`}
             >
-              {person.attributes?.feedbackFrom?.position} at{' '}
-              {person.attributes?.company?.data?.attributes?.name}
+              {person.attributes?.feedbackFrom?.position}{' '}
+              {person.attributes?.company?.data?.attributes?.name &&
+                `at 
+              ${person.attributes?.company?.data?.attributes?.name}`}
             </div>
             <p className="flex w-full grow items-center justify-center  text-center">
               {person.attributes?.feedback}

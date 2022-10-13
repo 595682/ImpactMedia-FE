@@ -83,7 +83,7 @@ const GET_FEATURED_PORTFOLIO_ELEMENTS = gql`
   query {
     portfolioElements(
       pagination: { page: 1, pageSize: 3 }
-      filters: { displayAsFeatured: { eq: true } }
+      filters: { displayAsShowcase: { eq: true } }
     ) {
       data {
         id

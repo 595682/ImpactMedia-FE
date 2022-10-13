@@ -124,6 +124,40 @@ const GET_BLOG_POST = gql`
               }
             }
           }
+          seo {
+            metaTitle
+            metaDescription
+            metaImage {
+              data {
+                attributes {
+                  formats
+                  url
+                  width
+                  height
+                  alternativeText
+                }
+              }
+            }
+            metaSocial {
+              socialNetwork
+              title
+              description
+              image {
+                data {
+                  attributes {
+                    formats
+                    url
+                    width
+                    height
+                    alternativeText
+                  }
+                }
+              }
+            }
+            keywords
+            metaRobots
+            canonicalURL
+          }
           content {
             ... on ComponentBlogImage {
               image {

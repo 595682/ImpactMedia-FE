@@ -64,7 +64,7 @@ const SwipeCard = ({
                 <footer className="mt-6">
                   <p className="text-base font-semibold text-white">{name}</p>
                   <p className="text-base font-medium text-theme-secondary-light">
-                    {position} at {company}
+                    {position} {company && `at ${company}`}
                   </p>
                 </footer>
               </blockquote>

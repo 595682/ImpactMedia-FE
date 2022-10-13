@@ -30,6 +30,7 @@ export type BlogArticle = {
   pinned?: Maybe<Scalars['Boolean']>;
   priority?: Maybe<Scalars['Int']>;
   publishedAt?: Maybe<Scalars['DateTime']>;
+  seo?: Maybe<ComponentSharedSeo>;
   shortDescription: Scalars['String'];
   slug?: Maybe<Scalars['String']>;
   subtitle?: Maybe<Scalars['String']>;
@@ -76,6 +77,7 @@ export type BlogArticleFiltersInput = {
   pinned?: InputMaybe<BooleanFilterInput>;
   priority?: InputMaybe<IntFilterInput>;
   publishedAt?: InputMaybe<DateTimeFilterInput>;
+  seo?: InputMaybe<ComponentSharedSeoFiltersInput>;
   shortDescription?: InputMaybe<StringFilterInput>;
   slug?: InputMaybe<StringFilterInput>;
   subtitle?: InputMaybe<StringFilterInput>;
@@ -89,6 +91,7 @@ export type BlogArticleInput = {
   pinned?: InputMaybe<Scalars['Boolean']>;
   priority?: InputMaybe<Scalars['Int']>;
   publishedAt?: InputMaybe<Scalars['DateTime']>;
+  seo?: InputMaybe<ComponentSharedSeoInput>;
   shortDescription?: InputMaybe<Scalars['String']>;
   slug?: InputMaybe<Scalars['String']>;
   subtitle?: InputMaybe<Scalars['String']>;
@@ -345,6 +348,79 @@ export type ComponentPortfolioOutcomesInput = {
   title?: InputMaybe<Scalars['String']>;
 };
 
+export type ComponentSharedMetaSocial = {
+  __typename?: 'ComponentSharedMetaSocial';
+  description: Scalars['String'];
+  id: Scalars['ID'];
+  image?: Maybe<UploadFileEntityResponse>;
+  socialNetwork: Enum_Componentsharedmetasocial_Socialnetwork;
+  title: Scalars['String'];
+};
+
+export type ComponentSharedMetaSocialFiltersInput = {
+  and?: InputMaybe<Array<InputMaybe<ComponentSharedMetaSocialFiltersInput>>>;
+  description?: InputMaybe<StringFilterInput>;
+  not?: InputMaybe<ComponentSharedMetaSocialFiltersInput>;
+  or?: InputMaybe<Array<InputMaybe<ComponentSharedMetaSocialFiltersInput>>>;
+  socialNetwork?: InputMaybe<StringFilterInput>;
+  title?: InputMaybe<StringFilterInput>;
+};
+
+export type ComponentSharedMetaSocialInput = {
+  description?: InputMaybe<Scalars['String']>;
+  id?: InputMaybe<Scalars['ID']>;
+  image?: InputMaybe<Scalars['ID']>;
+  socialNetwork?: InputMaybe<Enum_Componentsharedmetasocial_Socialnetwork>;
+  title?: InputMaybe<Scalars['String']>;
+};
+
+export type ComponentSharedSeo = {
+  __typename?: 'ComponentSharedSeo';
+  canonicalURL?: Maybe<Scalars['String']>;
+  id: Scalars['ID'];
+  keywords?: Maybe<Scalars['String']>;
+  metaDescription: Scalars['String'];
+  metaImage: UploadFileEntityResponse;
+  metaRobots?: Maybe<Scalars['String']>;
+  metaSocial?: Maybe<Array<Maybe<ComponentSharedMetaSocial>>>;
+  metaTitle: Scalars['String'];
+  metaViewport?: Maybe<Scalars['String']>;
+  structuredData?: Maybe<Scalars['JSON']>;
+};
+
+export type ComponentSharedSeoMetaSocialArgs = {
+  filters?: InputMaybe<ComponentSharedMetaSocialFiltersInput>;
+  pagination?: InputMaybe<PaginationArg>;
+  sort?: InputMaybe<Array<InputMaybe<Scalars['String']>>>;
+};
+
+export type ComponentSharedSeoFiltersInput = {
+  and?: InputMaybe<Array<InputMaybe<ComponentSharedSeoFiltersInput>>>;
+  canonicalURL?: InputMaybe<StringFilterInput>;
+  keywords?: InputMaybe<StringFilterInput>;
+  metaDescription?: InputMaybe<StringFilterInput>;
+  metaRobots?: InputMaybe<StringFilterInput>;
+  metaSocial?: InputMaybe<ComponentSharedMetaSocialFiltersInput>;
+  metaTitle?: InputMaybe<StringFilterInput>;
+  metaViewport?: InputMaybe<StringFilterInput>;
+  not?: InputMaybe<ComponentSharedSeoFiltersInput>;
+  or?: InputMaybe<Array<InputMaybe<ComponentSharedSeoFiltersInput>>>;
+  structuredData?: InputMaybe<JsonFilterInput>;
+};
+
+export type ComponentSharedSeoInput = {
+  canonicalURL?: InputMaybe<Scalars['String']>;
+  id?: InputMaybe<Scalars['ID']>;
+  keywords?: InputMaybe<Scalars['String']>;
+  metaDescription?: InputMaybe<Scalars['String']>;
+  metaImage?: InputMaybe<Scalars['ID']>;
+  metaRobots?: InputMaybe<Scalars['String']>;
+  metaSocial?: InputMaybe<Array<InputMaybe<ComponentSharedMetaSocialInput>>>;
+  metaTitle?: InputMaybe<Scalars['String']>;
+  metaViewport?: InputMaybe<Scalars['String']>;
+  structuredData?: InputMaybe<Scalars['JSON']>;
+};
+
 export type Connection = {
   __typename?: 'Connection';
   createdAt?: Maybe<Scalars['DateTime']>;
@@ -421,6 +497,11 @@ export type DateTimeFilterInput = {
   startsWith?: InputMaybe<Scalars['DateTime']>;
 };
 
+export enum Enum_Componentsharedmetasocial_Socialnetwork {
+  Facebook = 'Facebook',
+  Twitter = 'Twitter',
+}
+
 export enum Enum_Portfolioelement_Elementtype {
   AnimatedVideo = 'animated_video',
   Event = 'event',
@@ -478,6 +559,8 @@ export type GenericMorph =
   | ComponentFeedbackFeedback
   | ComponentPortfolioBrief
   | ComponentPortfolioOutcomes
+  | ComponentSharedMetaSocial
+  | ComponentSharedSeo
   | Connection
   | I18NLocale
   | PortfolioElement
@@ -833,6 +916,7 @@ export type PortfolioElement = {
   mainVideoUrl?: Maybe<Scalars['String']>;
   outcomes?: Maybe<Array<Maybe<ComponentPortfolioOutcomes>>>;
   publishedAt?: Maybe<Scalars['DateTime']>;
+  seo?: Maybe<ComponentSharedSeo>;
   shortDescription: Scalars['String'];
   slug?: Maybe<Scalars['String']>;
   subtitle?: Maybe<Scalars['String']>;
@@ -885,6 +969,7 @@ export type PortfolioElementFiltersInput = {
   or?: InputMaybe<Array<InputMaybe<PortfolioElementFiltersInput>>>;
   outcomes?: InputMaybe<ComponentPortfolioOutcomesFiltersInput>;
   publishedAt?: InputMaybe<DateTimeFilterInput>;
+  seo?: InputMaybe<ComponentSharedSeoFiltersInput>;
   shortDescription?: InputMaybe<StringFilterInput>;
   slug?: InputMaybe<StringFilterInput>;
   subtitle?: InputMaybe<StringFilterInput>;
@@ -905,6 +990,7 @@ export type PortfolioElementInput = {
   mainVideoUrl?: InputMaybe<Scalars['String']>;
   outcomes?: InputMaybe<Array<InputMaybe<ComponentPortfolioOutcomesInput>>>;
   publishedAt?: InputMaybe<Scalars['DateTime']>;
+  seo?: InputMaybe<ComponentSharedSeoInput>;
   shortDescription?: InputMaybe<Scalars['String']>;
   slug?: InputMaybe<Scalars['String']>;
   subtitle?: InputMaybe<Scalars['String']>;
