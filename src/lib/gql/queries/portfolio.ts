@@ -133,6 +133,40 @@ const GET_PORTFOLIO_ELEMENT = gql`
             description
             id
           }
+          seo {
+            metaTitle
+            metaDescription
+            metaImage {
+              data {
+                attributes {
+                  formats
+                  url
+                  width
+                  height
+                  alternativeText
+                }
+              }
+            }
+            metaSocial {
+              socialNetwork
+              title
+              description
+              image {
+                data {
+                  attributes {
+                    formats
+                    url
+                    width
+                    height
+                    alternativeText
+                  }
+                }
+              }
+            }
+            keywords
+            metaRobots
+            canonicalURL
+          }
           mainImage {
             data {
               attributes {

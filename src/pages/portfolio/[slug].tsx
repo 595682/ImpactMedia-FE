@@ -1,6 +1,7 @@
 import type { GetStaticPaths, GetStaticProps } from 'next';
 import type { ParsedUrlQuery } from 'querystring';
 
+import SEO from '@/common/components/SEO';
 import client from '@/lib/gql/client';
 import {
   GET_ALL_PORTFOLIO_ELEMENTS_LIGHT,
@@ -24,6 +25,7 @@ interface IBlogPostProps {
 const BlogPage = ({ data, morePosts, preview }: IBlogPostProps) => {
   return (
     <LayoutModule previewMode={preview}>
+      <SEO seoData={data.attributes?.seo || null} type="article" />
       <PortfolioElementModule data={data} morePosts={morePosts?.data || []} />
     </LayoutModule>
   );
