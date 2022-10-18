@@ -27,7 +27,10 @@ const ComponentBlogTextModule = ({
           <Space custom="h-4" />
         </>
       )}
-      <div dangerouslySetInnerHTML={{ __html: markdown }}></div>
+      <div
+        className="whitespace-pre"
+        dangerouslySetInnerHTML={{ __html: markdown }}
+      ></div>
     </div>
   );
 };
