@@ -35,6 +35,8 @@ const TrustedclientsModule = ({
     }
   }, [controls, inView]);
 
+  console.log(companies);
+
   return (
     <motion.div
       className="py-20 text-theme-primary"

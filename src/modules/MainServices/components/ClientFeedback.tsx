@@ -5,8 +5,6 @@ import { useInView } from 'react-intersection-observer';
 import {
   defaultWrapperAnimation,
   SlideUpAnimation,
-  StaggerItemAnimation,
-  StaggerWrapperAnimation,
   SubtitleAnimation,
 } from '@/common/animations/sharedAnimations';
 import Swiper from '@/common/components/Swiper';
@@ -66,21 +64,23 @@ const ClientFeedback = ({ people = [], style = 'light' }: IClientFeedback) => {
           </motion.div>
         </div>
         <Space amount="sm" />
-        <motion.ul
-          variants={StaggerWrapperAnimation}
-          role="list"
-          className="mx-auto hidden max-w-6xl items-center space-y-4 sm:grid-cols-2 sm:gap-6 sm:space-y-0 lg:grid lg:grid-cols-3 lg:gap-12"
-        >
-          {people.map((person) => (
-            <motion.div variants={StaggerItemAnimation} key={person.id}>
+        <motion.div className="hidden lg:block" variants={SlideUpAnimation()}>
+          <Swiper slidesPerView={2.8} version="dark">
+            {people.map((person) => (
+              /*  <motion.div
+                variants={StaggerItemAnimation}
+                key={person.id}
+                className="h-full"
+              > */
               <ClientFeedbackCard
                 person={person}
                 key={person.id}
                 color={style === 'dark' ? 'light' : 'dark'}
               />
-            </motion.div>
-          ))}
-        </motion.ul>
+              /*    </motion.div> */
+            ))}
+          </Swiper>
+        </motion.div>
         <motion.div className="block lg:hidden" variants={SlideUpAnimation()}>
           <Swiper slidesPerView={1.2}>
             {people.map((person) => (

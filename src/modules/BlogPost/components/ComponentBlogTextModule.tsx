@@ -28,7 +28,7 @@ const ComponentBlogTextModule = ({
         </>
       )}
       <div
-        className="whitespace-pre"
+        className="whitespace-pre-line list-item: link:font-bold link:text-theme-primary link:underline list:list-disc list:pl-10 list-item:my-0"
         dangerouslySetInnerHTML={{ __html: markdown }}
       ></div>
     </div>

@@ -1,3 +1,5 @@
+/* eslint-disable func-names */
+/* eslint-disable import/no-extraneous-dependencies */
 /* eslint-disable global-require */
 // eslint-disable-next-line import/no-extraneous-dependencies
 const defaultTheme = require('tailwindcss/defaultTheme');
@@ -53,5 +55,11 @@ module.exports = {
     require('@tailwindcss/aspect-ratio'),
     require('@tailwindcss/forms'),
     require('tailwind-scrollbar-hide'),
+    function ({ addVariant }) {
+      addVariant('link', '& a');
+      addVariant('link-hover', '& a:hover');
+      addVariant('list', '& ul');
+      addVariant('list-item', '& ul > li');
+    },
   ],
 };

@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import React from 'react';
 
 import StrapiImage from '@/common/components/StrapiImage';
@@ -19,38 +20,60 @@ const SwipeCard = ({
   company,
 }: ISwipeCard) => {
   return (
-    <div className="bg-white pt-16 lg:py-16">
-      <div className="rounded-md bg-theme-primary pb-8 shadow-md lg:relative lg:z-10 lg:pb-0">
-        <div className="lg:mx-auto lg:grid lg:max-w-7xl lg:grid-cols-3 lg:gap-8 lg:px-8">
-          <div className="relative lg:-my-8">
-            <div
-              aria-hidden="true"
-              className="absolute inset-x-0 top-0 h-1/2 bg-white lg:hidden"
-            />
-            <div className="mx-auto max-w-md px-4 sm:max-w-3xl sm:px-6 lg:h-full lg:p-0 ">
-              <div className="aspect-w-10 aspect-h-6 relative overflow-hidden rounded-xl shadow-xl sm:aspect-w-16 sm:aspect-h-7 lg:h-full lg:w-full ">
-                <StrapiImage
-                  src={
-                    image?.data?.attributes?.formats.medium.url ||
-                    image?.data?.attributes?.url
-                  }
-                  width={image?.data?.attributes?.width}
-                  height={image?.data?.attributes?.height}
-                  layout="fill"
-                  objectFit="cover"
-                  alt={image?.data?.attributes?.alternativeText}
-                  blurUrl={image?.data?.attributes?.formats.thumbnail.url}
-                  blur
-                />
+    <div className="h-full pt-16 bg-white lg:py-16">
+      <div className="h-full pb-8 rounded-md shadow-md bg-theme-primary lg:relative lg:z-10 lg:pb-0">
+        <div className="h-full lg:mx-auto lg:grid lg:max-w-7xl lg:grid-cols-3 lg:gap-8 lg:px-8">
+          {image?.data?.attributes?.formats?.small?.url ||
+          image?.data?.attributes?.url ? (
+            <div className="relative lg:-my-8">
+              <div
+                aria-hidden="true"
+                className="absolute inset-x-0 top-0 bg-white h-1/2 lg:hidden"
+              />
+              <div className="max-w-md px-4 mx-auto sm:max-w-3xl sm:px-6 lg:h-full lg:p-0 ">
+                <div className="relative overflow-hidden shadow-xl aspect-w-10 aspect-h-6 rounded-xl sm:aspect-w-16 sm:aspect-h-7 lg:h-full lg:w-full ">
+                  <StrapiImage
+                    src={
+                      image?.data?.attributes?.formats?.small?.url ||
+                      image?.data?.attributes?.url
+                    }
+                    width={image?.data?.attributes?.width}
+                    height={image?.data?.attributes?.height}
+                    layout="fill"
+                    objectFit="cover"
+                    alt={image?.data?.attributes?.alternativeText}
+                    blurUrl={image?.data?.attributes?.formats.thumbnail.url}
+                    blur
+                  />
+                </div>
               </div>
             </div>
-          </div>
-          <div className="mt-12 lg:col-span-2 lg:m-0 lg:pl-8">
-            <div className="mx-auto max-w-md px-4 sm:max-w-2xl sm:px-6 lg:max-w-none lg:px-0 lg:py-10">
+          ) : (
+            <div className="relative lg:-my-8">
+              <div
+                aria-hidden="true"
+                className="absolute inset-x-0 top-0 bg-white h-1/2 lg:hidden"
+              />
+              <div className="max-w-md px-4 mx-auto sm:max-w-3xl sm:px-6 lg:h-full lg:p-0 ">
+                <div className="relative overflow-hidden shadow-xl aspect-w-10 aspect-h-6 rounded-xl sm:aspect-w-16 sm:aspect-h-7 lg:h-full lg:w-full ">
+                  <Image
+                    src={'/assets/defaultAvatar.jpg'}
+                    height={160}
+                    width={160}
+                    layout="fill"
+                    objectFit="cover"
+                    alt={'Default placeholder for client feedbacks'}
+                  />
+                </div>
+              </div>
+            </div>
+          )}
+          <div className="h-full mt-12 lg:col-span-2 lg:m-0 lg:pl-8">
+            <div className="flex items-center justify-center h-full max-w-md px-4 mx-auto sm:max-w-2xl sm:px-6 lg:max-w-none lg:px-0 lg:py-10">
               <blockquote>
                 <div>
                   <svg
-                    className="hidden h-12 w-12 text-white opacity-25 sm:block"
+                    className="hidden w-12 h-12 text-white opacity-25 sm:block"
                     fill="currentColor"
                     viewBox="0 0 32 32"
                     aria-hidden="true"
