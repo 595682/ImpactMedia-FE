@@ -3,7 +3,7 @@ const withBundleAnalyzer = require('@next/bundle-analyzer')({
   enabled: process.env.ANALYZE === 'true',
 });
 
-const bundleAnalyser = withBundleAnalyzer({
+module.exports = withBundleAnalyzer({
   eslint: {
     dirs: ['.'],
   },
@@ -17,20 +17,4 @@ const bundleAnalyser = withBundleAnalyzer({
   images: {
     domains: ['localhost', 'fs.impact-media.eu'],
   },
-})
-const redirect={async redirects() {
-  return [
-    {
-      source: '/public-relations-20',
-      destination: '/services/event-communication',
-      permanent: true,
-    },
-    {
-      source: '/live-streaming-webinars',
-      destination: '/services/live-stream',
-      permanent: true,
-    },
-  ]
-}}
-module.exports = {bundleAnalyser, redirect}
-  
+});
