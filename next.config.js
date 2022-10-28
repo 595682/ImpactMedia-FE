@@ -17,7 +17,7 @@ module.exports = withBundleAnalyzer({
   images: {
     domains: ['localhost', 'fs.impact-media.eu'],
   },
-  async redirects() {
+  redirects: async () => {
     return [
       {
         source: '/public-relations-20',
@@ -30,5 +30,5 @@ module.exports = withBundleAnalyzer({
         permanent: true,
       },
     ]
-  },
+  }
 });
