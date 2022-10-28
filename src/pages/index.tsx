@@ -30,6 +30,8 @@ const IndexPage = ({
   clientFeedbacks,
   portfolioElements,
 }: IIndexPageProps) => {
+  console.log(clientFeedbacks?.data);
+
   return (
     <LayoutModule>
       <MainHero />

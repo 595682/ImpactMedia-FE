@@ -1,4 +1,3 @@
-import Image from 'next/image';
 import React from 'react';
 
 import StrapiImage from '@/common/components/StrapiImage';
@@ -19,12 +18,15 @@ const SwipeCard = ({
   position,
   company,
 }: ISwipeCard) => {
+  const isThereImage =
+    image?.data?.attributes?.formats?.small?.url ||
+    image?.data?.attributes?.url;
+
   return (
     <div className="h-full pt-16 bg-white lg:py-16">
       <div className="h-full pb-8 rounded-md shadow-md bg-theme-primary lg:relative lg:z-10 lg:pb-0">
         <div className="h-full lg:mx-auto lg:grid lg:max-w-7xl lg:grid-cols-3 lg:gap-8 lg:px-8">
-          {image?.data?.attributes?.formats?.small?.url ||
-          image?.data?.attributes?.url ? (
+          {isThereImage ? (
             <div className="relative lg:-my-8">
               <div
                 aria-hidden="true"
@@ -42,33 +44,18 @@ const SwipeCard = ({
                     layout="fill"
                     objectFit="cover"
                     alt={image?.data?.attributes?.alternativeText}
-                    blurUrl={image?.data?.attributes?.formats.thumbnail.url}
-                    blur
+                    /* blurUrl={image?.data?.attributes?.formats?.thumbnail?.url}
+                    blur */
                   />
                 </div>
               </div>
             </div>
-          ) : (
-            <div className="relative lg:-my-8">
-              <div
-                aria-hidden="true"
-                className="absolute inset-x-0 top-0 bg-white h-1/2 lg:hidden"
-              />
-              <div className="max-w-md px-4 mx-auto sm:max-w-3xl sm:px-6 lg:h-full lg:p-0 ">
-                <div className="relative overflow-hidden shadow-xl aspect-w-10 aspect-h-6 rounded-xl sm:aspect-w-16 sm:aspect-h-7 lg:h-full lg:w-full ">
-                  <Image
-                    src={'/assets/defaultAvatar.jpg'}
-                    height={160}
-                    width={160}
-                    layout="fill"
-                    objectFit="cover"
-                    alt={'Default placeholder for client feedbacks'}
-                  />
-                </div>
-              </div>
-            </div>
-          )}
-          <div className="h-full mt-12 lg:col-span-2 lg:m-0 lg:pl-8">
+          ) : null}
+          <div
+            className={`h-full mt-12 ${
+              isThereImage ? 'lg:col-span-2' : 'lg:col-span-3'
+            } lg:m-0 lg:pl-8`}
+          >
             <div className="flex items-center justify-center h-full max-w-md px-4 mx-auto sm:max-w-2xl sm:px-6 lg:max-w-none lg:px-0 lg:py-10">
               <blockquote>
                 <div>
