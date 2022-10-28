@@ -18,3 +18,19 @@ module.exports = withBundleAnalyzer({
     domains: ['localhost', 'fs.impact-media.eu'],
   },
 });
+module.exports = {
+  async redirects() {
+    return [
+      {
+        source: '/public-relations-20',
+        destination: '/services/event-communication',
+        permanent: true,
+      },
+      {
+        source: '/live-streaming-webinars',
+        destination: '/services/live-stream',
+        permanent: true,
+      },
+    ]
+  },
+}
