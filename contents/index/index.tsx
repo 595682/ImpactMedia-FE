@@ -1,4 +1,13 @@
-import { anim, event, stream, video } from 'contents/videoUrls';
+import {
+  anim,
+  animThumbnail,
+  event,
+  eventThumbnail,
+  stream,
+  streamThumbnail,
+  video,
+  videoThumbnail,
+} from 'contents/videoUrls';
 import approach_1 from 'public/assets/home/approach_1.svg';
 import approach_2 from 'public/assets/home/approach_2.svg';
 import approach_3 from 'public/assets/home/approach_3.svg';
@@ -100,7 +109,7 @@ const heroOptions = [
     url: '/services/video-production',
     /* video: '/dev_video.webm', */
     video,
-    poster: '/poster.jpg',
+    poster: videoThumbnail || '/poster.jpg',
   },
   {
     id: 1,
@@ -108,7 +117,7 @@ const heroOptions = [
     url: '/services/animated-video-production',
     /* video: '/dev_anim.mp4', */
     video: anim,
-    poster: '/poster.jpg',
+    poster: animThumbnail || '/poster.jpg',
   },
   {
     id: 2,
@@ -116,7 +125,7 @@ const heroOptions = [
     url: '/services/event-communication',
     video: event,
     /* video: '/hero_event.mp4', */
-    poster: '/poster.jpg',
+    poster: eventThumbnail || '/poster.jpg',
   },
   {
     id: 3,
@@ -124,7 +133,7 @@ const heroOptions = [
     url: '/services/live-stream',
     /* video: '/hero.mp4', */
     video: stream,
-    poster: '/poster.jpg',
+    poster: streamThumbnail || '/poster.jpg',
   },
 ];
 

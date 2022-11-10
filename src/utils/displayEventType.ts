@@ -4,6 +4,8 @@ const displayEventType = (
     | 'animated_video'
     | 'event'
     | 'live_stream'
+    | 'campaign'
+    | 'branding'
     | string
     | null
 ) => {
@@ -16,6 +18,10 @@ const displayEventType = (
       return 'Live Stream';
     case 'event':
       return 'Event';
+    case 'branding':
+      return 'Branding';
+    case 'campaign':
+      return 'Campaign';
     default:
       return null;
   }

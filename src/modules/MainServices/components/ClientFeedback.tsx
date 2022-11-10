@@ -5,21 +5,30 @@ import { useInView } from 'react-intersection-observer';
 import {
   defaultWrapperAnimation,
   SlideUpAnimation,
+  StaggerItemAnimation,
+  StaggerWrapperAnimation,
   SubtitleAnimation,
 } from '@/common/animations/sharedAnimations';
+import StrapiImage from '@/common/components/StrapiImage';
 import Swiper from '@/common/components/Swiper';
 import Wrapper from '@/Layout/Wrapper';
 import Space from '@/modules/Layout/components/Space';
 import Subtitle from '@/modules/Layout/components/Subtitle';
 import Title from '@/modules/Layout/components/Title';
+import type { CompanyEntity } from '@/types';
 
 import ClientFeedbackCard from './ClientFeedbackCard';
 
 interface IClientFeedback {
   people: any[];
+  companies: CompanyEntity[] | [];
   style?: 'light' | 'dark';
 }
-const ClientFeedback = ({ people = [], style = 'light' }: IClientFeedback) => {
+const ClientFeedback = ({
+  people = [],
+  style = 'light',
+  companies = [],
+}: IClientFeedback) => {
   const colors = {
     dark: {
       text: 'text-white',
@@ -63,9 +72,36 @@ const ClientFeedback = ({ people = [], style = 'light' }: IClientFeedback) => {
             </Subtitle>
           </motion.div>
         </div>
-        <Space amount="sm" />
+        {companies.length > 0 && (
+          <>
+            <Space amount="md" />
+            <motion.div
+              className="grid grid-cols-3 gap-10 lg:grid-cols-6"
+              variants={StaggerWrapperAnimation}
+            >
+              {/* TODO: LONG LOGOS COLSPAN-2 */}
+              {companies.map((company) => (
+                <motion.div
+                  key={company.id}
+                  className="relative flex h-[80px] w-full  items-center justify-center"
+                  variants={StaggerItemAnimation}
+                >
+                  <StrapiImage
+                    src={company.attributes?.logo?.data?.attributes?.url}
+                    alt="Client logo"
+                    height={company.attributes?.logo?.data?.attributes?.height}
+                    width={company.attributes?.logo?.data?.attributes?.width}
+                    layout="fill"
+                    objectFit="contain"
+                  />
+                </motion.div>
+              ))}
+            </motion.div>
+          </>
+        )}
+        {/*  <Space amount="md" /> */}
         <motion.div className="hidden lg:block" variants={SlideUpAnimation()}>
-          <Swiper slidesPerView={2.8} version="dark">
+          <Swiper slidesPerView={2.8} version={style}>
             {people.map((person) => (
               /*  <motion.div
                 variants={StaggerItemAnimation}
@@ -81,7 +117,21 @@ const ClientFeedback = ({ people = [], style = 'light' }: IClientFeedback) => {
             ))}
           </Swiper>
         </motion.div>
-        <motion.div className="block lg:hidden" variants={SlideUpAnimation()}>
+        <motion.div
+          className="hidden md:block lg:hidden"
+          variants={SlideUpAnimation()}
+        >
+          <Swiper slidesPerView={1.8} centered>
+            {people.map((person) => (
+              <ClientFeedbackCard
+                person={person}
+                key={person.id}
+                color={style === 'dark' ? 'light' : 'dark'}
+              />
+            ))}
+          </Swiper>
+        </motion.div>
+        <motion.div className="block md:hidden" variants={SlideUpAnimation()}>
           <Swiper slidesPerView={1.2}>
             {people.map((person) => (
               <ClientFeedbackCard

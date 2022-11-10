@@ -1,5 +1,5 @@
 import { goals } from 'contents/index';
-import { video } from 'contents/videoUrls';
+import { placeholderVideoProd, video } from 'contents/videoUrls';
 import type { GetStaticProps } from 'next';
 import fact_1 from 'public/assets/video_prod/fact_1.svg';
 import fact_2 from 'public/assets/video_prod/fact_2.svg';
@@ -8,6 +8,7 @@ import React from 'react';
 
 import client from '@/lib/gql/client';
 import { GET_CLIENT_FEEDBACKS } from '@/lib/gql/queries/clientFeedback';
+import { GET_TRUESTED_COMPANIES } from '@/lib/gql/queries/companies';
 import GoalmapModulev2 from '@/modules/Goalmap';
 import LayoutModule from '@/modules/Layout';
 import Title from '@/modules/Layout/components/Title';
@@ -18,7 +19,10 @@ import SpreadMessage from '@/modules/MainServices/components/SpreadMessage';
 import Summary from '@/modules/MainServices/components/Summary';
 import Videocomparetable from '@/modules/MainServices/components/Videocomparetable';
 import ServicesModule from '@/modules/Services';
-import type { ClientFeedbackEntityResponseCollection } from '@/types';
+import type {
+  ClientFeedbackEntityResponseCollection,
+  CompanyEntityResponseCollection,
+} from '@/types';
 import yearsCounter from '@/utils/yearsCounter';
 
 const facts = [
@@ -134,9 +138,13 @@ const pricing = [
 
 interface IVideoProductionProps {
   clientFeedbacks: ClientFeedbackEntityResponseCollection;
+  companies: CompanyEntityResponseCollection;
 }
 
-const VideoProduction = ({ clientFeedbacks }: IVideoProductionProps) => {
+const VideoProduction = ({
+  clientFeedbacks,
+  companies,
+}: IVideoProductionProps) => {
   return (
     <LayoutModule>
       <StatelessHero
@@ -155,7 +163,7 @@ const VideoProduction = ({ clientFeedbacks }: IVideoProductionProps) => {
                 </span>
               </Title>
             </Title>
-            <p className="mt-3 max-w-xs text-left sm:mt-5 lg:max-w-lg  lg:text-xl xl:font-black">
+            <p className="max-w-xs mt-3 text-left sm:mt-5 lg:max-w-lg lg:text-xl xl:font-black">
               Bring your stories to life with our seamless, engaging, and
               impactful video production. With storyboarding, cinematography,
               sound design, and high-end equipment, we’ll capture your
@@ -167,6 +175,7 @@ const VideoProduction = ({ clientFeedbacks }: IVideoProductionProps) => {
       <SpreadMessage
         title="From telling your story"
         subtitle="You’re just one video away"
+        videoURL={placeholderVideoProd}
       />
       <Facts
         facts={facts}
@@ -174,7 +183,10 @@ const VideoProduction = ({ clientFeedbacks }: IVideoProductionProps) => {
         subtitle="And why our clients keep coming back to us for more"
       />
       <Videocomparetable compareTableRows={compareTableRows} />
-      <ClientFeedback people={clientFeedbacks?.data || []} />
+      <ClientFeedback
+        people={clientFeedbacks?.data || []}
+        companies={companies?.data || []}
+      />
       <GoalmapModulev2 goals={goals} />
       <Summary tiers={pricing} />
       <ServicesModule video={false} />
@@ -184,11 +196,15 @@ const VideoProduction = ({ clientFeedbacks }: IVideoProductionProps) => {
 export default VideoProduction;
 
 export const getStaticProps: GetStaticProps = async () => {
+  const { data } = await client.query({
+    query: GET_TRUESTED_COMPANIES,
+  });
   const { data: clientFeedbacksData } = await client.query({
     query: GET_CLIENT_FEEDBACKS,
   });
   return {
     props: {
+      companies: data.companies,
       clientFeedbacks: clientFeedbacksData.clientFeedbacks,
     },
   };

@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import ReactPlayer from 'react-player/youtube';
+import ReactPlayer from 'react-player';
 
 interface IResponsiveplayer {
   url: string | undefined | null;
@@ -30,6 +30,7 @@ const Responsiveplayer = ({ url }: IResponsiveplayer) => {
           url={url}
           width="100%"
           height="100%"
+          controls={true}
         />
       )}
     </div>

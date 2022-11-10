@@ -4,6 +4,7 @@ import { ApolloProvider } from '@apollo/client';
 import { AnimatePresence, motion } from 'framer-motion';
 import type { AppProps } from 'next/app';
 import Head from 'next/head';
+import Script from 'next/script';
 import { useState } from 'react';
 
 import ClientOnly from '@/common/components/ClientOnly';
@@ -60,6 +61,19 @@ const MyApp = ({ Component, pageProps, router }: AppProps) => {
           content="width=device-width, initial-scale=1.0, maximum-scale=1.0,user-scalable=0"
         />
       </Head>
+      <Script
+        async
+        strategy="afterInteractive"
+        src="https://www.googletagmanager.com/gtag/js?id=G-MH9CQJ17T8"
+      ></Script>
+      <Script id="google-tag-manager" strategy="afterInteractive">
+        {`
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-MH9CQJ17T8');
+      `}
+      </Script>
       <ApolloProvider client={client}>
         <AnimatePresence
           initial={false}

@@ -10,8 +10,8 @@ import AlternativeCTA from '@/modules/CallToAction/alternativeCTA';
 import GoalmapModulev2 from '@/modules/Goalmap';
 import LayoutModule from '@/modules/Layout';
 import MainHero from '@/modules/MainHero';
+import ClientFeedback from '@/modules/MainServices/components/ClientFeedback';
 import InlinePortfolioComponent from '@/modules/Portfolio/InlinePortfolioComponent';
-import TrustedclientsModule from '@/modules/Trustedclients';
 import type {
   ClientFeedbackEntityResponseCollection,
   CompanyEntityResponseCollection,
@@ -39,9 +39,14 @@ const IndexPage = ({
         videos={portfolioElements?.data || []}
         variant="dark"
       />
-      <TrustedclientsModule
+      {/* <TrustedclientsModule
         feedbacks={clientFeedbacks?.data || []}
         companies={companies?.data || []}
+      /> */}
+      <ClientFeedback
+        people={clientFeedbacks.data || []}
+        companies={companies?.data || []}
+        style="light"
       />
       <AlternativeCTA
         topColor="bg-white"

@@ -18,12 +18,14 @@ import ServicePopup from '@/modules/VennDiagram/components/modal';
 import VennV2 from '@/modules/VennDiagram/v2';
 import type {
   ClientFeedbackEntityResponseCollection,
+  CompanyEntityResponseCollection,
   PortfolioElementEntityResponseCollection,
 } from '@/types';
 
 interface IEventCommunicationPage {
   clientFeedbacks: ClientFeedbackEntityResponseCollection;
   portfolioElements: PortfolioElementEntityResponseCollection;
+  companies: CompanyEntityResponseCollection;
 }
 
 interface IText {
@@ -93,7 +95,7 @@ const EventCommunicationPage = ({
                   </span>
                 </Title>
               </Title>
-              <p className="mt-3 max-w-xs text-left sm:mt-5 lg:max-w-lg  lg:text-xl xl:font-black">
+              <p className="max-w-xs mt-3 text-left sm:mt-5 lg:max-w-lg lg:text-xl xl:font-black">
                 Elevate the communication that serves as a bridge between your
                 organisation and the world. We create an effective
                 communications strategy across newsletters, press releases,
@@ -125,7 +127,11 @@ const EventCommunicationPage = ({
           videos={portfolioElements?.data || []}
           variant="light"
         />
-        <ClientFeedback people={clientFeedbacks.data || []} style="dark" />
+        <ClientFeedback
+          people={clientFeedbacks.data || []}
+          style="dark"
+          companies={[]}
+        />
 
         <ServicesModule event={false} />
       </LayoutModule>

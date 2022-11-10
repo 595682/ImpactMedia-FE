@@ -11,10 +11,10 @@ import UnwrappedCallToActionModule from '@/modules/CallToAction/alternativeCTA';
 import LayoutModule from '@/modules/Layout';
 import Title from '@/modules/Layout/components/Title';
 import StatelessHero from '@/modules/MainHero/statelessHero';
+import ClientFeedback from '@/modules/MainServices/components/ClientFeedback';
 import NextEventModule from '@/modules/NextEvent';
 import InlinePortfolioComponent from '@/modules/Portfolio/InlinePortfolioComponent';
 import ServicesModule from '@/modules/Services';
-import TrustedclientsModule from '@/modules/Trustedclients';
 import type {
   ClientFeedbackEntityResponseCollection,
   CompanyEntityResponseCollection,
@@ -52,7 +52,7 @@ const LiveStramPage = ({
                 </span>
               </Title>
             </Title>
-            <p className="mt-3 max-w-xs text-left sm:mt-5 lg:max-w-lg  lg:text-xl xl:font-black">
+            <p className="max-w-xs mt-3 text-left sm:mt-5 lg:max-w-lg lg:text-xl xl:font-black">
               Connect with audiences across the world, in real time and in high
               definition. Tap on our live streaming expertise that covers all
               bases, from high-end camera and streaming gear to back-up Internet
@@ -79,8 +79,13 @@ const LiveStramPage = ({
         videos={portfolioElements?.data || []}
         variant="dark"
       />
-      <TrustedclientsModule
+      {/* <TrustedclientsModule
         feedbacks={clientFeedbacks.data || []}
+        companies={companies?.data || []}
+      /> */}
+      <ClientFeedback
+        people={clientFeedbacks.data || []}
+        style="light"
         companies={companies?.data || []}
       />
       <AboutUsInlineCoponent />

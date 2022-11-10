@@ -1,4 +1,6 @@
 import { motion, useAnimation } from 'framer-motion';
+import Image from 'next/image';
+import aboutUsImage from 'public/assets/images/about_us.jpg';
 import React, { useEffect } from 'react';
 import { useInView } from 'react-intersection-observer';
 
@@ -23,7 +25,7 @@ const AboutUsInlineCoponent = () => {
 
   return (
     <motion.div
-      className="bg-theme-primary py-20"
+      className="py-20 bg-theme-primary"
       ref={ref}
       initial="hidden"
       variants={defaultWrapperAnimation}
@@ -32,7 +34,13 @@ const AboutUsInlineCoponent = () => {
     >
       <Wrapper width="narrower">
         <div className="grid gap-8 md:grid-cols-2">
-          <div className="h-80 bg-slate-200"></div>
+          <div className="relative h-80">
+            <Image
+              src={aboutUsImage}
+              layout="fill"
+              alt="Impact media about us cover image"
+            />
+          </div>
           <motion.div
             variants={SlideUpAnimation()}
             className="flex flex-col items-center justify-center space-y-6"

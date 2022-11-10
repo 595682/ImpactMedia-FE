@@ -1,8 +1,15 @@
-import { anim, event, stream, video } from 'contents/videoUrls';
+import {
+  anim,
+  animThumbnail,
+  event,
+  eventThumbnail,
+  stream,
+  streamThumbnail,
+  video,
+  videoThumbnail,
+} from 'contents/videoUrls';
 
 import ServiceSection from './components/ServiceSection';
-
-/* TODO: VIDEOURL */
 
 const MainServicesModule = () => {
   return (
@@ -10,8 +17,7 @@ const MainServicesModule = () => {
       <ServiceSection
         link="/services/video-production"
         videoUrl={video}
-        /* videoUrl="/hero_video.mp4" */
-        poster="/poster.jpg"
+        poster={videoThumbnail}
         color="dark"
         title={
           <span className="block uppercase">
@@ -27,8 +33,7 @@ const MainServicesModule = () => {
         link="/services/animated-video-production"
         color="dark"
         videoUrl={anim}
-        /* videoUrl="/hero_anim.mp4" */
-        poster="/poster.jpg"
+        poster={animThumbnail}
         title={
           <span className="block uppercase">
             <span className="block">Animated video</span>
@@ -42,8 +47,7 @@ const MainServicesModule = () => {
         color="dark"
         link="/services/live-stream"
         videoUrl={stream}
-        /* videoUrl="/hero.mp4" */
-        poster="/poster.jpg"
+        poster={streamThumbnail}
         title={
           <span className="block uppercase">
             <span className="block">Live streams </span>
@@ -57,8 +61,7 @@ const MainServicesModule = () => {
         reverse
         link="/services/event-communication"
         videoUrl={event}
-        /* videoUrl="/hero_event.mp4" */
-        poster="/poster.jpg"
+        poster={eventThumbnail}
         color="dark"
         title={
           <span className="block uppercase">

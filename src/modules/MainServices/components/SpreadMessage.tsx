@@ -20,8 +20,9 @@ import SpreadMessageCard from './SpreadMessageCard';
 interface ISpreadMessage {
   title: string;
   subtitle: string;
+  videoURL: string;
 }
-const SpreadMessage = ({ title, subtitle }: ISpreadMessage) => {
+const SpreadMessage = ({ title, subtitle, videoURL }: ISpreadMessage) => {
   const controls = useAnimation();
   const [ref, inView] = useInView({ threshold: 0.2, triggerOnce: true });
   useEffect(() => {
@@ -52,10 +53,10 @@ const SpreadMessage = ({ title, subtitle }: ISpreadMessage) => {
           </motion.div>
         </div>
 
-        <div className="mt-12 grid w-full grid-cols-12">
-          <div className="col-span-12 grid grid-cols-1 gap-8 md:grid-cols-2 lg:col-span-6 lg:grid-cols-1 lg:space-y-6 ">
+        <div className="grid w-full grid-cols-12 mt-12">
+          <div className="grid grid-cols-1 col-span-12 gap-8 md:grid-cols-2 lg:col-span-6 lg:grid-cols-1 lg:space-y-6 ">
             <motion.div
-              className="col-span-1 flex items-center justify-center"
+              className="flex items-center justify-center col-span-1"
               variants={SlideUpAnimation()}
             >
               <SpreadMessageCard
@@ -65,7 +66,7 @@ const SpreadMessage = ({ title, subtitle }: ISpreadMessage) => {
               />
             </motion.div>
             <motion.div
-              className="col-span-1 flex items-center justify-center"
+              className="flex items-center justify-center col-span-1"
               variants={SlideUpAnimation()}
             >
               <SpreadMessageCard
@@ -77,9 +78,9 @@ const SpreadMessage = ({ title, subtitle }: ISpreadMessage) => {
           </div>
           <motion.div
             variants={SlideUpAnimation(1)}
-            className="col-span-12 mt-12 grid h-full lg:col-span-6 lg:mt-0"
+            className="grid h-full col-span-12 mt-12 lg:col-span-6 lg:mt-0"
           >
-            <Responsiveplayer url="https://www.youtube.com/watch?v=JxS5E-kZc2s" />
+            <Responsiveplayer url={videoURL} />
           </motion.div>
         </div>
       </Wrapper>

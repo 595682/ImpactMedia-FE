@@ -26,7 +26,7 @@ const NextButton = ({ version }: { version: 'dark' | 'light' }) => {
 
   const [isDisabled, setDisabled] = useState(false);
 
-  swiper.on('slideChange', () => {
+  swiper.on('toEdge', () => {
     if (swiper.isEnd) {
       setDisabled(true);
     } else {
@@ -89,7 +89,7 @@ const TitleBar = ({
       <div className="flex items-center">
         {title}
         {controlTitle && (
-          <div className="mr-6 flex grow justify-end space-x-2">
+          <div className="flex justify-end mr-6 space-x-2 grow">
             <PrevButton version={version} />
             <NextButton version={version} />
           </div>
@@ -149,7 +149,7 @@ const SwiperComponent = ({
           </SwiperSlide>
         ))}
         {!controlTitle && (
-          <div className="mt-6 hidden h-20 w-full justify-end space-x-5 px-10 lg:flex">
+          <div className="justify-end hidden w-full h-20 px-10 mt-6 space-x-5 md:flex">
             <PrevButton version={version} />
             <NextButton version={version} />
           </div>

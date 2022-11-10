@@ -507,6 +507,8 @@ export enum Enum_Portfolioelement_Elementtype {
   Event = 'event',
   LiveStream = 'live_stream',
   Video = 'video',
+  Branding = 'branding',
+  Campaign = 'campaign',
 }
 
 export type Error = {

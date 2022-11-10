@@ -14,6 +14,8 @@ export type TCategory =
   | 'animated_video'
   | 'live_stream'
   | 'event'
+  | 'branding'
+  | 'campaign'
   | '';
 
 interface IPortfolioPageProps {

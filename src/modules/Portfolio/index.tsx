@@ -20,7 +20,6 @@ const tabs: TTab = [
   {
     name: 'Animated videos',
     href: '#',
-
     category: 'animated_video',
   },
   { name: 'Live Streams', href: '#', category: 'live_stream' },
@@ -28,6 +27,16 @@ const tabs: TTab = [
     name: 'Events',
     href: '#',
     category: 'event',
+  },
+  {
+    name: 'Branding',
+    href: '#',
+    category: 'branding',
+  },
+  {
+    name: 'Campaign',
+    href: '#',
+    category: 'campaign',
   },
 ];
 
@@ -51,7 +60,7 @@ const PortfolioModule = ({
           <select
             id="tabs"
             name="tabs"
-            className="block w-full rounded-md border-gray-300 focus:border-indigo-500 focus:ring-indigo-500"
+            className="block w-full border-gray-300 rounded-md focus:border-indigo-500 focus:ring-indigo-500"
             defaultValue={tabs.find((tab) => tab.category === category)?.name}
           >
             {tabs.map((tab) => (
@@ -66,7 +75,7 @@ const PortfolioModule = ({
         </div>
         <div className="my-10">
           <nav
-            className="flex space-x-4 overflow-y-scroll rounded-lg bg-theme-primary p-4 scrollbar-hide"
+            className="flex p-4 space-x-4 overflow-y-scroll rounded-lg bg-theme-primary scrollbar-hide"
             aria-label="Tabs"
           >
             {tabs
@@ -84,7 +93,7 @@ const PortfolioModule = ({
                     px-3 py-2 text-base rounded-md cursor-pointer`}
                   aria-current={tab.category === category ? 'page' : undefined}
                 >
-                  {tab.icon ? <tab.icon className="h-6 w-6" /> : tab.name}
+                  {tab.icon ? <tab.icon className="w-6 h-6" /> : tab.name}
                 </span>
               ))}
           </nav>

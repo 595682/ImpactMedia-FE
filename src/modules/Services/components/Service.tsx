@@ -10,6 +10,7 @@ interface IServiceCard {
   title1: string;
   title2: string;
   url: string;
+  poster: string;
 }
 
 const color = {
@@ -22,6 +23,7 @@ const ServiceCard = ({
   title1,
   title2,
   url,
+  poster,
 }: IServiceCard) => {
   const [hovered, setHovered] = useState(false);
 
@@ -32,20 +34,16 @@ const ServiceCard = ({
         onMouseEnter={() => setHovered(true)}
         onMouseLeave={() => setHovered(false)}
       >
-        <motion.video
+        <motion.img
           animate={hovered ? { scale: 1.1 } : { scale: 1 }}
-          src="/hero.mp4"
-          poster="/poster.jpg"
+          src={poster}
           className={`absolute inset-0 -z-20 aspect-1 h-full w-full object-cover  blur-sm transition-all duration-700 ${
             hovered ? 'blur-none' : 'blur-sm'
           }`}
-          autoPlay={hovered}
-          muted
-          loop
-        ></motion.video>
-        <div className="absolute bottom-4 right-4 z-20 flex items-end justify-end text-white">
+        ></motion.img>
+        <div className="absolute z-20 flex items-end justify-end text-white bottom-4 right-4">
           <motion.div animate={hovered ? { x: 0 } : { x: 100 }}>
-            <ArrowRightIcon className="h-6 w-6" />
+            <ArrowRightIcon className="w-6 h-6" />
           </motion.div>
         </div>
         <div className="absolute inset-0 -z-20 bg-theme-primary mix-blend-screen"></div>

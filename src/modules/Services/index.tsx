@@ -1,3 +1,9 @@
+import {
+  animThumbnail,
+  eventThumbnail,
+  streamThumbnail,
+  videoThumbnail,
+} from 'contents/videoUrls';
 import { motion, useAnimation } from 'framer-motion';
 import { useEffect } from 'react';
 import { useInView } from 'react-intersection-observer';
@@ -33,6 +39,7 @@ const ServicesModule = ({
       visible: video,
       dark: false,
       url: '/services/video-production',
+      poster: videoThumbnail,
     },
     {
       title1: 'ANIMATED',
@@ -40,6 +47,7 @@ const ServicesModule = ({
       visible: animated,
       dark: false,
       url: '/services/animated-video-production',
+      poster: animThumbnail,
     },
     {
       title1: 'LIVE STREAMS',
@@ -47,6 +55,7 @@ const ServicesModule = ({
       visible: streams,
       dark: false,
       url: '/services/live-stream',
+      poster: streamThumbnail,
     },
     {
       title1: 'EVENTS &',
@@ -54,6 +63,7 @@ const ServicesModule = ({
       visible: event,
       dark: false,
       url: '/services/event-communication',
+      poster: eventThumbnail,
     },
   ];
 
@@ -94,6 +104,7 @@ const ServicesModule = ({
                   title1={service.title1}
                   title2={service.title2}
                   url={service.url}
+                  poster={service.poster}
                 />
               </motion.div>
             ))}

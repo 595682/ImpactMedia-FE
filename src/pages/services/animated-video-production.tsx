@@ -1,5 +1,5 @@
 import { goals } from 'contents/index';
-import { anim } from 'contents/videoUrls';
+import { anim, placeholderAnimVideo } from 'contents/videoUrls';
 import type { GetStaticProps } from 'next';
 import fact_1 from 'public/assets/video_prod/fact_1.svg';
 import fact_2 from 'public/assets/video_prod/fact_2.svg';
@@ -8,6 +8,7 @@ import React from 'react';
 
 import client from '@/lib/gql/client';
 import { GET_CLIENT_FEEDBACKS } from '@/lib/gql/queries/clientFeedback';
+import { GET_TRUESTED_COMPANIES } from '@/lib/gql/queries/companies';
 import GoalmapModulev2 from '@/modules/Goalmap';
 import LayoutModule from '@/modules/Layout';
 import Title from '@/modules/Layout/components/Title';
@@ -18,7 +19,10 @@ import SpreadMessage from '@/modules/MainServices/components/SpreadMessage';
 import Summary from '@/modules/MainServices/components/Summary';
 import Videocomparetable from '@/modules/MainServices/components/Videocomparetable';
 import ServicesModule from '@/modules/Services';
-import type { ClientFeedbackEntityResponseCollection } from '@/types';
+import type {
+  ClientFeedbackEntityResponseCollection,
+  CompanyEntityResponseCollection,
+} from '@/types';
 import yearsCounter from '@/utils/yearsCounter';
 
 const facts = [
@@ -132,12 +136,14 @@ const pricing = [
 
 interface IAnimVideoProductionProps {
   clientFeedbacks: ClientFeedbackEntityResponseCollection;
+  companies: CompanyEntityResponseCollection;
 }
 
 /* TODO: VIDEOURL */
 
 const AnimVideoProduction = ({
   clientFeedbacks,
+  companies,
 }: IAnimVideoProductionProps) => {
   return (
     <LayoutModule>
@@ -157,7 +163,7 @@ const AnimVideoProduction = ({
                 </span>
               </Title>
             </Title>
-            <p className="mt-3 max-w-xs text-left sm:mt-5 lg:max-w-lg  lg:text-xl xl:font-black">
+            <p className="max-w-xs mt-3 text-left sm:mt-5 lg:max-w-lg lg:text-xl xl:font-black">
               Step into a world of visual storytelling through animation. With a
               wide variety of 2D and 3D motion graphics, characters, designs,
               and typography, we’ll convey your most important messages in an
@@ -169,6 +175,7 @@ const AnimVideoProduction = ({
       <SpreadMessage
         subtitle="Just one video away"
         title="From telling your story"
+        videoURL={placeholderAnimVideo}
       />
       <Facts
         facts={facts}
@@ -176,7 +183,10 @@ const AnimVideoProduction = ({
         subtitle="And why our clients keep coming back to us for more."
       />
       <Videocomparetable compareTableRows={compareTableRows} />
-      <ClientFeedback people={clientFeedbacks?.data || []} />
+      <ClientFeedback
+        people={clientFeedbacks?.data || []}
+        companies={companies?.data || []}
+      />
       <GoalmapModulev2 goals={goals} />
       {/* <ProductionType /> */}
       <Summary tiers={pricing} />
@@ -187,11 +197,15 @@ const AnimVideoProduction = ({
 export default AnimVideoProduction;
 
 export const getStaticProps: GetStaticProps = async () => {
+  const { data } = await client.query({
+    query: GET_TRUESTED_COMPANIES,
+  });
   const { data: clientFeedbacksData } = await client.query({
     query: GET_CLIENT_FEEDBACKS,
   });
   return {
     props: {
+      companies: data.companies,
       clientFeedbacks: clientFeedbacksData.clientFeedbacks,
     },
   };

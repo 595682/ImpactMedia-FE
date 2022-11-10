@@ -79,7 +79,7 @@ const ClientFeedbackCard = ({
                 `at 
               ${person.attributes?.company?.data?.attributes?.name}`}
             </div>
-            <p className="flex items-center justify-center w-full text-center grow">
+            <p className="flex items-center justify-center w-full px-2 text-lg font-medium text-center grow md:font-medium">
               {person.attributes?.feedback}
             </p>
           </div>
