@@ -3,6 +3,7 @@ import type { GetStaticProps } from 'next';
 import { useEffect, useState } from 'react';
 
 import ClientOnly from '@/common/components/ClientOnly';
+import PageSEO from '@/common/components/PageSEO';
 import client from '@/lib/gql/client';
 import {
   GET_HEADLINE_POSTS,
@@ -64,6 +65,10 @@ const BlogPage = ({ allPosts, headlinePosts }: IBlogProps) => {
 
   return (
     <LayoutModule fullFooter>
+      <PageSEO
+        title="Blog | Impact Media"
+        description="Impact Media provides the latest industry news, insights, and updates on our blog."
+      />
       <BlogLayout>
         <ClientOnly>
           <BlogModule

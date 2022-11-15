@@ -55,7 +55,7 @@ const ClientFeedbackCard = ({
         ) : (
           <div className="relative w-40 h-40 mx-auto overflow-hidden rounded-full xl:h-40 xl:w-40 ">
             <Image
-              src={'/assets/defaultAvatar.png'}
+              src={'/assets/testimonial/testimonial_folder.jpg'}
               height={160}
               width={160}
               objectFit="cover"

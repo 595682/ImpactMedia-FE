@@ -2,6 +2,7 @@ import { AnimateSharedLayout } from 'framer-motion';
 import type { GetStaticProps } from 'next';
 import { useEffect, useState } from 'react';
 
+import PageSEO from '@/common/components/PageSEO';
 import client from '@/lib/gql/client';
 import { GET_ALL_PORTFOLIO_ELEMENTS } from '@/lib/gql/queries/portfolio';
 import LayoutModule from '@/modules/Layout';
@@ -58,6 +59,10 @@ const PortfolioPage = ({
 
   return (
     <AnimateSharedLayout>
+      <PageSEO
+        title="Portfolio | Impact Media"
+        description="Impact Media has produced excellent work for NGOs, political institutions, industry leaders, and communications managers, across Video Production, Animated Video Production, Live Streams & Webinars, and Events & Public Relations."
+      />
       <LayoutModule lightMenu previewMode={preview}>
         <PortfolioLayout>
           <PortfolioModule

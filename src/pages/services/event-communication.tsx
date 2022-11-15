@@ -3,6 +3,7 @@ import type { GetStaticProps } from 'next';
 import type { ReactNode } from 'react';
 import React, { useState } from 'react';
 
+import PageSEO from '@/common/components/PageSEO';
 import client from '@/lib/gql/client';
 import { GET_CLIENT_FEEDBACKS } from '@/lib/gql/queries/clientFeedback';
 import { GET_FEATURED_PORTFOLIO_ELEMENTS } from '@/lib/gql/queries/portfolio';
@@ -72,6 +73,10 @@ const EventCommunicationPage = ({
 
   return (
     <>
+      <PageSEO
+        title="Events & Public Relations | Impact Media"
+        description="Impact Media's events and public relations elevate the communication that bridges audiences across the world. We create an effective communications strategy across newsletters, press releases, journalistic articles, and more, then execute, manage and evaluate it."
+      />
       <ServicePopup
         closePopup={closePopup}
         content={popupContent}

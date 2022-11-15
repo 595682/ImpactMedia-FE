@@ -1,6 +1,7 @@
 import { approach, ctaContent, goals } from 'contents/index';
 import type { GetStaticProps } from 'next';
 
+import PageSEO from '@/common/components/PageSEO';
 import client from '@/lib/gql/client';
 import { GET_CLIENT_FEEDBACKS } from '@/lib/gql/queries/clientFeedback';
 import { GET_TRUESTED_COMPANIES } from '@/lib/gql/queries/companies';
@@ -30,10 +31,12 @@ const IndexPage = ({
   clientFeedbacks,
   portfolioElements,
 }: IIndexPageProps) => {
-  console.log(clientFeedbacks?.data);
-
   return (
     <LayoutModule>
+      <PageSEO
+        title="Home | Impact Media"
+        description="Impact Media is a professional audio-visual and public relations agency"
+      />
       <MainHero />
       <InlinePortfolioComponent
         videos={portfolioElements?.data || []}

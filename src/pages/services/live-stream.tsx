@@ -2,6 +2,7 @@ import { stream } from 'contents/videoUrls';
 import type { GetStaticProps } from 'next';
 import React from 'react';
 
+import PageSEO from '@/common/components/PageSEO';
 import client from '@/lib/gql/client';
 import { GET_CLIENT_FEEDBACKS } from '@/lib/gql/queries/clientFeedback';
 import { GET_TRUESTED_COMPANIES } from '@/lib/gql/queries/companies';
@@ -36,6 +37,10 @@ const LiveStramPage = ({
 }: ILiveStramPage) => {
   return (
     <LayoutModule>
+      <PageSEO
+        title="Live Streams & Webinars | Impact Media"
+        description="Impact Media's live streams and webinars connect audiences across the world, in real time and in high definition. Our live streaming expertise covers high-end camera and streaming gear, back-up Internet connection, and well-trained on-site staff."
+      />
       <StatelessHero
         serviceId={10}
         light

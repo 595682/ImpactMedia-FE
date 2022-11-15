@@ -6,6 +6,7 @@ import fact_2 from 'public/assets/video_prod/fact_2.svg';
 import fact_3 from 'public/assets/video_prod/fact_3.svg';
 import React from 'react';
 
+import PageSEO from '@/common/components/PageSEO';
 import client from '@/lib/gql/client';
 import { GET_CLIENT_FEEDBACKS } from '@/lib/gql/queries/clientFeedback';
 import { GET_TRUESTED_COMPANIES } from '@/lib/gql/queries/companies';
@@ -147,6 +148,10 @@ const VideoProduction = ({
 }: IVideoProductionProps) => {
   return (
     <LayoutModule>
+      <PageSEO
+        title="Video Production | Impact Media"
+        description="Impact Media's video production brings stories to life with seamless, engaging, and impactful storyboarding, cinematography, sound design, and high-end equipment."
+      />
       <StatelessHero
         serviceId={2}
         light

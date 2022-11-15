@@ -6,6 +6,7 @@ import fact_2 from 'public/assets/video_prod/fact_2.svg';
 import fact_3 from 'public/assets/video_prod/fact_3.svg';
 import React from 'react';
 
+import PageSEO from '@/common/components/PageSEO';
 import client from '@/lib/gql/client';
 import { GET_CLIENT_FEEDBACKS } from '@/lib/gql/queries/clientFeedback';
 import { GET_TRUESTED_COMPANIES } from '@/lib/gql/queries/companies';
@@ -147,6 +148,10 @@ const AnimVideoProduction = ({
 }: IAnimVideoProductionProps) => {
   return (
     <LayoutModule>
+      <PageSEO
+        title="Animated Video Production | Impact Media"
+        description="Impact Media's animated video production propels visual storytelling through animation. With a wide variety of 2D and 3D motion graphics, characters, designs, and typography, we convey the most important messages in an engaging and creative way."
+      />
       <StatelessHero
         serviceId={3}
         light

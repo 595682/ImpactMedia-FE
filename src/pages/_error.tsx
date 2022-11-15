@@ -4,6 +4,7 @@ import React from 'react';
 
 import Button from '@/common/components/buttons/button';
 import CustomLink from '@/common/components/CustomLink';
+import PageSEO from '@/common/components/PageSEO';
 import LayoutModule from '@/modules/Layout';
 import Space from '@/modules/Layout/components/Space';
 import Wrapper from '@/modules/Layout/components/Wrapper';
@@ -11,6 +12,10 @@ import Wrapper from '@/modules/Layout/components/Wrapper';
 const ErrorPage = () => {
   return (
     <LayoutModule noMap lightMenu>
+      <PageSEO
+        title="404 | Impact Media"
+        description="An error occurred and the page could not be found. Looks like it could use a story to bring it to life!"
+      />
       <Wrapper>
         <div className="grid pt-12 md:grid-cols-2 md:pt-40">
           <div className="flex flex-col items-center justify-center">
@@ -25,7 +30,7 @@ const ErrorPage = () => {
               <Button color="secondary" title="GO BACK" />
             </CustomLink>
           </div>
-          <div className="flex aspect-1 flex-col">
+          <div className="flex flex-col aspect-1">
             <Image
               src={err404}
               alt="Error 404 vector"

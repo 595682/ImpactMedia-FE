@@ -1,6 +1,7 @@
 import { approach } from 'contents/index';
 import type { GetStaticProps } from 'next';
 
+import PageSEO from '@/common/components/PageSEO';
 import client from '@/lib/gql/client';
 import { GET_TEAM_MEMBERS } from '@/lib/gql/queries/teamMembers';
 import AboutModule from '@/modules/About';
@@ -16,6 +17,10 @@ interface IAboutPageProps {
 const AboutPage = ({ teamMembers }: IAboutPageProps) => {
   return (
     <LayoutModule>
+      <PageSEO
+        title="About Impact Media"
+        description="Impact Media is a professional audio-visual and public relations agency."
+      />
       <AboutModule />
       <OurteamModule people={teamMembers?.data || []} color="light" />
       <ApproachModule approach={approach} />
