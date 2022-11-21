@@ -1,5 +1,5 @@
 import { goals } from 'contents/index';
-import { anim, placeholderAnimVideo } from 'contents/videoUrls';
+import { anim } from 'contents/videoUrls';
 import type { GetStaticProps } from 'next';
 import fact_1 from 'public/assets/video_prod/fact_1.svg';
 import fact_2 from 'public/assets/video_prod/fact_2.svg';
@@ -168,7 +168,7 @@ const AnimVideoProduction = ({
                 </span>
               </Title>
             </Title>
-            <p className="max-w-xs mt-3 text-left sm:mt-5 lg:max-w-lg lg:text-xl xl:font-black">
+            <p className="mt-3 max-w-xs text-left sm:mt-5 lg:max-w-lg lg:text-xl xl:font-black">
               Step into a world of visual storytelling through animation. With a
               wide variety of 2D and 3D motion graphics, characters, designs,
               and typography, we’ll convey your most important messages in an
@@ -180,7 +180,7 @@ const AnimVideoProduction = ({
       <SpreadMessage
         subtitle="Just one video away"
         title="From telling your story"
-        videoURL={placeholderAnimVideo}
+        videoURL={anim}
       />
       <Facts
         facts={facts}

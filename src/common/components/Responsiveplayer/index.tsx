@@ -30,7 +30,8 @@ const Responsiveplayer = ({ url }: IResponsiveplayer) => {
           url={url}
           width="100%"
           height="100%"
-          controls={true}
+          loop={true}
+          playing={true}
         />
       )}
     </div>
