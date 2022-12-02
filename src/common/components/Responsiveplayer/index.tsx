@@ -17,7 +17,6 @@ const Responsiveplayer = ({ url }: IResponsiveplayer) => {
   if (typeof url === 'undefined' || !url) {
     return null;
   }
-
   return (
     <div style={{ position: 'relative', paddingTop: '56.25%' }}>
       {hasWindow && (
@@ -30,7 +29,9 @@ const Responsiveplayer = ({ url }: IResponsiveplayer) => {
           url={url}
           width="100%"
           height="100%"
-          controls={true}
+          loop={true}
+          muted={true}
+          playing={true}
         />
       )}
     </div>

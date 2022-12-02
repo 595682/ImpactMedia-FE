@@ -49,7 +49,7 @@ const StatelessHero = ({
 
   return (
     <motion.div
-      className="h-[100vh]"
+      className="h-[100vh] bg-black/50"
       ref={ref}
       variants={mainHeroVariants}
       animate={controls}
