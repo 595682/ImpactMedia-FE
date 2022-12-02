@@ -35,7 +35,11 @@ const Button: React.FC<ButtonProps> = ({
       } items-center rounded-full ${
         sizes[size]
       } transition-colors duration-500 ${colorVariant[color]} 
-      ${disabled ? 'bg-gray-300 text-gray-600 hover:bg-gray-300' : ''}
+      ${
+        disabled
+          ? 'bg-gray-400 text-gray-600 hover:bg-gray-400'
+          : 'cursor-pointer'
+      }
       `}
       {...props}
     >

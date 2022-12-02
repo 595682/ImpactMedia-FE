@@ -54,20 +54,20 @@ const services: IService[] = [
                 {
                   value: 'Development of Research and Campaign Strategy',
                   decorator: (
-                    <PlusIcon className="h-4 w-4 text-theme-primary" />
+                    <PlusIcon className="w-4 h-4 text-theme-primary" />
                   ),
                 },
                 {
                   value: 'Development of Value Propositions and Visual Assets',
                   decorator: (
-                    <PlusIcon className="h-4 w-4 text-theme-primary" />
+                    <PlusIcon className="w-4 h-4 text-theme-primary" />
                   ),
                 },
                 {
                   value:
                     'Facebook/Google Ad Account Opening and Ads Installation',
                   decorator: (
-                    <PlusIcon className="h-4 w-4 text-theme-primary" />
+                    <PlusIcon className="w-4 h-4 text-theme-primary" />
                   ),
                 },
               ],
@@ -79,19 +79,19 @@ const services: IService[] = [
                 {
                   value: 'Ads Launch',
                   decorator: (
-                    <PlusIcon className="h-4 w-4 text-theme-primary" />
+                    <PlusIcon className="w-4 h-4 text-theme-primary" />
                   ),
                 },
                 {
                   value: 'Tracking, Optimizing, Improving Ads',
                   decorator: (
-                    <PlusIcon className="h-4 w-4 text-theme-primary" />
+                    <PlusIcon className="w-4 h-4 text-theme-primary" />
                   ),
                 },
                 {
                   value: 'Regular Reporting',
                   decorator: (
-                    <PlusIcon className="h-4 w-4 text-theme-primary" />
+                    <PlusIcon className="w-4 h-4 text-theme-primary" />
                   ),
                 },
               ],
@@ -103,13 +103,13 @@ const services: IService[] = [
                 {
                   value: 'Evaluation and Analysis Report',
                   decorator: (
-                    <PlusIcon className="h-4 w-4 text-theme-primary" />
+                    <PlusIcon className="w-4 h-4 text-theme-primary" />
                   ),
                 },
                 {
                   value: 'Debriefing',
                   decorator: (
-                    <PlusIcon className="h-4 w-4 text-theme-primary" />
+                    <PlusIcon className="w-4 h-4 text-theme-primary" />
                   ),
                 },
               ],
@@ -131,20 +131,20 @@ const services: IService[] = [
                 {
                   value: 'Development of Research and Campaign Strategy',
                   decorator: (
-                    <PlusIcon className="h-4 w-4 text-theme-primary" />
+                    <PlusIcon className="w-4 h-4 text-theme-primary" />
                   ),
                 },
                 {
                   value: 'Development of Value Propositions and Visual Assets',
                   decorator: (
-                    <PlusIcon className="h-4 w-4 text-theme-primary" />
+                    <PlusIcon className="w-4 h-4 text-theme-primary" />
                   ),
                 },
                 {
                   value:
                     'Facebook/Google Ad Account Opening and Ads Installation',
                   decorator: (
-                    <PlusIcon className="h-4 w-4 text-theme-primary" />
+                    <PlusIcon className="w-4 h-4 text-theme-primary" />
                   ),
                 },
               ],
@@ -156,19 +156,19 @@ const services: IService[] = [
                 {
                   value: 'Ads Launch',
                   decorator: (
-                    <PlusIcon className="h-4 w-4 text-theme-primary" />
+                    <PlusIcon className="w-4 h-4 text-theme-primary" />
                   ),
                 },
                 {
                   value: 'Tracking, Optimizing, Improving Ads',
                   decorator: (
-                    <PlusIcon className="h-4 w-4 text-theme-primary" />
+                    <PlusIcon className="w-4 h-4 text-theme-primary" />
                   ),
                 },
                 {
                   value: 'Regular Reporting',
                   decorator: (
-                    <PlusIcon className="h-4 w-4 text-theme-primary" />
+                    <PlusIcon className="w-4 h-4 text-theme-primary" />
                   ),
                 },
               ],
@@ -180,13 +180,13 @@ const services: IService[] = [
                 {
                   value: 'Evaluation and Analysis Report',
                   decorator: (
-                    <PlusIcon className="h-4 w-4 text-theme-primary" />
+                    <PlusIcon className="w-4 h-4 text-theme-primary" />
                   ),
                 },
                 {
                   value: 'Debriefing',
                   decorator: (
-                    <PlusIcon className="h-4 w-4 text-theme-primary" />
+                    <PlusIcon className="w-4 h-4 text-theme-primary" />
                   ),
                 },
               ],
@@ -198,7 +198,7 @@ const services: IService[] = [
     ],
   },
   {
-    title: 'EVENT COMMUNICATIONS',
+    title: 'COMMUNICATION',
     image: event_comm,
     options: [
       {
@@ -206,7 +206,7 @@ const services: IService[] = [
         popup: {
           serviceId: 4,
           title: 'BASIC',
-          subtitle: 'Event Communications',
+          subtitle: 'Communication',
           contents: [
             {
               title: 'EVENT BANNER',
@@ -336,7 +336,7 @@ const services: IService[] = [
         popup: {
           serviceId: 5,
           title: 'FULL',
-          subtitle: 'Event Communications',
+          subtitle: 'Communication',
           contents: [
             {
               title: 'EVENT BANNER',
@@ -467,7 +467,7 @@ const services: IService[] = [
     ],
   },
   {
-    title: 'EVENT BRANDING & IDENTITY',
+    title: 'BRANDING & IDENTITY',
     image: event_branding,
     options: [
       {
@@ -486,7 +486,7 @@ const services: IService[] = [
                 {
                   value: 'Unlimited revisions',
                   /* decorator: (
-                    <PlusIcon className="h-4 w-4 text-theme-primary" />
+                    <PlusIcon className="w-4 h-4 text-theme-primary" />
                   ), */
                 },
               ],

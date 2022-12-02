@@ -1,3 +1,4 @@
+/* eslint-disable no-useless-escape */
 import '../styles/global.css';
 
 import { ApolloProvider } from '@apollo/client';
@@ -74,6 +75,18 @@ const MyApp = ({ Component, pageProps, router }: AppProps) => {
           gtag('config', 'G-MH9CQJ17T8');
       `}
       </Script>
+      <Script
+        id="sopro.io"
+        dangerouslySetInnerHTML={{
+          __html: `(function (o, u, t, b, a, s, e) {
+        window[b] = window[b] || {}; (e = e || [])['key'] = o; e['__obr'] = u.location.href; a = [];
+        u.location.search.replace('?', '').split('&').forEach(function (q) { if (q.startsWith(b) || q.startsWith('_obid')) e[q.split('=')[0]] = q.split('=')[1]; });
+        e['_obid'] = e['_obid'] || (u.cookie.match(/(^|;)\s*_obid\s*=\s*([^;]+)/) || []).pop() || 0;
+        for (k in e) { if (e.hasOwnProperty(k)) a.push(encodeURIComponent(k) + '=' + encodeURIComponent(e[k])); }
+        s = u.createElement('script'); s.src = t + '?' + a.join('&'); u.head.appendChild(s);
+    })('ee1a8c55-ed38-4cb2-85c8-f5c0173aece9', document, 'https://plugin.sopro.io/hq.js', 'outbase')`,
+        }}
+      ></Script>
       <ApolloProvider client={client}>
         <AnimatePresence
           initial={false}

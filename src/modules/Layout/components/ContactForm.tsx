@@ -37,6 +37,15 @@ const ContactForm = ({ title, replace }: IContactForm) => {
   const [success, setSuccess] = useState(false);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(false);
+  const [buttonDisbaled, setButtonDisbaled] = useState(true);
+
+  useEffect(() => {
+    if (firstName && lastName && email && message) {
+      setButtonDisbaled(false);
+    } else {
+      setButtonDisbaled(true);
+    }
+  }, [firstName, lastName, email, message]);
 
   const handleCompleted = () => {
     setLoading(false);
@@ -113,10 +122,10 @@ const ContactForm = ({ title, replace }: IContactForm) => {
   };
 
   return (
-    <div className="flex h-full w-full flex-col items-center justify-center lg:max-w-md">
+    <div className="flex flex-col items-center justify-center w-full h-full lg:max-w-md">
       {success && (
-        <div className="flex w-full flex-col items-center justify-center py-4 text-theme-primary">
-          <CheckIcon className="h-20 w-20 " />
+        <div className="flex flex-col items-center justify-center w-full py-4 text-theme-primary">
+          <CheckIcon className="w-20 h-20 " />
           <span className="text-4xl font-bold">SUCCESS!</span>
           <p className="text-2xl">We have received your request!</p>
           <p className="text-lg">We will get back to you shortly.</p>
@@ -124,11 +133,11 @@ const ContactForm = ({ title, replace }: IContactForm) => {
       )}
       {!success && (
         <>
-          <h3 className="text-4xl font-medium uppercase text-gray-900">
+          <h3 className="text-4xl font-medium text-gray-900 uppercase">
             {title}
           </h3>
           {error && (
-            <div className="my-4 w-full rounded-xl bg-red-200 p-4 text-sm">
+            <div className="w-full p-4 my-4 text-sm bg-red-200 rounded-xl">
               An unexpected error happened while submitting your form! Please
               try again or contact us via{' '}
               <a className="font-bold" href="mailto:contact@impactmedia.com">
@@ -136,13 +145,13 @@ const ContactForm = ({ title, replace }: IContactForm) => {
               </a>
             </div>
           )}
-          <form className="mt-6 grid w-full grid-cols-1 gap-y-6 sm:grid-cols-2 sm:gap-x-8">
+          <form className="grid w-full grid-cols-1 mt-6 gap-y-6 sm:grid-cols-2 sm:gap-x-8">
             <div>
               <label
                 htmlFor="first-name"
                 className="block text-sm font-medium text-gray-900"
               >
-                First name
+                First name*
               </label>
               <div className="mt-1">
                 <input
@@ -154,7 +163,7 @@ const ContactForm = ({ title, replace }: IContactForm) => {
                   name="first-name"
                   id="first-name"
                   autoComplete="given-name"
-                  className="block w-full rounded-md border-gray-300 py-3 px-4 text-gray-900 shadow-sm focus:border-theme-primary focus:ring-theme-primary"
+                  className="block w-full px-4 py-3 text-gray-900 border-gray-300 rounded-md shadow-sm focus:border-theme-primary focus:ring-theme-primary"
                   disabled={loading}
                 />
               </div>
@@ -164,7 +173,7 @@ const ContactForm = ({ title, replace }: IContactForm) => {
                 htmlFor="last-name"
                 className="block text-sm font-medium text-gray-900"
               >
-                Last name
+                Last name*
               </label>
               <div className="mt-1">
                 <input
@@ -176,7 +185,7 @@ const ContactForm = ({ title, replace }: IContactForm) => {
                   name="last-name"
                   id="last-name"
                   autoComplete="family-name"
-                  className="block w-full rounded-md border-gray-300 py-3 px-4 text-gray-900 shadow-sm focus:border-theme-primary focus:ring-theme-primary"
+                  className="block w-full px-4 py-3 text-gray-900 border-gray-300 rounded-md shadow-sm focus:border-theme-primary focus:ring-theme-primary"
                   disabled={loading}
                 />
               </div>
@@ -186,7 +195,7 @@ const ContactForm = ({ title, replace }: IContactForm) => {
                 htmlFor="email"
                 className="block text-sm font-medium text-gray-900"
               >
-                Email
+                Email*
               </label>
               <div className="mt-1">
                 <input
@@ -198,7 +207,7 @@ const ContactForm = ({ title, replace }: IContactForm) => {
                   name="email"
                   type="email"
                   autoComplete="email"
-                  className="block w-full rounded-md border-gray-300 py-3 px-4 text-gray-900 shadow-sm focus:border-theme-primary focus:ring-theme-primary"
+                  className="block w-full px-4 py-3 text-gray-900 border-gray-300 rounded-md shadow-sm focus:border-theme-primary focus:ring-theme-primary"
                   disabled={loading}
                 />
               </div>
@@ -216,7 +225,7 @@ const ContactForm = ({ title, replace }: IContactForm) => {
                   htmlFor="message"
                   className="block text-sm font-medium text-gray-900"
                 >
-                  {replace?.message ? replace.message : 'Message'}
+                  {replace?.message ? `${replace.message}*` : 'Message*'}
                 </label>
                 <span id="message-max" className="text-sm text-gray-500">
                   Max. 500 characters
@@ -231,7 +240,7 @@ const ContactForm = ({ title, replace }: IContactForm) => {
                   id="message"
                   name="message"
                   rows={4}
-                  className="block w-full rounded-md border border-gray-300 py-3 px-4 text-gray-900 shadow-sm focus:border-theme-primary focus:ring-theme-primary"
+                  className="block w-full px-4 py-3 text-gray-900 border border-gray-300 rounded-md shadow-sm focus:border-theme-primary focus:ring-theme-primary"
                   aria-describedby="message-max"
                   disabled={loading}
                 />
@@ -242,7 +251,7 @@ const ContactForm = ({ title, replace }: IContactForm) => {
                 color="primary"
                 title={!loading ? 'SUBMIT' : 'SUBMITTING'}
                 onClick={handleSubmit}
-                disabled={loading}
+                disabled={loading || buttonDisbaled}
                 icon={loading ? <Spinner /> : null}
               />
             </div>

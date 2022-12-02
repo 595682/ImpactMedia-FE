@@ -121,19 +121,19 @@ const heroOptions = [
   },
   {
     id: 2,
-    title: 'Events',
-    url: '/services/event-communication',
-    video: event,
-    /* video: '/hero_event.mp4', */
-    poster: eventThumbnail || '/poster.jpg',
-  },
-  {
-    id: 3,
     title: 'Live Streams',
     url: '/services/live-stream',
     /* video: '/hero.mp4', */
     video: stream,
     poster: streamThumbnail || '/poster.jpg',
+  },
+  {
+    id: 3,
+    title: 'Public Relations 2.0',
+    url: '/services/event-communication',
+    video: event,
+    /* video: '/hero_event.mp4', */
+    poster: eventThumbnail || '/poster.jpg',
   },
 ];
 
