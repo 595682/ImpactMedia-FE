@@ -15,7 +15,6 @@ import posts_6 from 'public/assets/icons/posts_6.svg';
 import prep from 'public/assets/icons/prep.svg';
 import press_release from 'public/assets/icons/press_release.svg';
 import smpost from 'public/assets/icons/smpost.svg';
-import speaker from 'public/assets/icons/speaker.svg';
 import thankyou from 'public/assets/icons/thankyou.svg';
 import visuals from 'public/assets/icons/visuals.svg';
 import web from 'public/assets/icons/web.svg';
@@ -205,7 +204,7 @@ const services: IService[] = [
         label: 'Basic',
         popup: {
           serviceId: 4,
-          title: 'BASIC',
+          title: 'BASIC PACKAGE',
           subtitle: 'Communication',
           contents: [
             {
@@ -214,12 +213,6 @@ const services: IService[] = [
                 {
                   value: 'Matches your organisation’s visual identity ',
                 },
-                {
-                  value: '1 style suggestion, fits up to 5 sizes',
-                },
-                {
-                  value: 'X Revisions',
-                },
               ],
               icon: flag,
             },
@@ -227,13 +220,7 @@ const services: IService[] = [
               title: 'WEBSITE EVENT ANNOUNCEMENT ARTICLE',
               text: [
                 {
-                  value: 'Up to 300 words',
-                },
-                {
                   value: 'Tailored to your target audience',
-                },
-                {
-                  value: 'Unlimited copy revisions',
                 },
               ],
               icon: web,
@@ -242,13 +229,7 @@ const services: IService[] = [
               title: '2 SOCIAL MEDIA EVENT VISUALS',
               text: [
                 {
-                  value: 'Matches your event’s visual identity',
-                },
-                {
-                  value: 'Photos, banners, GIFs, short videos (max. 30 sec)',
-                },
-                {
-                  value: '2 revisions',
+                  value: 'Photos, banners, GIFs',
                 },
               ],
               icon: visuals,
@@ -257,13 +238,7 @@ const services: IService[] = [
               title: 'PRESS RELEASE',
               text: [
                 {
-                  value: 'Up to 450 words',
-                },
-                {
                   value: 'Highly focused on your call-to-action',
-                },
-                {
-                  value: 'Unlimited copy revisions',
                 },
               ],
               icon: press_release,
@@ -272,13 +247,7 @@ const services: IService[] = [
               title: 'EVENT INVITATION',
               text: [
                 {
-                  value: 'Matches your organisation’s visual identity',
-                },
-                {
-                  value: 'Fits up to 5 sizes',
-                },
-                {
-                  value: 'X revisions',
+                  value: 'Pdf, print & web format',
                 },
               ],
               icon: invite,
@@ -287,33 +256,30 @@ const services: IService[] = [
               title: '3 SOCIAL MEDIA EVENT POSTS',
               text: [
                 {
-                  value: 'Up to 300 words',
-                },
-                {
-                  value: 'Tailored to your target audience',
-                },
-                {
-                  value: 'Unlimited copy revisions',
+                  value: 'Tailored to all your social media channels',
                 },
               ],
               icon: post,
             },
             {
-              title: 'POST-EVENT FOLLOW-UP MAIL TO ATTENDEES',
+              title: 'POST-EVENT FOLLOW-UP MAIL TO ATTENDEES AND SPEAKERS',
               text: [
                 {
-                  value: 'Up to X words',
-                },
-                {
                   value: 'Tailored to your target audience',
-                },
-                {
-                  value: '2 revisions',
                 },
               ],
               icon: attendee,
             },
             {
+              title: 'CUSTOM',
+              text: [
+                {
+                  value: 'Adapted to your needs',
+                },
+              ],
+              icon: custom,
+            },
+            /*             {
               title: 'POST-EVENT FOLLOW-UP MAIL TO SPEAKERS',
               text: [
                 {
@@ -327,7 +293,7 @@ const services: IService[] = [
                 },
               ],
               icon: speaker,
-            },
+            }, */
           ],
         },
       },
@@ -335,35 +301,24 @@ const services: IService[] = [
         label: 'Full',
         popup: {
           serviceId: 5,
-          title: 'FULL',
+          title: 'FULL PACKAGE',
           subtitle: 'Communication',
           contents: [
             {
               title: 'EVENT BANNER',
               text: [
                 {
-                  value: 'Matches your organisation’s visual identity ',
-                },
-                {
-                  value: 'Unlimited revisions included',
-                },
-                {
-                  value: '2 style suggestions, fits up to 10 sizes',
+                  value:
+                    'Matches the brand identity of your organisation, print & web format',
                 },
               ],
               icon: flag,
             },
             {
-              title: '3 WEBSITE EVENT ANNOUNCEMENT ARTICLES',
+              title: '3 WEBSITE ARTICLES',
               text: [
                 {
-                  value: 'Up to X words',
-                },
-                {
                   value: 'Tailored to your target audience',
-                },
-                {
-                  value: 'Unlimited copy revisions',
                 },
               ],
               icon: web,
@@ -372,14 +327,7 @@ const services: IService[] = [
               title: '6 SOCIAL MEDIA EVENT VISUALS',
               text: [
                 {
-                  value: 'Matches your event’s visual identity',
-                },
-                {
-                  value:
-                    'Photos, banners, GIFs, short videos (max. 30 seconds)',
-                },
-                {
-                  value: 'Unlimited revisions',
+                  value: 'Photos, banners, GIFs',
                 },
               ],
               icon: posts_6,
@@ -388,13 +336,7 @@ const services: IService[] = [
               title: 'PRESS RELEASE (WITH MEDIA PRESS LIST AND PITCH)',
               text: [
                 {
-                  value: 'Up to X words',
-                },
-                {
                   value: 'Highly focused on your call-to-action',
-                },
-                {
-                  value: 'Unlimited copy revisions',
                 },
               ],
               icon: press_release,
@@ -403,29 +345,17 @@ const services: IService[] = [
               title: 'EVENT INVITATION (WITH BUILD-OUT ON YOUR EMAIL SOFTWARE)',
               text: [
                 {
-                  value: 'Matches your organisation’s visual identity',
-                },
-                {
-                  value: 'Fits up to X sizes',
-                },
-                {
-                  value: 'Unlimited revisions',
+                  value: 'And a pdf, print & web format',
                 },
               ],
               icon: invite,
             },
 
             {
-              title: '6 SOCIAL MEDIA EVENT POSTS (ACROSS ALL CHANNELS)',
+              title: '6 SOCIAL MEDIA EVENT POSTS',
               text: [
                 {
-                  value: 'Up to X words',
-                },
-                {
-                  value: 'Tailored to your target audience',
-                },
-                {
-                  value: '○	Unlimited copy revisions',
+                  value: 'Tailored to all your social media channels',
                 },
               ],
               icon: visuals,
@@ -434,19 +364,7 @@ const services: IService[] = [
               title: 'POST-EVENT FOLLOW-UP MAIL TO ATTENDEES AND SPEAKERS',
               text: [
                 {
-                  value: 'Up to X words',
-                },
-                {
-                  value: 'Tailored to your target audience',
-                },
-                {
-                  value: 'Choose your own style',
-                },
-                {
-                  value: 'Thank you’ video (max. 30 seconds)',
-                },
-                {
-                  value: 'Unlimited revisions',
+                  value: 'Or a 30-sec thank you video',
                 },
               ],
               icon: thankyou,
@@ -482,12 +400,6 @@ const services: IService[] = [
               text: [
                 {
                   value: 'Choose between 3 logo styles',
-                },
-                {
-                  value: 'Unlimited revisions',
-                  /* decorator: (
-                    <PlusIcon className="w-4 h-4 text-theme-primary" />
-                  ), */
                 },
               ],
               icon: logo,

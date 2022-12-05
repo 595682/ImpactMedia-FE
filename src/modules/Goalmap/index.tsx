@@ -50,15 +50,15 @@ const GoalmapModule = ({ goals }: IGoalmapModulev2) => {
       transition={{ when: 'beforeChildren' }}
     >
       <motion.div
-        className="absolute inset-0 -z-10 h-full w-full bg-theme-primary"
+        className="absolute inset-0 w-full h-full -z-10 bg-theme-primary"
         variants={goalMapBgAnimation}
       ></motion.div>
       <Wrapper>
-        <div className="mb-20 flex flex-col items-center text-white">
+        <div className="flex flex-col items-center mb-20 text-white">
           <div className="overflow-hidden">
             <motion.div variants={SubtitleAnimation}>
               <Title>
-                <p className="text-center text-3xl font-bold sm:text-2xl md:text-3xl xl:text-4xl">
+                <p className="text-3xl font-bold text-center sm:text-2xl md:text-3xl xl:text-4xl">
                   GET YOUR MESSAGE ACROSS IN THE MOST EFFECTIVE WAY
                 </p>
               </Title>
@@ -68,9 +68,9 @@ const GoalmapModule = ({ goals }: IGoalmapModulev2) => {
           <div className="overflow-hidden">
             <motion.div variants={TitleAnimation}>
               <Subtitle>
-                <p className="text-center text-lg lg:text-xl">
+                <p className="text-lg text-center lg:text-xl">
                   {`Tap on the expertise of a team with ${yearsCounter} years of experience and
-                  X video content produced.`}
+                  over 200 hours of video content produced.`}
                 </p>
               </Subtitle>
             </motion.div>
@@ -79,7 +79,7 @@ const GoalmapModule = ({ goals }: IGoalmapModulev2) => {
       </Wrapper>
       <Wrapper>
         <div className="grid grid-cols-12">
-          <div className="col-span-10 col-start-4 flex justify-end pt-10 md:col-span-5 md:col-start-1">
+          <div className="flex justify-end col-span-10 col-start-4 pt-10 md:col-span-5 md:col-start-1">
             <GoalMapCard
               image={goals[0]?.image}
               alt={goals[0]!.imageDescription}
@@ -87,17 +87,17 @@ const GoalmapModule = ({ goals }: IGoalmapModulev2) => {
               offset={65}
             />
           </div>
-          <div className="relative col-span-2 col-start-1 row-start-1 flex w-full items-center justify-center md:col-start-6">
-            <div className="h-full w-4 bg-theme-secondary"></div>
-            <div className="absolute flex h-16 w-16 items-center justify-center rounded-full bg-theme-secondary">
+          <div className="relative flex items-center justify-center w-full col-span-2 col-start-1 row-start-1 md:col-start-6">
+            <div className="w-4 h-full bg-theme-secondary"></div>
+            <div className="absolute flex items-center justify-center w-16 h-16 rounded-full bg-theme-secondary">
               <span className="text-2xl font-bold">1</span>
             </div>
           </div>
-          <div className="col-span-5 hidden md:block"></div>
-          <div className="col-span-5 hidden md:block"></div>
-          <div className="relative col-span-2 col-start-1 flex w-full items-center justify-center md:col-start-auto">
-            <div className="h-full w-4 bg-theme-secondary"></div>
-            <div className="absolute flex h-16 w-16 items-center justify-center rounded-full bg-theme-secondary">
+          <div className="hidden col-span-5 md:block"></div>
+          <div className="hidden col-span-5 md:block"></div>
+          <div className="relative flex items-center justify-center w-full col-span-2 col-start-1 md:col-start-auto">
+            <div className="w-4 h-full bg-theme-secondary"></div>
+            <div className="absolute flex items-center justify-center w-16 h-16 rounded-full bg-theme-secondary">
               <span className="text-2xl font-bold">2</span>
             </div>
           </div>
@@ -109,7 +109,7 @@ const GoalmapModule = ({ goals }: IGoalmapModulev2) => {
               offset={60}
             />
           </div>
-          <div className="col-span-10 col-start-4 flex justify-end pt-10 md:col-span-5 md:col-start-auto">
+          <div className="flex justify-end col-span-10 col-start-4 pt-10 md:col-span-5 md:col-start-auto">
             <GoalMapCard
               image={goals[2]?.image}
               alt={goals[2]!.imageDescription}
@@ -117,17 +117,17 @@ const GoalmapModule = ({ goals }: IGoalmapModulev2) => {
               offset={65}
             />
           </div>
-          <div className="relative col-span-2 col-start-1 row-start-3 flex w-full items-center justify-center md:col-start-6">
-            <div className="h-full w-4 bg-theme-secondary"></div>
-            <div className="absolute flex h-16 w-16 items-center justify-center rounded-full bg-theme-secondary">
+          <div className="relative flex items-center justify-center w-full col-span-2 col-start-1 row-start-3 md:col-start-6">
+            <div className="w-4 h-full bg-theme-secondary"></div>
+            <div className="absolute flex items-center justify-center w-16 h-16 rounded-full bg-theme-secondary">
               <span className="text-2xl font-bold">3</span>
             </div>
           </div>
-          <div className="col-span-5 hidden md:block"></div>
-          <div className="col-span-5 hidden md:block"></div>
-          <div className="relative col-span-2 col-start-1 flex w-full items-center justify-center md:col-start-auto">
-            <div className="h-full w-4 bg-theme-secondary"></div>
-            <div className="absolute flex h-16 w-16 items-center justify-center rounded-full bg-theme-secondary">
+          <div className="hidden col-span-5 md:block"></div>
+          <div className="hidden col-span-5 md:block"></div>
+          <div className="relative flex items-center justify-center w-full col-span-2 col-start-1 md:col-start-auto">
+            <div className="w-4 h-full bg-theme-secondary"></div>
+            <div className="absolute flex items-center justify-center w-16 h-16 rounded-full bg-theme-secondary">
               <span className="text-2xl font-bold">4</span>
             </div>
           </div>
