@@ -197,7 +197,7 @@ const services: IService[] = [
     ],
   },
   {
-    title: 'COMMUNICATION',
+    title: 'EVENT COMMUNICATION',
     image: event_comm,
     options: [
       {
