@@ -1,4 +1,4 @@
-import Responsiveplayer from '@/common/components/Responsiveplayer';
+import Responsiveplayer from '@/common/components/Responsiveplayer/controllableResponsivePlayer';
 import StrapiImage from '@/common/components/StrapiImage';
 import Wrapper from '@/modules/Layout/components/Wrapper';
 import type { UploadFileEntityResponse } from '@/types';
@@ -10,8 +10,8 @@ interface IMidHero {
 const MidHero = ({ mainVideo, mainImage }: IMidHero) => {
   if (mainVideo) {
     return (
-      <div className="relative w-full bg-theme-primary text-white">
-        <div className="absolute bottom-0 h-1/2 w-full bg-white"></div>
+      <div className="relative w-full text-white bg-theme-primary">
+        <div className="absolute bottom-0 w-full bg-white h-1/2"></div>
         <Wrapper width="narrower">
           <Responsiveplayer url={mainVideo} />
         </Wrapper>
@@ -20,8 +20,8 @@ const MidHero = ({ mainVideo, mainImage }: IMidHero) => {
   }
   if (mainImage) {
     return (
-      <div className="relative w-full bg-theme-primary text-white">
-        <div className="absolute bottom-0 h-1/2 w-full bg-white"></div>
+      <div className="relative w-full text-white bg-theme-primary">
+        <div className="absolute bottom-0 w-full bg-white h-1/2"></div>
         <Wrapper width="narrower">
           <StrapiImage
             src={

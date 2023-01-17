@@ -1,4 +1,4 @@
-import Responsiveplayer from '@/common/components/Responsiveplayer';
+import Responsiveplayer from '@/common/components/Responsiveplayer/controllableResponsivePlayer';
 import Space from '@/modules/Layout/components/Space';
 
 import ComponentBlogSectionTitle from './ComponentBlogSectionTitle';

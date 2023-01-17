@@ -8,11 +8,11 @@ interface IResponsiveplayer {
   playing?: boolean;
   controls?: boolean;
 }
-const Responsiveplayer = ({
+const ControllableResponsivePlayer = ({
   url,
-  loop = true,
-  muted = true,
-  controls = false,
+  loop = false,
+  muted = false,
+  controls = true,
   playing = true,
 }: IResponsiveplayer) => {
   // https://github.com/cookpete/react-player/issues/1474
@@ -48,4 +48,4 @@ const Responsiveplayer = ({
     </div>
   );
 };
-export default Responsiveplayer;
+export default ControllableResponsivePlayer;

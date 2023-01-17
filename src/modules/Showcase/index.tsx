@@ -12,17 +12,23 @@ interface IShowcaseModule {
 }
 const ShowcaseModule = ({ videos }: IShowcaseModule) => {
   return (
-    <div className="bg-theme-primary py-40 text-white">
+    <div className="py-40 text-white bg-theme-primary">
       <Wrapper>
         <Subtitle>Draw inspiration from our previous work.</Subtitle>
         <Title>
           <span className="font-bold">VIDEO</span> SHOWCASE
         </Title>
         <Space amount="lg" />
-        <dl className="mx-auto hidden grid-cols-3 gap-8 lg:grid ">
+        <dl className="hidden grid-cols-3 gap-8 mx-auto lg:grid ">
           {videos.map((video) => (
             <div key={video.id} className="flex flex-col bg-white">
-              <Responsiveplayer url={video.attributes?.mainVideoUrl} />
+              <Responsiveplayer
+                url={video.attributes?.mainVideoUrl}
+                controls={true}
+                loop={false}
+                muted={false}
+                playing={false}
+              />
             </div>
           ))}
         </dl>
