@@ -2,7 +2,7 @@ import { gql } from '@apollo/client';
 
 const GET_ALL_PORTFOLIO_ELEMENTS_LIGHT = gql`
   query {
-    portfolioElements {
+    portfolioElements(pagination: { limit: 100 }) {
       data {
         id
         attributes {
@@ -19,7 +19,7 @@ const GET_ALL_PORTFOLIO_ELEMENTS_LIGHT = gql`
 
 const GET_ALL_PORTFOLIO_ELEMENTS = gql`
   query ($state: PublicationState) {
-    portfolioElements(publicationState: $state) {
+    portfolioElements(publicationState: $state, pagination: { limit: 100 }) {
       data {
         id
         attributes {
