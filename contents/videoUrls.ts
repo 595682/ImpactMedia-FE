@@ -1,5 +1,6 @@
 //  URL: /services/video-production
-export const video = 'https://fs.impact-media.eu/01_promo_videos_v2_3_2323372d64.mp4';
+export const video =
+  'https://fs.impact-media.eu/01_promo_videos_v2_3_2323372d64.mp4';
 export const videoThumbnail = '' || '/poster.jpg';
 export const placeholderVideoProd = 'https://vimeo.com/424802498';
 
