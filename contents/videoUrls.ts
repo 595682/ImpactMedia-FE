@@ -1,12 +1,12 @@
 //  URL: /services/video-production
 export const video =
   'https://fs.impact-media.eu/01_promo_videos_v2_3_2323372d64.mp4';
-export const videoThumbnail = '' || '/poster.jpg';
+export const videoThumbnail = '/newVideosTumbnail.png' || '/poster.jpg';
 export const placeholderVideoProd = 'https://vimeo.com/424802498';
 
 //  URL: /services/animated-video-production
 export const anim = 'https://fs.impact-media.eu/02_animation_v1_e5b844bd6b.mp4';
-export const animThumbnail = '' || '/poster.jpg';
+export const animThumbnail = '/newVideosTumbnail.png' || '/poster.jpg';
 export const placeholderAnimVideo = 'https://vimeo.com/424802498';
 
 //  URL: /services/live-stream
