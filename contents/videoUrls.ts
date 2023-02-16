@@ -15,5 +15,5 @@ export const streamThumbnail = '' || '/poster.jpg';
 
 //  RECENTLY RENAMED TO  Public Relations 2.0
 //  URL: /services/event-communication
-export const event = 'https://fs.impact-media.eu/hero_event_e292bf37ad.mp4';
-export const eventThumbnail = '' || '/poster.jpg';
+export const event = 'https://fs.impact-media.eu/public_listen_political_discussion_on_event_hall_2022_08_03_15_03_10_utc_7ce3c98635.webm';
+export const eventThumbnail = '/public-listen.jpg' || '/poster.jpg';
