@@ -53,10 +53,10 @@ const SpreadMessage = ({ title, subtitle, videoURL }: ISpreadMessage) => {
           </motion.div>
         </div>
 
-        <div className="grid w-full grid-cols-12 mt-12">
-          <div className="grid grid-cols-1 col-span-12 gap-8 md:grid-cols-2 lg:col-span-6 lg:grid-cols-1 lg:space-y-6 ">
+        <div className="mt-12 grid w-full grid-cols-12">
+          <div className="col-span-12 grid grid-cols-1 gap-8 md:grid-cols-2 lg:col-span-6 lg:grid-cols-1 lg:space-y-6 ">
             <motion.div
-              className="flex items-center justify-center col-span-1"
+              className="col-span-1 flex items-center justify-center"
               variants={SlideUpAnimation()}
             >
               <SpreadMessageCard
@@ -66,7 +66,7 @@ const SpreadMessage = ({ title, subtitle, videoURL }: ISpreadMessage) => {
               />
             </motion.div>
             <motion.div
-              className="flex items-center justify-center col-span-1"
+              className="col-span-1 flex items-center justify-center"
               variants={SlideUpAnimation()}
             >
               <SpreadMessageCard
@@ -78,9 +78,14 @@ const SpreadMessage = ({ title, subtitle, videoURL }: ISpreadMessage) => {
           </div>
           <motion.div
             variants={SlideUpAnimation(1)}
-            className="grid h-full col-span-12 mt-12 lg:col-span-6 lg:mt-0"
+            className="col-span-12 mt-12 grid h-full lg:col-span-6 lg:mt-0"
           >
-            <Responsiveplayer url={videoURL} />
+            <Responsiveplayer
+              url={videoURL}
+              controls
+              muted={false}
+              playing={false}
+            />
           </motion.div>
         </div>
       </Wrapper>

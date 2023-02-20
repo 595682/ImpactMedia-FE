@@ -10,10 +10,10 @@ interface IResponsiveplayer {
 }
 const Responsiveplayer = ({
   url,
-  loop = true,
-  muted = true,
-  controls = false,
-  playing = true,
+  loop = false,
+  muted = false,
+  controls = true,
+  playing = false,
 }: IResponsiveplayer) => {
   // https://github.com/cookpete/react-player/issues/1474
   //  HACK: HASWINDOW to check if window exists, so it loads using SSR check for react-player version updates to support SSR

@@ -18,7 +18,7 @@ const ComponentBlogVideo = ({ videoUrl, title }: IComponentBlogVideo) => {
         <>
           <ComponentBlogSectionTitle title={title} />
           <Space custom="h-6" />
-          <Responsiveplayer url={videoUrl} />
+          <Responsiveplayer url={videoUrl} playing={false} muted={false} />
         </>
       )}
     </div>

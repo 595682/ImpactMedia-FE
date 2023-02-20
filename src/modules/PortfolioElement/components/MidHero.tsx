@@ -10,18 +10,24 @@ interface IMidHero {
 const MidHero = ({ mainVideo, mainImage }: IMidHero) => {
   if (mainVideo) {
     return (
-      <div className="relative w-full text-white bg-theme-primary">
-        <div className="absolute bottom-0 w-full bg-white h-1/2"></div>
+      <div className="relative w-full bg-theme-primary text-white">
+        <div className="absolute bottom-0 h-1/2 w-full bg-white"></div>
         <Wrapper width="narrower">
-          <Responsiveplayer url={mainVideo} />
+          <Responsiveplayer
+            url={mainVideo}
+            controls={true}
+            loop={false}
+            muted={false}
+            playing={false}
+          />
         </Wrapper>
       </div>
     );
   }
   if (mainImage) {
     return (
-      <div className="relative w-full text-white bg-theme-primary">
-        <div className="absolute bottom-0 w-full bg-white h-1/2"></div>
+      <div className="relative w-full bg-theme-primary text-white">
+        <div className="absolute bottom-0 h-1/2 w-full bg-white"></div>
         <Wrapper width="narrower">
           <StrapiImage
             src={
