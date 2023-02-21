@@ -1,4 +1,3 @@
-//make a type for the services details
 export type ServicesDetails = {
   title1: string;
   title2: string;

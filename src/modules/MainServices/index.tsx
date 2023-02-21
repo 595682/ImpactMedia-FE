@@ -1,4 +1,10 @@
 import {
+  animServiceDetails,
+  eventServiceDetails,
+  streamServiceDetails,
+  videoServiceDetails,
+} from 'contents/servicesDetails';
+import {
   anim,
   animThumbnail,
   event,
@@ -8,13 +14,6 @@ import {
   video,
   videoThumbnail,
 } from 'contents/videoUrls';
-
-import {
-  videoServiceDetails,
-  animServiceDetails,
-  streamServiceDetails,
-  eventServiceDetails,
-} from 'contents/servicesDetails';
 
 import ServiceSection from './components/ServiceSection';
 
