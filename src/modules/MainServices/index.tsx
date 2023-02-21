@@ -9,6 +9,13 @@ import {
   videoThumbnail,
 } from 'contents/videoUrls';
 
+import {
+  videoServiceDetails,
+  animServiceDetails,
+  streamServiceDetails,
+  eventServiceDetails,
+} from 'contents/servicesDetails';
+
 import ServiceSection from './components/ServiceSection';
 
 const MainServicesModule = () => {
@@ -21,11 +28,13 @@ const MainServicesModule = () => {
         color="dark"
         title={
           <span className="block uppercase">
-            <span className="block">video</span>
-            <span className="block font-bold">production</span>
+            <span className="block">{videoServiceDetails.title1}</span>
+            <span className="block font-bold">
+              {videoServiceDetails.title2}
+            </span>
           </span>
         }
-        description="Bring your stories to life with our seamless, engaging, and impactful video production. With storyboarding, cinematography, sound design, and high-end equipment, we’ll capture your audience’s attention and get your message across for you."
+        description={videoServiceDetails.description}
       />
 
       <ServiceSection
@@ -36,11 +45,11 @@ const MainServicesModule = () => {
         poster={animThumbnail}
         title={
           <span className="block uppercase">
-            <span className="block">Animated video</span>
-            <span className="block font-bold">production</span>
+            <span className="block">{animServiceDetails.title1}</span>
+            <span className="block font-bold">{animServiceDetails.title2}</span>
           </span>
         }
-        description="Step into a world of visual storytelling through animation. With a wide variety of 2D and 3D motion graphics, characters, designs, and typography, we’ll convey your most important messages in an engaging and creative way."
+        description={animServiceDetails.description}
       />
 
       <ServiceSection
@@ -50,11 +59,13 @@ const MainServicesModule = () => {
         poster={streamThumbnail}
         title={
           <span className="block uppercase">
-            <span className="block">Live streams </span>
-            <span className="block font-bold">& webinars</span>
+            <span className="block">{streamServiceDetails.title1}</span>
+            <span className="block font-bold">
+              {streamServiceDetails.title2}
+            </span>
           </span>
         }
-        description="Connect with audiences across the world, in real time and in high definition. Tap on our live streaming expertise that covers all bases, from high-end camera and streaming gear to back-up Internet connection and well-trained on-site staff."
+        description={streamServiceDetails.description}
       />
 
       <ServiceSection
@@ -65,11 +76,14 @@ const MainServicesModule = () => {
         color="dark"
         title={
           <span className="block uppercase">
-            <span className="block">Events &</span>
-            <span className="block font-bold"> public relations</span>
+            <span className="block">{eventServiceDetails.title1}</span>
+            <span className="block font-bold">
+              {' '}
+              {eventServiceDetails.title2}
+            </span>
           </span>
         }
-        description="Elevate the communication that serves as a bridge between your organisation and the world. We create an effective communications strategy across newsletters, press releases, journalistic articles, and more, then execute, manage and evaluate it for your greatest success."
+        description={eventServiceDetails.description}
       />
     </div>
   );

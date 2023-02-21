@@ -74,7 +74,7 @@ const EventCommunicationPage = ({
   return (
     <>
       <PageSEO
-        title="Events & Public Relations | Impact Media"
+        title="Marketing & Public Relations | Impact Media"
         description="Impact Media's events and public relations elevate the communication that bridges audiences across the world. We create an effective communications strategy across newsletters, press releases, journalistic articles, and more, then execute, manage and evaluate it."
       />
       <ServicePopup
@@ -94,18 +94,22 @@ const EventCommunicationPage = ({
             <>
               <Title>
                 <Title size="xl4">
-                  <span className="whitespace-pre-wrap font-extrabold leading-none tracking-tight lg:text-[8rem]">
+                  <span className="whitespace-pre-wrap leading-none tracking-tight lg:text-[8rem]">
                     <span className="block">EVENTS & </span>
                     <span className="block font-bold">PUBLIC RELATIONS</span>
                   </span>
                 </Title>
               </Title>
               <p className="max-w-xs mt-3 text-left sm:mt-5 lg:max-w-lg lg:text-xl xl:font-black">
-                Elevate the communication that serves as a bridge between your
-                organisation and the world. We create an effective
-                communications strategy across newsletters, press releases,
-                journalistic articles, and more, then execute, manage and
-                evaluate it for your greatest success.
+                Elevate your communication strategy with our expert team. We
+                create custom-tailored plans that get results through
+                newsletters, press releases, articles, and pay-per-click
+                advertising (especially for nonprofits). Our experienced
+                creatives know how to craft engaging content that resonates with
+                your target audience, while our data-driven approach ensures
+                that your plan is continually optimized for maximum impact.
+                Trust us to help you achieve your communication goals with a
+                proven track record of success.
               </p>
             </>
           }

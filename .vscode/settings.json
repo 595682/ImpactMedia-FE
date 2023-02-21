@@ -21,5 +21,8 @@
     "editor.formatOnSave": true,
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
-  "clockify.tracking.workspaceId": "60674025e5f8774ca2eeb790"
+  "clockify.tracking.workspaceId": "60674025e5f8774ca2eeb790",
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  }
 }

@@ -38,7 +38,7 @@ const LiveStramPage = ({
   return (
     <LayoutModule>
       <PageSEO
-        title="Live Streams & Webinars | Impact Media"
+        title="Conferences & Events | Impact Media"
         description="Impact Media's live streams and webinars connect audiences across the world, in real time and in high definition. Our live streaming expertise covers high-end camera and streaming gear, back-up Internet connection, and well-trained on-site staff."
       />
       <StatelessHero
@@ -51,9 +51,9 @@ const LiveStramPage = ({
           <>
             <Title>
               <Title size="xl4">
-                <span className="whitespace-pre-wrap font-extrabold leading-none tracking-tight lg:text-[8rem]">
-                  <span className="block">LIVE STREAMS </span>
-                  <span className="block font-bold">& WEBINARS</span>
+                <span className="whitespace-pre-wrap  leading-none tracking-tight lg:text-[8rem]">
+                  <span className="block uppercase">Conferences </span>
+                  <span className="block font-bold uppercase">& WEBINARS</span>
                 </span>
               </Title>
             </Title>
