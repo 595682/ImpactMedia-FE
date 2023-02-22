@@ -1,4 +1,5 @@
 import { goals } from 'contents/index';
+import { animServiceDetails } from 'contents/servicesDetails';
 import { anim } from 'contents/videoUrls';
 import type { GetStaticProps } from 'next';
 import fact_1 from 'public/assets/video_prod/fact_1.svg';
@@ -162,17 +163,14 @@ const AnimVideoProduction = ({
           <>
             <Title>
               <Title size="xl4">
-                <span className="whitespace-pre-wrap font-extrabold leading-none tracking-tight lg:text-[8rem]">
-                  <span>ANIMATED VIDEO </span>
-                  <span>PRODUCTION</span>
+                <span className="whitespace-pre-wrap font-extrabold uppercase leading-none tracking-tight lg:text-[8rem]">
+                  <span>{animServiceDetails.title1} </span>
+                  <span>{animServiceDetails.title2} </span>
                 </span>
               </Title>
             </Title>
             <p className="mt-3 max-w-xs text-left sm:mt-5 lg:max-w-lg lg:text-xl xl:font-black">
-              Step into a world of visual storytelling through animation. With a
-              wide variety of 2D and 3D motion graphics, characters, designs,
-              and typography, we’ll convey your most important messages in an
-              engaging and creative way.
+              {animServiceDetails.description}
             </p>
           </>
         }

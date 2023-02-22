@@ -1,4 +1,5 @@
 import { goals } from 'contents/index';
+import { videoServiceDetails } from 'contents/servicesDetails';
 import { placeholderVideoProd, video } from 'contents/videoUrls';
 import type { GetStaticProps } from 'next';
 import fact_1 from 'public/assets/video_prod/fact_1.svg';
@@ -162,17 +163,14 @@ const VideoProduction = ({
           <>
             <Title>
               <Title size="xl4">
-                <span className="whitespace-pre-wrap font-extrabold leading-none tracking-tight lg:text-[8rem]">
-                  <span>VIDEO </span>
-                  <span>PRODUCTION</span>
+                <span className="whitespace-pre-wrap font-extrabold uppercase leading-none tracking-tight lg:text-[8rem]">
+                  <span>{videoServiceDetails.title1} </span>
+                  <span>{videoServiceDetails.title2} </span>
                 </span>
               </Title>
             </Title>
-            <p className="max-w-xs mt-3 text-left sm:mt-5 lg:max-w-lg lg:text-xl xl:font-black">
-              Bring your stories to life with our seamless, engaging, and
-              impactful video production. With storyboarding, cinematography,
-              sound design, and high-end equipment, we’ll capture your
-              audience’s attention and get your message across for you.
+            <p className="mt-3 max-w-xs text-left sm:mt-5 lg:max-w-lg lg:text-xl xl:font-black">
+              {videoServiceDetails.description}
             </p>
           </>
         }

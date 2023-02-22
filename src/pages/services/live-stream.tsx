@@ -1,3 +1,4 @@
+import { streamServiceDetails } from 'contents/servicesDetails';
 import { stream } from 'contents/videoUrls';
 import type { GetStaticProps } from 'next';
 import React from 'react';
@@ -51,17 +52,16 @@ const LiveStramPage = ({
           <>
             <Title>
               <Title size="xl4">
-                <span className="whitespace-pre-wrap  leading-none tracking-tight lg:text-[8rem]">
-                  <span className="block uppercase">Conferences </span>
-                  <span className="block font-bold uppercase">& WEBINARS</span>
+                <span className="whitespace-pre-wrap  uppercase leading-none tracking-tight lg:text-[8rem]">
+                  <span className="block ">{streamServiceDetails.title1} </span>
+                  <span className="block font-bold ">
+                    {streamServiceDetails.title2}{' '}
+                  </span>
                 </span>
               </Title>
             </Title>
-            <p className="max-w-xs mt-3 text-left sm:mt-5 lg:max-w-lg lg:text-xl xl:font-black">
-              Connect with audiences across the world, in real time and in high
-              definition. Tap on our live streaming expertise that covers all
-              bases, from high-end camera and streaming gear to back-up Internet
-              connection and well-trained on-site staff.
+            <p className="mt-3 max-w-xs text-left sm:mt-5 lg:max-w-lg lg:text-xl xl:font-black">
+              {streamServiceDetails.description}
             </p>
           </>
         }

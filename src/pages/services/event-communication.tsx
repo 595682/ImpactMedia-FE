@@ -1,3 +1,4 @@
+import { eventServiceDetails } from 'contents/servicesDetails';
 import { event } from 'contents/videoUrls';
 import type { GetStaticProps } from 'next';
 import type { ReactNode } from 'react';
@@ -94,22 +95,16 @@ const EventCommunicationPage = ({
             <>
               <Title>
                 <Title size="xl4">
-                  <span className="whitespace-pre-wrap leading-none tracking-tight lg:text-[8rem]">
-                    <span className="block">EVENTS & </span>
-                    <span className="block font-bold">PUBLIC RELATIONS</span>
+                  <span className="whitespace-pre-wrap uppercase leading-none tracking-tight lg:text-[8rem]">
+                    <span className="block">{eventServiceDetails.title1} </span>
+                    <span className="block font-bold">
+                      {eventServiceDetails.title2}
+                    </span>
                   </span>
                 </Title>
               </Title>
-              <p className="max-w-xs mt-3 text-left sm:mt-5 lg:max-w-lg lg:text-xl xl:font-black">
-                Elevate your communication strategy with our expert team. We
-                create custom-tailored plans that get results through
-                newsletters, press releases, articles, and pay-per-click
-                advertising (especially for nonprofits). Our experienced
-                creatives know how to craft engaging content that resonates with
-                your target audience, while our data-driven approach ensures
-                that your plan is continually optimized for maximum impact.
-                Trust us to help you achieve your communication goals with a
-                proven track record of success.
+              <p className="mt-3 max-w-xs text-left sm:mt-5 lg:max-w-lg lg:text-xl xl:font-black">
+                {eventServiceDetails.description}
               </p>
             </>
           }
