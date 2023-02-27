@@ -27,5 +27,5 @@ export const eventServiceDetails: ServicesDetails = {
   title1: 'Marketing',
   title2: '& Public Relations',
   description:
-    'Elevate your communication strategy with our expert team. We create custom-tailored plans that get results through newsletters, press releases, articles, and pay-per-click advertising (especially for nonprofits). Our experienced creatives know how to craft engaging content that resonates with your target audience, while our data-driven approach ensures that your plan is continually optimized for maximum impact. Trust us to help you achieve your communication goals with a proven track record of success.',
+    'Elevate your outside presentation with our expert team! We create content for your success - online campaigns, design and branding packages, and content marketing & PPC (especially for nonprofits). Our content resonates with your target audience on a deep level, while our data-driven approach ensures maximum impact.',
 };

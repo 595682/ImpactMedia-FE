@@ -105,7 +105,7 @@ const ctaContent = (
 const heroOptions = [
   {
     id: 0,
-    title: 'Videos',
+    title: 'Video Production',
     url: '/services/video-production',
     /* video: '/dev_video.webm', */
     video,
@@ -121,7 +121,7 @@ const heroOptions = [
   },
   {
     id: 2,
-    title: 'Live Streams',
+    title: 'Conferences & Events',
     url: '/services/live-stream',
     /* video: '/hero.mp4', */
     video: stream,
@@ -129,7 +129,7 @@ const heroOptions = [
   },
   {
     id: 3,
-    title: 'Public Relations 2.0',
+    title: 'Marketing & PR',
     url: '/services/event-communication',
     video: event,
     /* video: '/hero_event.mp4', */
