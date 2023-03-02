@@ -31,6 +31,16 @@ class MyDocument extends Document {
           />
         </Head>
         <body>
+          {/* Google Tag Manager (noscript) */}
+          <noscript>
+            <iframe
+              src="https://www.googletagmanager.com/ns.html?id=GTM-NHMKPWX"
+              height="0"
+              width="0"
+              className="invisible hidden"
+            ></iframe>
+          </noscript>
+          {/* End Google Tag Manager (noscript) */}
           <Main />
           <NextScript />
         </body>
