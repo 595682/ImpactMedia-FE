@@ -6,12 +6,10 @@ import {
   defaultWrapperAnimation,
   SlideUpAnimation,
   SubtitleAnimation,
-  TitleAnimation,
 } from '@/common/animations/sharedAnimations';
 import SwiperComponent from '@/common/components/Swiper';
 import Space from '@/Layout/Space';
 import Subtitle from '@/Layout/Subtitle';
-import Title from '@/Layout/Title';
 import Wrapper from '@/Layout/Wrapper';
 import type { TeamMemberEntity } from '@/types';
 
@@ -61,15 +59,6 @@ const OurteamModule = ({ people = [], color = 'light' }: IOurteamModule) => {
                 The people behind the magic
               </span>
             </Subtitle>
-          </motion.div>
-        </div>
-        <div className="h-max overflow-hidden">
-          <motion.div variants={TitleAnimation}>
-            <Title>
-              <span className={`font-bold ${colors[color].text}`}>
-                OUR TEAM
-              </span>
-            </Title>
           </motion.div>
         </div>
         <Space amount="lg" />
