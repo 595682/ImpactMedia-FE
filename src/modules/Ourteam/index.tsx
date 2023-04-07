@@ -8,7 +8,6 @@ import {
   SubtitleAnimation,
 } from '@/common/animations/sharedAnimations';
 import SwiperComponent from '@/common/components/Swiper';
-import Space from '@/Layout/Space';
 import Subtitle from '@/Layout/Subtitle';
 import Wrapper from '@/Layout/Wrapper';
 import type { TeamMemberEntity } from '@/types';
@@ -61,7 +60,6 @@ const OurteamModule = ({ people = [], color = 'light' }: IOurteamModule) => {
             </Subtitle>
           </motion.div>
         </div>
-        <Space amount="lg" />
         <motion.div className="hidden md:block" variants={SlideUpAnimation()}>
           <SwiperComponent slidesPerView={3} version={color}>
             {people.map((person) => (
